@@ -2,10 +2,17 @@
 
 = Introduction =
 
-Add your content here.
+JSword provides a quality, robust, mature and proven Java library that delivers theological documents stored in a variety of readily available formats, but especially OSIS documents on the CrossWire site.
 
+Android provides and exceptional Java environment and ui framework for mobile phones.
+
+The combination of Android, JSword, and CrossWire OSIS documents provides a good foundation for the development of a tool to display scripture and theological works on a mobile platform.
+
+This page summarises some of the challenges in adapting JSword to the mobile environment.
 
 = Details =
+
+Yep, I will be putting lots of info here - which at least I think is interesting.
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
