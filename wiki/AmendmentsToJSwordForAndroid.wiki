@@ -17,7 +17,7 @@ I will be putting lots of (hopefully interesting) info here.
 = Fetch and Display of Bible Text =
 JSword fetches raw OSIS text from a file, converts the text into a DOM model using JDOM, requests a SAXEventProvider from JDOM which is normally passed through an XSLT processor to convert the OSIS to HTML format ready for display.
 
-== Amends to Optimise Fetch and Display of Text ==
+== Changes to Optimise Fetch and Display of Text ==
 === Architectural Change to Stream Data from Backend to View ===
 I have heard JDOM is slow and with Android running on low spec and low memory machines I decided to remove JDOM.  Also, when considering simple raw text to html translation I considered the intermediate DOM model created by JSword added a lot of processing overhead, some functionality that I did not intend to use some of which could be done in SAX with the html conversion, so I removed the intermediate DOM model.
 
@@ -28,9 +28,9 @@ ZVerseBackend is the raw OSIS text provider for most documents and ZVerseBackend
 
 Initially I saw many OutOfMemory exceptions emanating from Zip.uncompress() until I removed the redundant Buffer and set the initial size of the ByteArrayOutputStream which was had been at it's default value.
 
-== Amends to Optimise Performance ==
+== Changes to Optimise Performance ==
 
-== Amends to Workaround Android Deficiencies ==
+== Changes to Workaround Android Deficiencies ==
 Classloader problems on older Android version meant much of the dynamic class loading in JSword had to be backed up with default hard-coded class instantiation.
 
 Lack of any javax.xml.transform functionality to support xslt on Android pre2.2 also me to use SAX.
