@@ -14,11 +14,11 @@ This page summarises some of the challenges in adapting JSword to the mobile env
 
 Yep, I will be putting lots of info here - which at least I think is interesting.
 
-*Fetch and Display of Bible Text
+= Fetch and Display of Bible Text =
 JSword fetches raw OSIS text from a file, converts the text into a DOM model using JDOM, requests a SAXEventProvider from JDOM which is normally passed through an XSLT processor to convert the OSIS to HTML format ready for display.
 
-== Amends to Optimise Fetch and Display of Text
-=== Architectural Change to Stream Data from Backend to View
+== Amends to Optimise Fetch and Display of Text ==
+=== Architectural Change to Stream Data from Backend to View ===
 I have heard JDOM is slow and with Android running on low spec and low memory machines I decided to remove JDOM.  I also considered the intermediate DOM model created by JSword to add little value and to consume much memory so I removed the intermediate DOM model.
 
 The architecture I was aiming at would contain one InputStream of data from raw OSIS text through to web browser.  Use of a stream would to avoid instantiating the whole document in several states and therefore consume less memory.
@@ -28,7 +28,7 @@ ZVerseBackend is the raw OSIS text provider for most documents and ZVerseBackend
 
 Initially I saw many OutOfMemory exceptions emanating from Zip.uncompress() until I removed the redundant Buffer and set the initial size of the ByteArrayOutputStream which was had been at it's default value.
 
-== Amends to Optimise Performance
+== Amends to Optimise Performance ==
 
-== Amends to Workaround Android Deficiencies
+== Amends to Workaround Android Deficiencies ==
 Classloader problems...
