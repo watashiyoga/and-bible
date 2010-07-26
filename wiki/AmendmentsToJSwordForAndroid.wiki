@@ -1,4 +1,4 @@
-#summary Amendments made to the JSword library to improve performance and compatibility on the Android operating system
+#summary Changes made to the JSword library to improve performance and compatibility on the Android operating system
 
 = Introduction =
 
