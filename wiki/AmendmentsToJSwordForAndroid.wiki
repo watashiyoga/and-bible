@@ -33,4 +33,4 @@ Initially I saw many OutOfMemory exceptions emanating from Zip.uncompress() unti
 == Changes to Workaround Android Deficiencies ==
 Classloader problems on older Android version meant much of the dynamic class loading in JSword had to be backed up with default hard-coded class instantiation.
 
-Lack of any javax.xml.transform functionality to support xslt on Android pre2.2 also me to use SAX.
+Lack of any javax.xml.transform functionality to support xslt on Android pre2.2 meant I used SAX.  I find Java easier than xslt for many things but there would have been advantages in using the existing mature xslt.  It may be necessary to switch back to it later.
