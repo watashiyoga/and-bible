@@ -1,5 +1,5 @@
 #labels crosswire,bible,sword
-#The CrossWire Bible Society#
+=The CrossWire Bible Society=
 
 = Introduction =
 
