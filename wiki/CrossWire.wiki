@@ -1,5 +1,5 @@
 #labels crosswire,bible,sword
-#The CrossWire Bible Society
+#The CrossWire Bible Society#
 
 = Introduction =
 
@@ -16,4 +16,3 @@ The heart of most projects here at CrossWire use a common technology called The 
   * A huge and rapidly growing electronic library of Bibles, commentaries, devotional and general books, maps and much more, in many different languages.
   * A community where volunteers and developers can meet and assist each other in creating great Bible software.
   * A place where publishers will find tools to easily make available their works on a vast array of devices and operating systems.
-
