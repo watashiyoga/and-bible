@@ -10,9 +10,11 @@ The CrossWire Bible Society is an organization with the purpose to sponsor and p
 
 The SWORD Project
 
-The heart of most projects here at CrossWire use a common technology called The SWORD Project.
+The heart of most projects at CrossWire use a common technology called The SWORD Project.
 
   * A cross-platform textual publishing and research engine with bindings for most modern programming languages.
   * A huge and rapidly growing electronic library of Bibles, commentaries, devotional and general books, maps and much more, in many different languages.
   * A community where volunteers and developers can meet and assist each other in creating great Bible software.
   * A place where publishers will find tools to easily make available their works on a vast array of devices and operating systems.
+
+For more information regarding the CrossWire Bible Society visit their web site at http://www.crosswire.org.
