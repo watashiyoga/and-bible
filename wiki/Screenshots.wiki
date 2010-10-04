@@ -1,4 +1,8 @@
 #labels Screenshots
 Screenshots of this application
 
-http://and-bible.googlecode.com/svn/trunk/AndBible/graphics/android-bible-main.jpg http://and-bible.googlecode.com/svn/trunk/AndBible/graphics/and-bible-download.jpg
+This is the main page, currently showing Genesis chapter 1 with verses and notes being displayed:
+http://and-bible.googlecode.com/svn/trunk/AndBible/graphics/android-bible-main.jpg
+
+You may download from a selection of bibles and commentaries in many different languages:
+http://and-bible.googlecode.com/svn/trunk/AndBible/graphics/and-bible-download.jpg
