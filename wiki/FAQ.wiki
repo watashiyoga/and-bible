@@ -4,6 +4,11 @@ Frequently Asked Questions
 No there isn't much here yet but it should grow
 
 1. Can I manually add modules/documents to And Bible?
-Yes, you can copy modules to a jsword directory on your sd card.  Expand the module so that the .conf file is in sdcard/jsword/mods.d and the bible files in a subdirectory of sdcard/jsword/modules e.g. sdcard\jsword\modules\texts\ztext\nettext.  
-Modules/documents installed via teh Download screen in And Bible will be placed in an application specific directory and, in Android 2.2+, will be removed if the application is removed. 
 
+Yes, you can copy modules to a jsword directory on your sd card.  Expand the module so that the .conf file is in sdcard/jsword/mods.d and the bible files in a subdirectory of sdcard/jsword/modules e.g. sdcard\jsword\modules\texts\ztext\nettext.
+  
+Modules/documents installed via the Download screen in And Bible will be placed in an application specific directory and, in Android 2.2+, will be removed if the application is removed. 
+
+2. How can I get help?
+
+Submit a question to http://www.crosswire.org/mailman/listinfo/mobile-devel.
