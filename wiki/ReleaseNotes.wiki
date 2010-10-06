@@ -1,0 +1,69 @@
+#labels release,notes
+= Release Notes =
+
+== Release 0.0.9 (6/10/2010) ==
+This build contains bug fixes for issues discovered in build 0.0.8
+  * fix for notifications that cannot be cleared if indexing or downloading fail
+  * incorrect version number in translated uis
+  * a few other subtle improvements in background task monitoring and thread creation
+
+== Release 0.0.8 (4/10/2010) ==
+If you have used a previous version of and-bible you will need to uninstall the old version before installing version 0.0.8 because a new encryption key is being used.
+
+  * Faster navigation using grouped books and chapters
+  * Improve synchronization of page change, hourglass, and verse update
+  * Text to speech - listen to the bible read to you
+  * Make swipe more sensitive
+  * Download to dir deleted on app uninstall (Android 2.2) but still allow use of sdcard/jsword for manual installs
+  * New icon (thanks John)
+  * French localisation (thanks Dominique)
+  * Improved initial install and download flow
+  * Android Notification bar integration for download and index
+  * Machine automated translations of the ui for Chinese, Korean, and German users (thanks Thomas)
+
+==Release 0.0.7 (18/09/2010) ==
+  * Exact verse calculation
+  * Splash screen
+  * History
+  * Add Norwegian ui text (thanks Lars)
+Fixes
+  * Fix increasing number of duplicate page loads resulting in gradual slow down of bible
+  * Fix duplicate calls to display commentary pages
+  * Darker night mode & larger font
+  * Avoid double quotes before Jesus Christ's words in esv
+
+==Release 0.0.6 (20/08/2010) ==
+  * Experimenting with a new name 'and God said'
+  * Module download from CrossWire site
+  * Jump to verse  
+  * Hungarian ui translation started (thanks Gabor)
+  * Download documents displayed on first run so SdcardBibles.zip should no longer be required.
+  * Night mode option (white text on black background)
+  * index creation works but is very slow
+
+==Release 0.0.5 (3/8/2010)==
+  * Fixed and enhanced search functionality - you need to get the new indexes from SdcardBibles2.zip too
+  * Swedish user interface translation started (thanks Thomas)
+
+==Release 0.0.4 (23/7/2010)==
+  * better visual pages 
+    * using WebView instead of TextView
+    * noticeably faster due to use of WebView
+    * tweak default font and spacing
+    * pop-up footnotes & cross-references and allow navigation direct to cross-references (works well in ESV)
+  * options page for display options e.g. turn off verse numbers, notes, ...
+  * fix - page forward/back in a commentary sometimes causes a blank screen
+  * fix swipe sensitivity problem affecting Droid
+
+==Release 0.0.3 14/7/10==
+  * fix to allow use of non OSIS ztext modules
+Release 0.0.2 14/7/10:
+  * Use standard menu instead of toolbar
+  * Optimised page loading
+  * Slightly improved book/chapter selection
+  * Current verse estimation and improved bible-commentary synch
+  * fix back-a-page swipe
+  * trackball support for next/prev page
+  * application icon
+  * tidy search results
+  * save & restore state
