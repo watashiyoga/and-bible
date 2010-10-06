@@ -12,3 +12,9 @@ Modules/documents installed via the Download screen in And Bible will be placed 
 2. How can I get help?
 
 Submit a question to mobile-devel@crosswire.org (see http://www.crosswire.org/mailman/listinfo/mobile-devel).
+
+3. I just see squares instead of the Hebrew bible.
+
+Hebrew font support was added in Android 2.2.  Although some people have found out how to add Hebrew fonts to older versions of Android that is not supported although it may work for you.
+
+Hebrew fonts are in Android 2.2 but right-to-left support is still not available.
