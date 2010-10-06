@@ -11,4 +11,4 @@ Modules/documents installed via the Download screen in And Bible will be placed 
 
 2. How can I get help?
 
-Submit a question to http://www.crosswire.org/mailman/listinfo/mobile-devel.
+Submit a question to mobile-devel@crosswire.org (see http://www.crosswire.org/mailman/listinfo/mobile-devel).
