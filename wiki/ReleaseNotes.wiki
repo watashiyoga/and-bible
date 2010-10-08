@@ -62,7 +62,8 @@ Fixes
 
 ==Release 0.0.3 14/7/10==
   * fix to allow use of non OSIS ztext modules
-Release 0.0.2 14/7/10:
+
+==Release 0.0.2 14/7/10==
   * Use standard menu instead of toolbar
   * Optimised page loading
   * Slightly improved book/chapter selection
