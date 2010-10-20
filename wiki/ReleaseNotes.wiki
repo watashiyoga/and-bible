@@ -1,6 +1,11 @@
 #labels release,notes
 = Release Notes =
 
+== Release 0.0.12 (20/10/2010) ==
+  * Simple dictionary prototype (no Strongs integration yet)
+  * New and tidier look 
+  * Bug fixes
+
 == Release 0.0.11 (8/10/2010) ==
 This build contains a minor bug fix.  Errors occurring were not being displayed in the ui thread causing a secondary uncaught error.
 
