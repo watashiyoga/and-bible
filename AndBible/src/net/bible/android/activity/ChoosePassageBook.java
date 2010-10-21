@@ -5,14 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.bible.android.activity.base.ExpandableListActivityBase;
-import net.bible.android.control.page.CurrentPageManager;
+import net.bible.android.CurrentPassage;
 
-import org.crosswire.jsword.passage.Verse;
 import org.crosswire.jsword.versification.BibleInfo;
 import org.crosswire.jsword.versification.SectionNames;
 
 import android.app.Activity;
+import android.app.ExpandableListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,7 +27,7 @@ import android.widget.SimpleExpandableListAdapter;
  * @see gnu.lgpl.License for license details.<br>
  *      The copyright to this program is held by it's author.
  */
-public class ChoosePassageBook extends ExpandableListActivityBase {
+public class ChoosePassageBook extends ExpandableListActivity {
 	private static final String TAG = "ChoosePassageBook";
 
 	private static final String NAME = "NAME";
@@ -114,14 +113,16 @@ public class ChoosePassageBook extends ExpandableListActivityBase {
     private void bookSelected(int bibleBookNo) {
     	Log.d(TAG, "Book selected:"+bibleBookNo);
     	try {
+    		//TODO should delay saving until end of tx but just get it working for now
+    		CurrentPassage.getInstance().setCurrentBibleBookNo( bibleBookNo );
+
     		// if there is only 1 chapter then no need to select chapter
     		if (BibleInfo.chaptersInBook(bibleBookNo)==1) {
-        		CurrentPageManager.getInstance().getCurrentBible().setKey(new Verse(bibleBookNo, 1, 1));
+        		CurrentPassage.getInstance().setCurrentChapter(1);
         		returnToMainScreen();
     		} else {
     			// select chapter
 	        	Intent myIntent = new Intent(this, ChoosePassageChapter.class);
-	        	myIntent.putExtra("BOOK_NO", bibleBookNo);
 	        	startActivityForResult(myIntent, bibleBookNo);
     		}
     	} catch (Exception e) {

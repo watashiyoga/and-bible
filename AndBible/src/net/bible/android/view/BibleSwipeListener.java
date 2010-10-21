@@ -1,7 +1,6 @@
 package net.bible.android.view;
 
-import net.bible.android.control.page.CurrentBiblePage;
-import net.bible.android.control.page.CurrentPageManager;
+import net.bible.android.CurrentPassage;
 import android.content.Context;
 import android.util.Log;
 import android.view.GestureDetector.SimpleOnGestureListener;
@@ -50,11 +49,11 @@ public class BibleSwipeListener extends SimpleOnGestureListener {
 		else if ( horizontal > scaledDistance && Math.abs(velocityX) > minScaledVelocity ) {
 			// right to left swipe
 			if (velocityX < 0 ) {
-				CurrentPageManager.getInstance().getCurrentPage().next();
+				CurrentPassage.getInstance().next();
 			}
 			// left to right swipe
 			else {
-				CurrentPageManager.getInstance().getCurrentPage().previous();
+				CurrentPassage.getInstance().previous();
 			}
 			return true;
 		}

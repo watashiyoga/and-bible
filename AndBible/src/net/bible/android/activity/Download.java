@@ -7,18 +7,17 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import net.bible.android.activity.base.Dialogs;
-import net.bible.android.activity.base.ListActivityBase;
+import net.bible.android.util.ActivityBase;
 import net.bible.android.util.Hourglass;
 import net.bible.service.sword.SwordApi;
 
 import org.crosswire.common.progress.JobManager;
 import org.crosswire.common.util.Language;
 import org.crosswire.jsword.book.Book;
-import org.crosswire.jsword.book.BookCategory;
 import org.crosswire.jsword.book.BookFilter;
 import org.crosswire.jsword.book.BookFilters;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -45,11 +44,11 @@ import android.widget.Toast;
  * @see gnu.lgpl.License for license details.<br>
  *      The copyright to this program is held by it's author.
  */
-public class Download extends ListActivityBase {
+public class Download extends ActivityBase {
 	private static final String TAG = "Download";
 
 	// document type spinner
-	private static final BookFilter[] DOCUMENT_TYPE_SPINNER_FILTERS = new BookFilter[] {BookFilters.getBibles(), BookFilters.getCommentaries(), BookFilters.getDictionaries()};
+	private static final BookFilter[] DOCUMENT_TYPE_SPINNER_FILTERS = new BookFilter[] {BookFilters.getBibles(), BookFilters.getCommentaries()};
 	private int selectedDocumentFilterNo = 0;
 
 	// language spinner
@@ -59,9 +58,10 @@ public class Download extends ListActivityBase {
 	private ArrayAdapter<String> langArrayAdapter; 
 	
 	// the document list
+	private ListView bookList;
 	private ArrayAdapter<String> listArrayAdapter;
 	private List<Book> allDocuments;
-	//TODO just use displayedDocuments with a model giving 2 lines in list
+	//todo just use displayedDocuments with a model giving 2 lines in list
 	private List<Book> displayedDocuments = new ArrayList<Book>();
 	private List<String> displayedDocumentDescriptions = new ArrayList<String>();
 
@@ -72,8 +72,6 @@ public class Download extends ListActivityBase {
 	private Book selectedDocument;
 	
 	private static final int DOWNLOAD_CONFIRMATION_DIALOG = 33;
-	public static final int DOWNLOAD_MORE_RESULT = 10;
-	public static final int DOWNLOAD_FINISH = 1;
 	
     /** Called when the activity is first created. */
     @Override
@@ -88,11 +86,18 @@ public class Download extends ListActivityBase {
 
     private void initialiseView() {
     	// prepare the document list view
+    	bookList = (ListView)findViewById(R.id.bookList);
     	populateMasterDocumentList();
     	listArrayAdapter = new ArrayAdapter<String>(this,
     	        LIST_ITEM_TYPE,
     	        displayedDocumentDescriptions);
-    	setListAdapter(listArrayAdapter);
+    	bookList.setAdapter(listArrayAdapter);
+    	bookList.setOnItemClickListener(new OnItemClickListener() {
+    	    @Override
+    	    public void onItemClick(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+    	    	documentSelected(displayedDocuments.get(position));
+    	    }
+    	});
     	
     	//prepare the documentType spinner
     	Spinner documentTypeSpinner = (Spinner)findViewById(R.id.documentTypeSpinner);
@@ -132,23 +137,18 @@ public class Download extends ListActivityBase {
     	}
     }
     
-    @Override
-	protected void onListItemClick(ListView l, View v, int position, long id) {
-    	documentSelected(displayedDocuments.get(position));
-	}
-
     private void populateMasterDocumentList() {
-		if (allDocuments==null || allDocuments.size()==0) {
-    	    new AsyncTask<Void, Boolean, Void>() {
-    	    	
-    	        @Override
-    	        protected void onPreExecute() {
-    	        	showDialog(Hourglass.HOURGLASS_KEY);
-    	        }
-    	        
-    			@Override
-    	        protected Void doInBackground(Void... noparam) {
-    				try {
+    	try {
+    		if (allDocuments==null || allDocuments.size()==0) {
+	    	    new AsyncTask<Void, Boolean, Void>() {
+	    	    	
+	    	        @Override
+	    	        protected void onPreExecute() {
+	    	        	showDialog(Hourglass.HOURGLASS_KEY);
+	    	        }
+	    	        
+	    			@Override
+	    	        protected Void doInBackground(Void... noparam) {
 	    	        	allDocuments = SwordApi.getInstance().getDownloadableDocuments();
 	    	        	for (Iterator<Book> iter=allDocuments.iterator(); iter.hasNext(); ) {
 	    	        		Book doc = iter.next();
@@ -156,33 +156,28 @@ public class Download extends ListActivityBase {
 	    	        			Log.d(TAG, "Ignoring "+doc.getName()+" because it has no language");
 	    	        			iter.remove();
 	    	        		}
-	    	        		if (doc.getInitials().equals("WebstersDict")) {
-	    	        			Log.d(TAG, "Removing "+doc.getName()+" because it is too big and crashed dictionary code");
-	    	        			iter.remove();
-	    	        		}
 	    	        	}
 	    	        	Log.i(TAG, "number of documents available:"+allDocuments.size());
-    				} catch (Exception e) {
-    					Log.e(TAG, "Error getting documents to download", e);
-    					//todo INTERNATIONALIZE
-    					showErrorMsg("Error getting documents to download");
-    				}
-    	        	return null;
-    			}
-    			
-    	        @Override
-				protected void onPostExecute(Void result) {
-    	        	try {
-    	        		populateLanguageList();
-    	        		filterDocuments();
-    	        	} finally {
-    	        		//todo implement this: http://stackoverflow.com/questions/891451/android-dismissdialog-does-not-dismiss-the-dialog
-        	        	dismissHourglass();
-    	        	}
-    	        }
-
-    	    }.execute((Void[])null);
-		}
+	    	        	return null;
+	    			}
+	    			
+	    	        @Override
+					protected void onPostExecute(Void result) {
+	    	        	try {
+	    	        		populateLanguageList();
+	    	        		filterDocuments();
+	    	        	} finally {
+	    	        		//todo implement this: http://stackoverflow.com/questions/891451/android-dismissdialog-does-not-dismiss-the-dialog
+	        	        	dismissHourglass();
+	    	        	}
+	    	        }
+	
+	    	    }.execute((Void[])null);
+    		}
+    	} catch (Exception e) {
+    		Log.e(TAG, "Error initialising view", e);
+    		Toast.makeText(this, getString(R.string.error)+e.getMessage(), Toast.LENGTH_SHORT);
+    	}
     }
     
     /** a spinner has changed so refilter the doc list
@@ -256,16 +251,13 @@ public class Download extends ListActivityBase {
     private void documentSelected(Book document) {
     	Log.d(TAG, "Document selected:"+document.getInitials());
     	try {
-    		//sometimes the selected doc is null if the list was not clicked properly - odd!
-    		if (document!=null) {
-	    		this.selectedDocument = document;
-	
-	    		if (JobManager.getJobs().size()>=2) {
-	    			Log.i(TAG, "Too many jobs:"+JobManager.getJobs().size());
-	    			showDialog(Dialogs.TOO_MANY_JOBS);
-	    		} else {
-	    			showDialog(DOWNLOAD_CONFIRMATION_DIALOG);
-	    		}
+    		this.selectedDocument = document;
+
+    		if (JobManager.getJobs().size()>=2) {
+    			Log.i(TAG, "Too many jobs:"+JobManager.getJobs().size());
+    			showDialog(TOO_MANY_JOBS);
+    		} else {
+    			showDialog(DOWNLOAD_CONFIRMATION_DIALOG);
     		}
     	} catch (Exception e) {
     		Log.e(TAG, "Error on attempt to download", e);
@@ -274,14 +266,6 @@ public class Download extends ListActivityBase {
     }
 
     @Override
-	public void dialogOnClick(int dialogId, int buttonId) {
-    	if (dialogId==Dialogs.TOO_MANY_JOBS) {
-    		Intent intent = new Intent(this, DownloadStatus.class);
-    		startActivityForResult(intent, 1);
-    	}
-	}
-
-	@Override
     protected Dialog onCreateDialog(int id) {
     	Dialog superDlg = super.onCreateDialog(id);
     	if (superDlg!=null) {
@@ -322,15 +306,10 @@ public class Download extends ListActivityBase {
 			SwordApi.getInstance().downloadDocument(document);
 	    	Log.d(TAG, "Download requested");
 	    	
-	    	Intent intent;
 	    	if (forceBasicFlow) {
-	    		intent = new Intent(this, EnsureBibleDownloaded.class);
-	    		finish();
-	    		removeDialog(DOWNLOAD_CONFIRMATION_DIALOG);
-	    	} else {
-	    		intent = new Intent(this, DownloadStatus.class);
+	    		Intent intent = new Intent(this, EnsureBibleDownloaded.class);
+	        	startActivity(intent);
 	    	}
-        	startActivityForResult(intent, 1);
 
     	} catch (Exception e) {
     		Log.e(TAG, "Error on attempt to download", e);
@@ -341,7 +320,7 @@ public class Download extends ListActivityBase {
     
     @Override 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-    	if (resultCode==DOWNLOAD_FINISH) {
+    	if (resultCode==Activity.RESULT_OK) {
     		returnToPreviousScreen();
     	}
     }

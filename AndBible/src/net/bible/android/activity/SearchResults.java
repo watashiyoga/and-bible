@@ -4,9 +4,8 @@ package net.bible.android.activity;
 import java.util.HashMap;
 import java.util.List;
 
-import net.bible.android.activity.base.ListActivityBase;
-import net.bible.android.control.page.CurrentBiblePage;
-import net.bible.android.control.page.CurrentPageManager;
+import net.bible.android.CurrentPassage;
+import net.bible.android.util.ListActivityBase;
 import net.bible.service.sword.SwordApi;
 
 import org.crosswire.jsword.book.Book;
@@ -15,7 +14,6 @@ import org.crosswire.jsword.passage.Key;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -77,15 +75,15 @@ public class SearchResults extends ListActivityBase {
     	try {
 	    	String searchText = getIntent().getExtras().getString(Search.SEARCH_TEXT);
 	    	
-	        Book bible = CurrentPageManager.getInstance().getCurrentPage().getCurrentDocument();
+	        Book bible = CurrentPassage.getInstance().getCurrentDocument();
 	    	SwordApi swordApi = SwordApi.getInstance();
 	    	Key result = swordApi.search(bible, searchText);
 	    	if (result!=null) {
 	    		int resNum = result.getCardinality();
 	        	Log.d(TAG, "Number of results:"+resNum);
-	        	String msg = getString(R.string.search_result_count, resNum);
+	        	String msg = resNum+" matches found";
 	    		if (resNum>MAX_SEARCH_RESULTS) {
-	    			msg = getString(R.string.search_showing_first, MAX_SEARCH_RESULTS);
+	    			msg = "Too many matches.  Showing first "+MAX_SEARCH_RESULTS;
 	    		}
 	    		showMsg(msg);
 	    		mResultList = new ArrayList<ResultItem>();
@@ -117,7 +115,7 @@ public class SearchResults extends ListActivityBase {
     
     private void verseSelected(ResultItem resultItem) {
     	Log.i(TAG, "chose:"+resultItem);
-    	CurrentPageManager.getInstance().getCurrentPage().setKey(resultItem.verse);
+    	CurrentPassage.getInstance().setKey(resultItem.verse);
     	doFinish();
     }
     
@@ -142,7 +140,7 @@ public class SearchResults extends ListActivityBase {
 	    		if (key.equals(LIST_ITEM_LINE1)) {
 	    			retval = verse.getName();
 	    		} else {
-	    			retval = SwordApi.getInstance().getPlainText(CurrentPageManager.getInstance().getCurrentPage().getCurrentDocument(), verse.getName(), 1);
+	    			retval = SwordApi.getInstance().getPlainText(CurrentPassage.getInstance().getCurrentDocument(), verse.getName(), 1);
 	    		}
     		} catch (Exception e) {
     			Log.e(TAG, "Error getting search result", e);

@@ -3,9 +3,8 @@ package net.bible.android.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.bible.android.activity.base.ActivityBase;
-import net.bible.android.control.page.CurrentPage;
-import net.bible.android.control.page.CurrentPageManager;
+import net.bible.android.CurrentPassage;
+import net.bible.android.util.ActivityBase;
 import net.bible.service.sword.SwordApi;
 
 import org.crosswire.jsword.book.Book;
@@ -63,36 +62,24 @@ public class ChooseDocument extends ActivityBase {
 	    	bookList.setOnItemClickListener(new OnItemClickListener() {
 	    	    @Override
 	    	    public void onItemClick(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-	    	    	bookSelected(documents.get(position));
+	    	    	bookSelected(position);
+	    	    	onSave(null);
 	    	    }
 	    	});
     	}
     }
     
-    private void bookSelected(Book selectedBook) {
-    	Log.d(TAG, "Book selected:"+selectedBook.getInitials());
+    private void bookSelected(int position) {
+    	Log.d(TAG, "Book selected:"+position);
     	try {
-    		CurrentPage newPage = CurrentPageManager.getInstance().setCurrentDocument( selectedBook );
-    		
-    		// page will change due to above
-    		// if there is a valid key then show the page straight away
-    		if (newPage.getKey()==null) {
-    			// no key set for this doc type so show a key chooser
-    			//TODO this code is generic and needs to be performed whenever a doc changes so think where to put it
-    	    	Intent intent = new Intent(this, newPage.getKeyChooserActivity());
-    	    	startActivity(intent);
-    	    	finish();    
-    		} else {
-    			// if key is valid then the new doc will have been shown already
-    			returnToMainBibleView();
-    		}
+    		CurrentPassage.getInstance().setCurrentDocument( documents.get(position) );
     	} catch (Exception e) {
     		Log.e(TAG, "error on select of bible book", e);
     	}
     }
     
-    private void returnToMainBibleView() {
-    	Log.i(TAG, "returning to main bible view");
+    public void onSave(View v) {
+    	Log.i(TAG, "CLICKED");
     	Intent resultIntent = new Intent();
     	setResult(Activity.RESULT_OK, resultIntent);
     	finish();    

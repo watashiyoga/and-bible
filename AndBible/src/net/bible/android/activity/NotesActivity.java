@@ -3,9 +3,8 @@ package net.bible.android.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.bible.android.activity.base.ActivityBase;
-import net.bible.android.control.page.CurrentBiblePage;
-import net.bible.android.control.page.CurrentPageManager;
+import net.bible.android.CurrentPassage;
+import net.bible.android.util.ActivityBase;
 import net.bible.android.util.DataPipe;
 import net.bible.service.format.Note;
 
@@ -55,7 +54,7 @@ public class NotesActivity extends ActivityBase {
         mWarning =  (TextView)findViewById(R.id.warningText);
         mNotesListView =  (ListView)findViewById(R.id.notesList);
         
-        mVerseNo = CurrentPageManager.getInstance().getCurrentBible().getCurrentVerseNo();
+        mVerseNo = CurrentPassage.getInstance().getCurrentVerse();
         mChapterNotesList = DataPipe.getInstance().popNotes();
         
         initialiseView();
@@ -91,7 +90,7 @@ public class NotesActivity extends ActivityBase {
     	}
     }
     public void onNext(View v) {
-    	if (mVerseNo<CurrentPageManager.getInstance().getCurrentBible().getNumberOfVersesDisplayed()) {
+    	if (mVerseNo<CurrentPassage.getInstance().getNumberOfVersesDisplayed()) {
     		mVerseNo++;
     		onVerseChanged();
     	}
@@ -107,20 +106,18 @@ public class NotesActivity extends ActivityBase {
     private void populateVerseNotesList() {
     	mVerseNotesList.clear();
     	
-    	if (mChapterNotesList!=null) {
-			for (Note note : mChapterNotesList) {
-				if (note.getVerseNo() == mVerseNo) {
-					mVerseNotesList.add(note);
-				}
+		for (Note note : mChapterNotesList) {
+			if (note.getVerseNo() == mVerseNo) {
+				mVerseNotesList.add(note);
 			}
-    	}
+		}
     }
     
     private void prepareWarningMsg() {
     	String warning = "";
-    	if (mChapterNotesList==null || mChapterNotesList.size()==0) {
+    	if (mChapterNotesList.size()==0) {
     		warning = getString(R.string.no_chapter_notes);
-    	} else if (mChapterNotesList==null || mVerseNotesList.size()==0) {
+    	} else if (mVerseNotesList.size()==0) {
     		warning = getString(R.string.no_verse_notes);
     	}
     	
@@ -134,6 +131,16 @@ public class NotesActivity extends ActivityBase {
     	}
     }
 
+    private List<Note> getNotesList(int verseNo) {
+		List<Note> verseNotes = new ArrayList<Note>();
+		for (Note note : mChapterNotesList) {
+			if (note.getVerseNo() == verseNo) {
+				verseNotes.add(note);
+			}
+		}
+		return verseNotes;
+	}
+    
     private void showCurrentVerse() {
     	mTitle.setText("Verse "+mVerseNo);
     }

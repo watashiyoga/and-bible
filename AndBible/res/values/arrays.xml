@@ -9,6 +9,5 @@
 	<string-array name="documentTypes">
 		<item>Bible</item>
 		<item>Commentary</item>
-		<item>Dictionary</item>
 	</string-array>
 </resources>

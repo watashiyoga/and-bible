@@ -1,6 +1,6 @@
 package net.bible.android.view;
 
-import net.bible.android.control.page.CurrentPageManager;
+import net.bible.android.CurrentPassage;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -68,7 +68,7 @@ public class BibleView extends WebView {
 		    {
 		    	super.onPageFinished(view, url);
 		    	
-		    	if (mJumpToVerse > 0) { 
+		    	if (mJumpToVerse != -1) { 
 		    		Log.d(TAG, "Jumping to verse "+mJumpToVerse);
 		    		if (mJumpToVerse==1) {
 		    			// use scroll to becasue difficult to place a tag exactly at the top
@@ -148,7 +148,7 @@ public class BibleView extends WebView {
 						Log.d(TAG, "<.3");
 						if (event.getEventTime()-lastHandledTrackballEventTime>1000) {
 							Log.i(TAG, "Move Back");
-							CurrentPageManager.getInstance().getCurrentPage().previous();
+							CurrentPassage.getInstance().previous();
 							lastHandledTrackballEventTime = event.getEventTime();
 						} else {
 							Log.i(TAG, "Already handled");
@@ -158,7 +158,7 @@ public class BibleView extends WebView {
 						Log.d(TAG, ">.3");
 						if (event.getEventTime()-lastHandledTrackballEventTime>1000) {
 							Log.i(TAG, "Move Forward");
-							CurrentPageManager.getInstance().getCurrentPage().next();
+							CurrentPassage.getInstance().next();
 							lastHandledTrackballEventTime = event.getEventTime();
 						} else {
 							Log.i(TAG, "Already handled");

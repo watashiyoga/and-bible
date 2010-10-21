@@ -33,10 +33,12 @@ In the <note n="a" osisID="Gen.1.1!crossReference.a" osisRef="Gen.1.1" type="cro
  */
 public class OsisToHtmlSaxHandler extends OsisSaxHandler {
 
+	private static final String getVerseOffsetJS = "";
+	
     // properties
     private boolean isLeftToRight = true;
     private boolean isShowHeadings = true;
-    private boolean isShowVerseNumbers = false;
+    private boolean isShowVerseNumbers = true;
     private boolean isShowNotes = false;
     private String extraStylesheet;
     
@@ -221,9 +223,7 @@ public class OsisToHtmlSaxHandler extends OsisSaxHandler {
     		if (isShowVerseNumbers) {
     			write("<span class='verse' id='"+currentVerseNo+"'>"+currentVerseNo+"</span>"+NBSP);
     		} else {
-    			// we realy want an empty span but that is illegal and causes problems such as incorrect verse calculation in Psalms 
-    			// so use something that will hopefully interfere as little as possible - a zero-width-space
-    			write("<span class='verse' id='"+currentVerseNo+"'/>&#x200b;</span>");
+    			write("<span class='verse' id='"+currentVerseNo+"'></span>");
     		}
     		isCurrentVerseNoWritten = true;
     	}

@@ -1,17 +1,23 @@
 package net.bible.android.activity;
 
-import net.bible.android.activity.base.ActivityBase;
-import net.bible.android.activity.base.Dialogs;
+import net.bible.android.device.ProgressNotificationManager;
+import net.bible.android.util.ActivityBase;
 import net.bible.android.util.CommonUtil;
 import net.bible.service.sword.SwordApi;
+
+import org.crosswire.common.util.Reporter;
+import org.crosswire.common.util.ReporterEvent;
+import org.crosswire.common.util.ReporterListener;
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
+import android.widget.Toast;
 
 /** Called first to show download screen if no documents exist
  * 
@@ -31,13 +37,6 @@ public class StartupActivity extends ActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.startup_view);
 
-        // check for SD card 
-        //TODO it would be great to check in the Application but how to show dialog from Application?
-        if (!Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-        	showErrorMsg(getString(R.string.no_sdcard_error));
-        	return;
-        }
-    
         // allow call back and continuation in the ui thread after JSword has been initialised
         final Handler uiHandler = new Handler();
         final Runnable uiThreadRunnable = new Runnable() {
@@ -52,8 +51,11 @@ public class StartupActivity extends ActivityBase {
         new Thread() {
         	public void run() {
         		try {
+	                installJSwordErrorReportListener();
 	                // force Sword to initialise itself
 	                SwordApi.getInstance().getBibles();
+	                //initialise link to Android progress control display in Notification bar
+	                ProgressNotificationManager.getInstance().initialise();
         		} finally {
         			// switch back to ui thread to continue
         			uiHandler.post(uiThreadRunnable);
@@ -72,6 +74,12 @@ public class StartupActivity extends ActivityBase {
         }
     }
 
+    @Override
+	protected void onDestroy() {
+        Log.i(TAG, "*** onDestroy");
+		super.onDestroy();
+	}
+
 	private void askIfGotoDownloadActivity() {
     	showDialog(CAN_DOWNLOAD_DLG);
     }
@@ -79,30 +87,24 @@ public class StartupActivity extends ActivityBase {
     	if (CommonUtil.isInternetAvailable()) {
 	       	Intent handlerIntent = new Intent(StartupActivity.this, Download.class);
 	    	startActivityForResult(handlerIntent, 1);
-	    	
-	    	// tidy up these resources
-	    	removeDialog(CAN_DOWNLOAD_DLG);
-	    	finish();
 		} else {
-			showErrorMsg(getString(R.string.no_internet_connection));
+			showDialog(INTERNET_NOT_AVAILABLE_DIALOG);
 		}
     }
 
-    /** called when user presses okay button on standard dialog message box
+    /** caled when user presses okay on internet connection error
      */
     @Override
-	public void dialogOnClick(int dialogId, int id) {
+	protected void dialogOnClick(int dialogId, int id) {
     	Log.d(TAG, "dialogOnClick");
-    	if (dialogId==Dialogs.ERROR_MSG) {
+    	if (dialogId==INTERNET_NOT_AVAILABLE_DIALOG) {
     		finish();
     	}
 	}
 
 	private void gotoMainBibleActivity() {
-		Log.i(TAG, "Going to MainBibleActivity");
     	Intent handlerIntent = new Intent(this, MainBibleActivity.class);
-    	startActivity(handlerIntent);
-    	finish();
+    	startActivityForResult(handlerIntent, 2);
     }
     
     @Override
@@ -131,6 +133,36 @@ public class StartupActivity extends ActivityBase {
         return null;
     }
 
+    /** JSword calls back to this listener in the event of some types of error
+     * 
+     */
+    private void installJSwordErrorReportListener() {
+        Reporter.addReporterListener(new ReporterListener() {
+			@Override
+			public void reportException(final ReporterEvent ev) {
+				Log.e(TAG, ev.getMessage(), ev.getException());
+		    	runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						//todo: make sure this runs on ui thread
+						Toast.makeText(getApplicationContext(), ev.getMessage(), Toast.LENGTH_LONG);
+					}
+		    	});
+			}
+
+			@Override
+			public void reportMessage(final ReporterEvent ev) {
+				Log.w(TAG, ev.getMessage(), ev.getException());
+		    	runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						Toast.makeText(getApplicationContext(), ev.getMessage(), Toast.LENGTH_SHORT);
+					}
+		    	});
+			}
+        });
+    }
+    
     /** on return from download we may go to bible
      *  on return from bible just exit
      */
@@ -148,6 +180,10 @@ public class StartupActivity extends ActivityBase {
         		Log.i(TAG, "No Bibles exist so exit");
     			finish();
     		}
+    	}
+    	if (requestCode == 2) {
+    		Log.i(TAG, "Returned from MainBibleActivity so exit");
+    		finish();
     	}
     }
 }

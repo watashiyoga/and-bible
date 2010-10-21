@@ -1,7 +1,6 @@
-package net.bible.android.activity.base;
+package net.bible.android.util;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
@@ -9,7 +8,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 import net.bible.android.SharedConstants;
 import net.bible.android.activity.R;
-import net.bible.android.util.CommonUtil;
 
 import org.apache.commons.lang.StringUtils;
 import org.crosswire.common.progress.JobManager;
@@ -20,7 +18,6 @@ import org.crosswire.common.progress.WorkListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -33,21 +30,12 @@ public class ProgressActivityBase extends ActivityBase {
 	private WorkListener workListener;
 	private Queue<Progress> progressNotificationQueue = new ConcurrentLinkedQueue<Progress>();
 
-	private TextView taskKillWarningView;
-	private TextView noTasksMessageView;
-	
 	private static final String TAG = "ProgressActivityBase";
 	
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		CommonUtil.applyTheme(this);
-	}
-
-	/** Wait until subclass has setContentView before looking for controls. */
+	/** Called when the activity is first created. */
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
         Log.i(TAG, "Displaying "+TAG+" view");
 
         progressControlContainer = (LinearLayout)findViewById(R.id.progressControlContainer);
@@ -55,9 +43,6 @@ public class ProgressActivityBase extends ActivityBase {
     }
 
     private void initialiseView() {
-    	// prepare to show no tasks msg
-    	noTasksMessageView = (TextView)findViewById(R.id.noTasksRunning);
-    	taskKillWarningView = (TextView)findViewById(R.id.progressStatusMessage);
 
     	Set<Progress> jobs = JobManager.getJobs();
     	for (Progress job : jobs) {
@@ -95,58 +80,17 @@ public class ProgressActivityBase extends ActivityBase {
 			}
 		};
 		JobManager.addWorkListener(workListener);
-
-		// give new jobs a chance to start then show 'No Job' msg if nothing running
-		uiHandler.postDelayed(
-			new Runnable() {
-				@Override
-				public void run() {
-					if (JobManager.getJobs().size()==0) {
-						showNoTaskMsg(true);				
-					}
-				}
-			}, 4000);
     }
 
     /** virtual method called on ui thread to update progress.  Can be overridden for subclass specific ui updates br make sure this method is called to update progres controls
      */
     protected void updateProgress(Progress prog) {
-    	// if this is called then ensure the no tasks msg is not also displayed
-    	showNoTaskMsg(false);
-    	
 		int done = prog.getWork();
 		String status = getStatusDesc(prog);
 
 		final ProgressUIControl progressUIControl = findOrCreateUIControl(prog);
 		progressUIControl.showMsg(status);
 		progressUIControl.showPercent(done);
-		
-		if (prog.isFinished() && !progressUIControl.isFinishNotified) {
-			Log.i(TAG, "Job finished:"+prog.getJobName());
-			progressUIControl.isFinishNotified = true;
-			jobFinished(prog);
-		}
-    }
-    
-    protected void jobFinished(Progress job) {
-    	// do nothing by default
-    }
-    
-    /** helper method that returns true if alll jobs are finished
-     * 
-     * @return true if all jobs finished or no jobs
-     */
-    protected boolean isAllJobsFinished() {
-		Set jobs = JobManager.getJobs();
-		Iterator iter = jobs.iterator();
-		boolean allFinished = true;
-		while (iter.hasNext()) {
-			Progress job = (Progress)iter.next();
-			if (!job.isFinished()) {
-				return false;
-			}
-		}
-		return true;
     }
 
     /** format a descriptive string from a Progress object
@@ -163,30 +107,6 @@ public class ProgressActivityBase extends ActivityBase {
 		return status;
 	}
 
-    protected void hideButtons() {
-    	View buttonPanel = findViewById(R.id.button_panel);
-    	if (buttonPanel!=null) {
-    		buttonPanel.setVisibility(View.INVISIBLE);
-    	}
-    }
-    protected void setMainText(String text) {
-    	((TextView)findViewById(R.id.progressStatusMessage)).setText(text);
-    }
-    
-    private void showNoTaskMsg(boolean bShow) {
-    	Log.d(TAG, "No Tasks:"+bShow);
-		if (noTasksMessageView!=null && taskKillWarningView!=null) {
-	    	if (bShow) {
-	   			noTasksMessageView.setVisibility(View.VISIBLE);
-	        	// if the no-tasks msg is show then hide the warning relating to running tasks
-	    		taskKillWarningView.setVisibility(View.INVISIBLE);
-	    	} else {
-	    		noTasksMessageView.setVisibility(View.GONE);
-	    		taskKillWarningView.setVisibility(View.VISIBLE);
-	    	}
-		}
-    }
-    
 	/** get a UI control for the current prog from the previously created controls, or create one
 	 * 
 	 * @param prog
@@ -206,7 +126,7 @@ public class ProgressActivityBase extends ActivityBase {
 	}
 	
     @Override
-	protected void onPause() {
+	protected void onStop() {
 		super.onStop();
     	JobManager.removeWorkListener(workListener);
 	}
@@ -218,7 +138,6 @@ public class ProgressActivityBase extends ActivityBase {
     	LinearLayout parent = new LinearLayout(ProgressActivityBase.this);
     	TextView status = new TextView(ProgressActivityBase.this);
     	ProgressBar progressBar = new ProgressBar(ProgressActivityBase.this, null, android.R.attr.progressBarStyleHorizontal);
-    	boolean isFinishNotified;
     	
     	public ProgressUIControl() {
     		parent.setOrientation(LinearLayout.VERTICAL);

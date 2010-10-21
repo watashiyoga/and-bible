@@ -3,7 +3,7 @@ package net.bible.android.activity;
  import java.util.ArrayList;
 import java.util.List;
 
-import net.bible.android.activity.base.ListActivityBase;
+import net.bible.android.util.ListActivityBase;
 import net.bible.service.history.HistoryItem;
 import net.bible.service.history.HistoryManager;
 import android.app.Activity;
@@ -23,6 +23,7 @@ import android.widget.ListView;
  */
 public class History extends ListActivityBase {
 	private static final String TAG = "History";
+	private static final int MAX_SIZE = 100;
 	
 	private List<HistoryItem> mHistoryItemList;
 	

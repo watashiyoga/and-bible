@@ -26,7 +26,7 @@ public class OSISInputStream extends InputStream {
 	
 	// iterator
 	private boolean isFirstVerse = true;
-	private Iterator<Key> keyIterator;
+	private Iterator<Verse> verseIterator;
 	private boolean isClosingTagWritten = false;
 	
 	// cache
@@ -49,7 +49,7 @@ public class OSISInputStream extends InputStream {
 		this.book = book;
 		this.key = key;
 		osisVerseTidy  = new OSISVerseTidy(book);
-		keyIterator = key.iterator();
+		verseIterator = key.iterator();
 	}
 
 	/* (non-Javadoc)
@@ -117,8 +117,8 @@ public class OSISInputStream extends InputStream {
 				return;
 			}
 		
-			if (keyIterator.hasNext()) {
-				Key currentVerse = keyIterator.next();
+			if (verseIterator.hasNext()) {
+				Verse currentVerse = verseIterator.next();
 				//get the actual verse text and tidy it up
 				String verseText = book.getRawText(currentVerse);
 				verseText = osisVerseTidy.tidy(currentVerse, verseText);

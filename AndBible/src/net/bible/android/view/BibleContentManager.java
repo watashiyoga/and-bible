@@ -1,13 +1,11 @@
-package net.bible.android.control;
+package net.bible.android.view;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
-import net.bible.android.control.page.CurrentBiblePage;
-import net.bible.android.control.page.CurrentPage;
-import net.bible.android.control.page.CurrentPageManager;
-import net.bible.android.util.CommonUtil;
-import net.bible.android.view.BibleView;
+import net.bible.android.CurrentPassage;
 import net.bible.service.format.FormattedDocument;
 import net.bible.service.format.Note;
 import net.bible.service.sword.SwordApi;
@@ -53,21 +51,21 @@ public class BibleContentManager {
     }
     
     public void updateText(boolean forceUpdate) {
-    	CurrentPage currentPage = CurrentPageManager.getInstance().getCurrentPage();
-		Book document = currentPage.getCurrentDocument();
-		Key key = currentPage.getKey();
+    	CurrentPassage currentPassage = CurrentPassage.getInstance();
+		Book bible = currentPassage.getCurrentDocument();
+		Key verse = currentPassage.getKey();
 
 //		 scrolling right in a commentary can sometimes cause duplicate updates and I don't know why - catch them for now
 //		if (forceUpdate || (!bible.equals(displayedBible) || !verse.equals(displayedVerse))) {
 //			new UpdateTextTask().execute(currentPassage);
 //		}
-		if (!forceUpdate && document.equals(displayedBible) && key.equals(displayedVerse)) {
-			Log.w(TAG, "Duplicated screen update. Doc:"+document.getInitials()+" Key:"+key);
+		if (!forceUpdate && bible.equals(displayedBible) && verse.equals(displayedVerse)) {
+			Log.w(TAG, "Duplicated screen update");
 		}
-		new UpdateTextTask().execute(currentPage);
+		new UpdateTextTask().execute(currentPassage);
     }
 
-    private class UpdateTextTask extends AsyncTask<CurrentPage, Integer, String> {
+    private class UpdateTextTask extends AsyncTask<CurrentPassage, Integer, String> {
     	int verseNo;
     	@Override
     	protected void onPreExecute() {
@@ -75,29 +73,25 @@ public class BibleContentManager {
     	}
     	
 		@Override
-        protected String doInBackground(CurrentPage... currentPageArgs) {
-            Log.d(TAG, "Loading html in background");
+        protected String doInBackground(CurrentPassage... currentPassageArgs) {
         	String text = "Error";
         	try {
-        		CurrentPage currentPage = currentPageArgs[0]; 
-	    		Book document = currentPage.getCurrentDocument();
+        		CurrentPassage currentPassage = currentPassageArgs[0]; 
+	    		Book bible = currentPassage.getCurrentDocument();
 	    		// if bible show whole chapter
-	    		Key key = currentPage.getKey();
-	    		// but allow for jump to specific verse e.g. after search result
-	    		if (currentPage instanceof CurrentBiblePage) {
-	    			verseNo = ((CurrentBiblePage)currentPage).getCurrentVerseNo();
-	    		}
+	    		Key verses = currentPassage.getKey();
+	    		verseNo = currentPassage.getCurrentVerse();
 	
-	    		SharedPreferences preferences = CommonUtil.getSharedPreferences();
+	    		SharedPreferences preferences = context.getSharedPreferences("net.bible.android.activity_preferences", 0);
 	    		
-	            Log.d(TAG, "Loading document:"+document.getInitials()+" key:"+key);
+	            Log.d(TAG, "Loading "+verses);
 	    		//setText("Loading "+verse.toString());
 	            SwordApi swordApi = SwordApi.getInstance();
 	            swordApi.setPreferences(preferences);
 	            
 	            notesList = new ArrayList<Note>();
 	            
-	            FormattedDocument formattedDocument = swordApi.readHtmlText(document, key, 200);
+	            FormattedDocument formattedDocument = swordApi.readHtmlText(bible, verses, 200);
 	            text = formattedDocument.getHtmlPassage();
 	            notesList = formattedDocument.getNotesList();
 	            
@@ -105,21 +99,18 @@ public class BibleContentManager {
 	            	text = NO_CONTENT;
 	            }
 	
-	            displayedBible = document;
-	            displayedVerse = key;
+	            displayedBible = bible;
+	            displayedVerse = verses;
 		            
         	} catch (Exception e) {
         		Log.e(TAG, "Error getting bible text", e);
         		text = "Error getting bible text: "+e.getMessage();
-	    	} catch (OutOfMemoryError oom) {
-	    		Log.e(TAG, "Out of memory error", oom);
-	    		text = "Error: document section is too large.";
-	    	}
+        	}
         	return text;
         }
 
         protected void onPostExecute(String htmlFromDoInBackground) {
-            Log.d(TAG, "Loading html:"+htmlFromDoInBackground);
+            Log.d(TAG, "Loading "+htmlFromDoInBackground);
             showText(htmlFromDoInBackground, verseNo);
     		PassageChangeMediator.getInstance().contentChangeFinished();
         }

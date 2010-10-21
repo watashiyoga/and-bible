@@ -2,8 +2,7 @@ package net.bible.service.format;
 
 import java.util.HashMap;
 
-import net.bible.android.control.page.CurrentBiblePage;
-import net.bible.android.control.page.CurrentPageManager;
+import net.bible.android.CurrentPassage;
 import net.bible.service.sword.SwordApi;
 
 import org.apache.commons.lang.StringUtils;
@@ -50,8 +49,7 @@ public class Note extends HashMap<String, String> {
     		} else if (key.equals(DETAIL)) {
     			if (noteType.equals(NoteType.TYPE_REFERENCE)) {
     				String verse = StringUtils.isNotEmpty(osisRef) ? osisRef : noteText; 
-    				//TODO xxxtodo this use of doc is odd need to tidy up this view in service code
-    				retval = SwordApi.getInstance().getPlainText(CurrentPageManager.getInstance().getCurrentBible().getCurrentDocument(), verse, 1);
+    				retval = SwordApi.getInstance().getPlainText(CurrentPassage.getInstance().getCurrentDocument(), verse, 1);
     			}
     		} else {
     			retval = "Error";
@@ -77,10 +75,7 @@ public class Note extends HashMap<String, String> {
 		} else {
 			ref = noteText;
 		}
-		//xxxtodo also need to switch docs
-		CurrentPageManager.getInstance().getCurrentBible().setKey(ref);
-		CurrentPageManager.getInstance().showBible();
-		
+		CurrentPassage.getInstance().setKey(ref);
 	}
 
 	@Override

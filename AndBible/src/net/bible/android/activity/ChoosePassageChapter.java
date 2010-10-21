@@ -5,14 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.bible.android.activity.base.ExpandableListActivityBase;
-import net.bible.android.control.page.CurrentPageManager;
+import net.bible.android.CurrentPassage;
 
-import org.crosswire.jsword.passage.NoSuchVerseException;
-import org.crosswire.jsword.passage.Verse;
 import org.crosswire.jsword.versification.BibleInfo;
+import org.crosswire.jsword.versification.BookName;
 
 import android.app.Activity;
+import android.app.ExpandableListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,11 +28,9 @@ import android.widget.SimpleExpandableListAdapter;
  * @see gnu.lgpl.License for license details.<br>
  *      The copyright to this program is held by it's author.
  */
-public class ChoosePassageChapter extends ExpandableListActivityBase {
+public class ChoosePassageChapter extends ExpandableListActivity {
 	private static final String TAG = "ChoosePassageChapter";
 	
-	private int mBibleBookNo=1;
-
 	private static final String GROUP_DESC = "GROUP_DESC";
 	private static final String CHAPTER_DESC = "CHAPTER_DESC";
 	private static final String CHAPTER_NO = "CHAPTER_NO";
@@ -41,6 +38,8 @@ public class ChoosePassageChapter extends ExpandableListActivityBase {
 	private static final int MIN_CHAPTERS_TO_GROUP = 15;
 	
 	private static final String CHAPTER_PRE = "Chapter ";
+	private static final String CHAPTER_SEP = " chapters ";
+	private static final String TO = " to ";
 
 	private ExpandableListAdapter mAdapter;
 
@@ -54,14 +53,11 @@ public class ChoosePassageChapter extends ExpandableListActivityBase {
 
         setContentView(R.layout.passage_chapter_chooser);
 
-        mBibleBookNo = getIntent().getIntExtra("BOOK_NO", 1);
-
         ExpandableListAdapter adapter = createAdapter();
         setListAdapter(adapter);
 
-        Log.d(TAG, "Book no:"+mBibleBookNo);
         // if there is only 1 group then expand it automatically
-        if (getNumberOfGroups(mBibleBookNo)==1) {
+        if (getNumberOfGroups(CurrentPassage.getInstance().getCurrentBibleBook())==1) {
             getExpandableListView().expandGroup(0);
         }
 }
@@ -75,9 +71,11 @@ public class ChoosePassageChapter extends ExpandableListActivityBase {
     	ListAdapter adapter = null;
     	
     	try {
-    		if (mBibleBookNo>0) {
+    		BookName book = CurrentPassage.getInstance().getCurrentBibleBook();
+
+    		if (book!=null) {
         		Log.d(TAG, "Populating chapters list");
-        		int numGroups = getNumberOfGroups(mBibleBookNo);
+        		int numGroups = getNumberOfGroups(book);
 		        		        
 //        		boolean groupChapters = numChapters > MIN_CHAPTERS_TO_GROUP;
         		
@@ -88,11 +86,11 @@ public class ChoosePassageChapter extends ExpandableListActivityBase {
                 for (int groupNo = 0; groupNo < numGroups; groupNo++) {
                     Map<String, String> curGroupMap = new HashMap<String, String>();
                     groupData.add(curGroupMap);
-                    curGroupMap.put(GROUP_DESC, getGroupName(mBibleBookNo, groupNo));
+                    curGroupMap.put(GROUP_DESC, getGroupName(book, groupNo));
                     
                     // add all chapters in current group to list
                     List<Map<String, Object>> children = new ArrayList<Map<String, Object>>();
-                    for (int chapter=getGroupStart(groupNo); chapter<=getGroupEnd(mBibleBookNo, groupNo); chapter++) {
+                    for (int chapter=getGroupStart(groupNo); chapter<=getGroupEnd(book, groupNo); chapter++) {
                         Map<String, Object> curChapterInfoMap = new HashMap<String, Object>();
                         children.add(curChapterInfoMap);
                         curChapterInfoMap.put(CHAPTER_DESC, CHAPTER_PRE+chapter);
@@ -147,8 +145,7 @@ public class ChoosePassageChapter extends ExpandableListActivityBase {
     private void chapterSelected(int chapter) {
 		Log.d(TAG, "Chapter selected:"+chapter);
 		try {
-			//xxxtodo think how to manage common verse between bible and commentary
-			CurrentPageManager.getInstance().getCurrentPage().setKey(new Verse(mBibleBookNo, chapter, 1));
+			CurrentPassage.getInstance().setCurrentChapter( chapter );
 			onSave(null);
 
 		} catch (Exception e) {
@@ -163,10 +160,9 @@ public class ChoosePassageChapter extends ExpandableListActivityBase {
     	finish();    
     }
 
-    private int getNumberOfGroups(int bibleBookNo) {
-    	Log.d(TAG, "Finding num groups in bookno:"+bibleBookNo);
+    private int getNumberOfGroups(BookName book) {
     	try {
-	        int numChapters = BibleInfo.chaptersInBook(bibleBookNo);
+	        int numChapters = BibleInfo.chaptersInBook(book.getNumber());
 	        return (int)Math.ceil( (double)numChapters / 10.0d );
 		} catch (Exception e) {
 			Log.e(TAG, "Error calculating number of chapter groups", e);
@@ -174,21 +170,22 @@ public class ChoosePassageChapter extends ExpandableListActivityBase {
 		}
     }
     
-    private String getGroupName(int bibleBookNo, int groupNo) {
-    	try {
-    		return getString(R.string.chapter_range, BibleInfo.getLongBookName(bibleBookNo), getGroupStart(groupNo), getGroupEnd(mBibleBookNo, groupNo));
-    	} catch (NoSuchVerseException e) {
-    		Log.e(TAG, "Invalid verse", e);
-    		return "Error";
-    	}
+    private String getGroupName(BookName book, int groupNo) {
+    	StringBuffer buff = new StringBuffer();
+    	buff.append(book.getLongName()).append(CHAPTER_SEP);
+    	buff.append(getGroupStart(groupNo))
+    		.append(TO)
+    		.append(getGroupEnd(book, groupNo));
+    	
+    	return buff.toString();
     }
     
     private int getGroupStart(int groupNo) {
     	return (groupNo*10)+1;
     }
-    private int getGroupEnd(int bibleBookNo, int groupNo) {
+    private int getGroupEnd(BookName book, int groupNo) {
     	try {
-	    	int chaptersInBook = BibleInfo.chaptersInBook(bibleBookNo);
+	    	int chaptersInBook = BibleInfo.chaptersInBook(book.getNumber());
 	    	return Math.min(chaptersInBook, (groupNo+1)*10);
     	} catch (Exception e) {
     		Log.e(TAG, "Error calculating chapters in book", e);

@@ -28,8 +28,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import net.bible.android.util.CommonUtil;
-import net.bible.service.common.ParseException;
 import net.bible.service.sword.Logger;
 import net.bible.service.sword.SwordApi;
 
@@ -97,7 +95,7 @@ public class PdaLuceneIndexCreator {
     public static final String FIELD_NOTE = "note"; //$NON-NLS-1$
 
     /** we are on a device with limited ram so don't use too much */
-    private static final int MAX_RAM_BUFFER_SIZE_MB = 1;
+    private static final int MAX_RAM_BUFFER_SIZE_MB = 4;
     
     private static final String TAG = "PdaLuceneIndexCreator";
     
@@ -128,7 +126,7 @@ public class PdaLuceneIndexCreator {
         Progress job = JobManager.createJob(UserMsg.INDEX_START.toString(book.getInitials()), Thread.currentThread(), false);
 
         IndexStatus finalStatus = IndexStatus.UNDONE;
-        // Need to test both analyzers - does the LuceneAnalyzer work, the SimpleAnalyzer did??? 
+        //todo *** Need to test both analyzers - does the LuceneAnalyzer work, teh SimpleAnalyzer did??? 
         Analyzer analyzer = new LuceneAnalyzer(book); //SimpleAnalyzer();
 
         List<Key> errors = new ArrayList<Key>();
@@ -140,33 +138,26 @@ public class PdaLuceneIndexCreator {
                 book.setIndexStatus(IndexStatus.CREATING);
 
                // Create the index in core.
-                IndexWriter writer = null;
+                Directory destination = FSDirectory.open(new File(tempPath.getCanonicalPath()));
+                IndexWriter writer = new IndexWriter(destination, analyzer, true, IndexWriter.MaxFieldLength.UNLIMITED);
+                writer.setRAMBufferSizeMB(MAX_RAM_BUFFER_SIZE_MB);
+                logger.debug("Beginning indexing "+book.getName());
                 try {
-	                Directory destination = FSDirectory.open(new File(tempPath.getCanonicalPath()));
-	                writer = new IndexWriter(destination, analyzer, true, IndexWriter.MaxFieldLength.UNLIMITED);
-	                writer.setRAMBufferSizeMB(MAX_RAM_BUFFER_SIZE_MB);
-	                logger.debug("Beginning indexing "+book.getName());
-	                try {
-		                Key keyList = PassageKeyFactory.instance().getGlobalKeyList(); //getKey("Genesis");
-		                generateSearchIndexImpl(job, errors, writer, keyList, 0);
-	                } catch (Exception e) {
-	                	e.printStackTrace();
-	                    throw new BookException(UserMsg.INSTALL_FAIL);                	
-	                }
-	                logger.info("Finished indexing "+book.getName()+" starting optimisation");
-	
-	                job.setSectionName(UserMsg.OPTIMIZING.toString());
-	                job.setWork(95);
-	
-	                // Consolidate the index into the minimum number of files.
-	                // writer.optimize(); /* Optimize is done by addIndexes */
-	                writer.optimize();
-                } finally {
-                	// writer must be closed even on error to release the Lucene Lock
-                	if (writer!=null) {
-                		writer.close();
-                	}
+	                Key keyList = PassageKeyFactory.instance().getGlobalKeyList(); //getKey("Genesis");
+	                generateSearchIndexImpl(job, errors, writer, keyList, 0);
+                } catch (Exception e) {
+                	e.printStackTrace();
+                    throw new BookException(UserMsg.INSTALL_FAIL);                	
                 }
+                logger.info("Finished indexing "+book.getName()+" starting optimisation");
+
+                job.setSectionName(UserMsg.OPTIMIZING.toString());
+                job.setWork(95);
+
+                // Consolidate the index into the minimum number of files.
+                // writer.optimize(); /* Optimize is done by addIndexes */
+                writer.optimize();
+                writer.close();
 
                 job.setCancelable(false);
                 if (!job.isFinished()) {
@@ -196,8 +187,6 @@ public class PdaLuceneIndexCreator {
         } finally {
             book.setIndexStatus(finalStatus);
             job.done();
-            // ensure the temp path is gone - errors can leave it there and cause further problems
-            CommonUtil.deleteDirectory(tempPath);
         }
     }
 
@@ -232,16 +221,12 @@ public class PdaLuceneIndexCreator {
                 DataPolice.setKey(subkey);
 
                 try {
-                	canonicalText = SwordApi.getInstance().getCanonicalText(book, subkey);
+                	canonicalText = SwordApi.getInstance().getCanonicalText(book, subkey, 1);
                 } catch (NoSuchKeyException e) {
                 	logger.warn("No such key:"+subkey.getName());
                     errors.add(subkey);
                     continue;
-	            } catch (ParseException e) {
-	            	logger.warn("Parse exception:"+subkey.getName());
-	                errors.add(subkey);
-	                continue;
-	            }
+                }
 
                 // Remove all fields from the document
                 doc.getFields().clear();
@@ -267,13 +252,11 @@ public class PdaLuceneIndexCreator {
 	                    oldRootName = rootName;
 	                    job.setSectionName(rootName);
 	                }
-	                percent = 95 * subCount / size;
-	                job.setWork(percent);
-
-	                // and force a garbage collect every so often
-	                System.gc();
                 }
                 
+                percent = 95 * subCount / size;
+
+                job.setWork(percent);
 
                 // This could take a long time ...
                 Thread.yield();

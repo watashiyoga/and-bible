@@ -1,18 +1,15 @@
 package net.bible.android.activity;
 
-import net.bible.android.activity.base.ActivityBase;
-import net.bible.android.activity.base.Dialogs;
-import net.bible.android.control.BibleContentManager;
-import net.bible.android.control.PassageChangeMediator;
-import net.bible.android.control.page.CurrentBiblePage;
-import net.bible.android.control.page.CurrentPageManager;
+import net.bible.android.CurrentPassage;
 import net.bible.android.device.TextToSpeechController;
+import net.bible.android.util.ActivityBase;
 import net.bible.android.util.CommonUtil;
 import net.bible.android.util.DataPipe;
+import net.bible.android.view.BibleContentManager;
 import net.bible.android.view.BibleSwipeListener;
 import net.bible.android.view.BibleView;
+import net.bible.android.view.PassageChangeMediator;
 import net.bible.service.history.HistoryManager;
-import net.bible.service.sword.SwordApi;
 
 import org.crosswire.jsword.book.Book;
 import org.crosswire.jsword.index.IndexStatus;
@@ -21,7 +18,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
@@ -58,12 +54,14 @@ public class MainBibleActivity extends ActivityBase {
         setContentView(R.layout.main_bible_view);
 
         // create related objects
-        gestureDetector = new GestureDetector( new BibleSwipeListener(MainBibleActivity.this) );
+        gestureDetector = new GestureDetector( new BibleSwipeListener(this) );
         bibleWebView = (BibleView)findViewById(R.id.main_text);
-    	bibleContentManager = new BibleContentManager(bibleWebView, MainBibleActivity.this);
+    	bibleContentManager = new BibleContentManager(bibleWebView, this);
 
-        PassageChangeMediator.getInstance().setMainBibleActivity(MainBibleActivity.this);
+        PassageChangeMediator.getInstance().setMainBibleActivity(this);
         
+    	HistoryManager.getInstance().initialise();
+    	
         restoreState();
 
     	// initialise title etc
@@ -75,9 +73,6 @@ public class MainBibleActivity extends ActivityBase {
     @Override
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
-
-		// force a recalculation of verse offsets
-		bibleContentManager.updateText(true);
 	}
 
 	/** 
@@ -97,7 +92,7 @@ public class MainBibleActivity extends ActivityBase {
 	        	handlerIntent = new Intent(this, ChooseDocument.class);
 	        	break;
 	        case R.id.selectPassageButton:
-	        	handlerIntent = new Intent(this, CurrentPageManager.getInstance().getCurrentPage().getKeyChooserActivity());
+	        	handlerIntent = new Intent(this, ChoosePassageBook.class);
 	        	break;
 	        case R.id.searchButton:
 	        	handlerIntent = getSearchIntent();
@@ -118,7 +113,7 @@ public class MainBibleActivity extends ActivityBase {
 	        	break;
 	        case R.id.downloadButton:
 	        	if (!CommonUtil.isInternetAvailable()) {
-	            	showErrorMsg(getString(R.string.no_internet_connection));
+	            	showDialog(INTERNET_NOT_AVAILABLE_DIALOG);
 	        	} else {
 	        		handlerIntent = new Intent(this, Download.class);
 	        	}
@@ -152,7 +147,7 @@ public class MainBibleActivity extends ActivityBase {
 	        		tts.stop();
 	        	} else {
 	        		Log.d(TAG, "Tell TTS to say current chapter");
-		        	tts.speak(this, CurrentPageManager.getInstance().getCurrentPage());
+		        	tts.speak(this, CurrentPassage.getInstance());
 	        	}
 	        	isHandled = true;
 	        	break;
@@ -187,8 +182,7 @@ public class MainBibleActivity extends ActivityBase {
     }
 
     private Intent getSearchIntent() {
-    	//xxxtodo is search relevant to all doc types? - some don't have verse keys so need to check it works
-    	Book book = CurrentPageManager.getInstance().getCurrentPage().getCurrentDocument();
+    	Book book = CurrentPassage.getInstance().getCurrentDocument();
     	IndexStatus indexStatus = book.getIndexStatus();
     	Log.d(TAG, "Index status:"+indexStatus);
     	if (indexStatus.equals(IndexStatus.DONE)) {
@@ -211,13 +205,13 @@ public class MainBibleActivity extends ActivityBase {
 			}
 		});
     }
-    /** called by PassageChangeMediator after a new passage has been changed and displayed
+    /** called after a new passage has been changed and displayed
      */
     public void onPassageChanged() {
     	runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-		    	String passageDesc = CurrentPageManager.getInstance().getCurrentPage().getKeyDescription();
+		    	String passageDesc = CurrentPassage.getInstance().toString();
 		    	setTitle(passageDesc);
 				setProgressBarIndeterminateVisibility(false);
 			}
@@ -230,14 +224,14 @@ public class MainBibleActivity extends ActivityBase {
     	Log.i(TAG, "Saving instance state");
 		super.onPause();
     	SharedPreferences settings = getSharedPreferences(TAG, 0);
-		CurrentPageManager.getInstance().saveState(settings);
+		CurrentPassage.getInstance().saveState(settings);
 	}
 
     private void restoreState() {
     	try {
         	Log.i(TAG, "Restore instance state");
         	SharedPreferences settings = getSharedPreferences(TAG, 0);
-    		CurrentPageManager.getInstance().restoreState(settings);
+    		CurrentPassage.getInstance().restoreState(settings);
     	} catch (Exception e) {
     		Log.e(TAG, "Restore error", e);
     	}
@@ -251,18 +245,8 @@ public class MainBibleActivity extends ActivityBase {
         inflater.inflate(R.menu.main, menu);
         return true;
     }
-    
- 
-    @Override
-	public boolean onPrepareOptionsMenu(Menu menu) {
-		super.onPrepareOptionsMenu(menu);
-		
-		CurrentPageManager.getInstance().getCurrentPage().updateOptionsMenu(menu);
-		// must return for menu to be displayed
-		return true;
-	}
 
-	// handle swipe left and right
+    // handle swipe left and right
     // http://android-journey.blogspot.com/2010_01_01_archive.html
     //http://android-journey.blogspot.com/2010/01/android-gestures.html
     // above dropped in favour of simpler method below
@@ -273,8 +257,4 @@ public class MainBibleActivity extends ActivityBase {
 		return super.dispatchTouchEvent(motionEvent);
 	}
 	
-	private void showSplashScreen() {
-		Intent intent = new Intent(this, SplashScreen.class);
-		startActivity(intent);
-	}
  }

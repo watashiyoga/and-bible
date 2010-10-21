@@ -1,13 +1,13 @@
 package net.bible.service.history;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Stack;
 
-import net.bible.android.control.page.CurrentPageManager;
+import net.bible.android.CurrentPassage;
 
-import org.crosswire.jsword.book.Book;
 import org.crosswire.jsword.passage.Key;
 
 import android.util.Log;
@@ -26,6 +26,15 @@ public class HistoryManager {
 		return singleton;
 	}
 	
+	public void initialise() {
+		CurrentPassage.getInstance().addObserver(new Observer() {
+			@Override
+			public void update(Observable observable, Object data) {
+				verseChanged();
+			}
+    	});
+	}
+	
 	public boolean canGoBack() {
 		return history.size()>1;
 	}
@@ -33,14 +42,13 @@ public class HistoryManager {
 	/**
 	 *  called when a verse is changed
 	 */
-	public void pageChanged() {
+	public void verseChanged() {
 		// if we cause the change by requesting Back then ignore it
 		if (!isGoingBack) {
-			Book doc = CurrentPageManager.getInstance().getCurrentPage().getCurrentDocument();
-			Key verse = CurrentPageManager.getInstance().getCurrentPage().getKey();
+			Key verse = CurrentPassage.getInstance().getKey();
 			if (verse!=null) {
 				Log.d(TAG, "Adding "+verse+" to history");
-				VerseHistoryItem item = new VerseHistoryItem(doc, verse);
+				VerseHistoryItem item = new VerseHistoryItem(verse);
 				add(history, item);
 			}
 		}
@@ -73,8 +81,6 @@ public class HistoryManager {
 	
 	public List<HistoryItem> getHistory() {
 		List<HistoryItem> allHistory = new ArrayList<HistoryItem>(history);
-		// reverse so most recent items are at top rather than end
-		Collections.reverse(allHistory);
 		return allHistory;
 	}
 	

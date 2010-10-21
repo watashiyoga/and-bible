@@ -12,9 +12,6 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 import net.bible.android.SharedConstants;
-import net.bible.service.common.ParseException;
-import net.bible.service.common.Utils;
-import net.bible.service.download.DownloadManager;
 import net.bible.service.format.FormattedDocument;
 import net.bible.service.format.OsisToCanonicalTextSaxHandler;
 import net.bible.service.format.OsisToHtmlSaxHandler;
@@ -31,8 +28,11 @@ import org.crosswire.jsword.book.BookMetaData;
 import org.crosswire.jsword.book.Books;
 import org.crosswire.jsword.book.OSISUtil;
 import org.crosswire.jsword.book.install.InstallException;
+import org.crosswire.jsword.book.install.InstallManager;
+import org.crosswire.jsword.book.install.Installer;
 import org.crosswire.jsword.book.sword.SwordBookPath;
 import org.crosswire.jsword.book.sword.SwordConstants;
+import org.crosswire.jsword.bridge.BookInstaller;
 import org.crosswire.jsword.index.IndexStatus;
 import org.crosswire.jsword.index.lucene.PdaLuceneIndexManager;
 import org.crosswire.jsword.passage.Key;
@@ -41,6 +41,7 @@ import org.crosswire.jsword.passage.Passage;
 import org.xml.sax.SAXException;
 
 import android.content.SharedPreferences;
+import android.os.Environment;
 import android.util.Log;
 
 /** JSword facade
@@ -61,14 +62,9 @@ public class SwordApi {
 	
 	private static final String CROSSWIRE_REPOSITORY = "CrossWire";
 	
-	private DownloadManager downloadManager;
-
-	private static BookFilter SUPPORTED_DOCUMENT_TYPES = BookFilters.either(BookFilters.either(BookFilters.getBibles(), BookFilters.getCommentaries()), BookFilters.getDictionaries());
 	private SharedPreferences preferences;
 	
-	private static boolean isSwordLoaded;
-	
-	private static boolean isAndroid = Utils.isAndroid();
+	private static boolean isAndroid = true;
     private static final Logger log = new Logger(SwordApi.class.getName()); 
 
 	public static SwordApi getInstance() {
@@ -91,6 +87,7 @@ public class SwordApi {
 		try {
 			if (isAndroid) {
 				// ensure required module directories exist and register them with jsword
+				
 				File moduleDir = SharedConstants.MODULE_DIR;
 
 				// main module dir
@@ -101,21 +98,14 @@ public class SwordApi {
 				ensureDirExists(new File(moduleDir, SwordConstants.DIR_DATA));
 				// indexes
 				ensureDirExists(new File(moduleDir, LUCENE_DIR));
-
+				
 				// the second value below is the one which is used in effectively all circumstances
 		        CWProject.setHome("jsword.home", moduleDir.getAbsolutePath(), SharedConstants.MANUAL_INSTALL_DIR.getAbsolutePath()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-
-		        // the following causes Sword to initialise itself and can take quite a few seconds
+	
 				SwordBookPath.setAugmentPath(new File[] {SharedConstants.MANUAL_INSTALL_DIR});  // add manual install dir to this list
-				
-				// because the above line causes initialisation set the is initialised flag here
-				isSwordLoaded = true;
 				
 				log.debug(("Sword paths:"+getPaths()));
 			}
-			
-			downloadManager = new DownloadManager();
-
 		} catch (Exception e) {
 			log.error("Error initialising", e);
 		}
@@ -125,28 +115,6 @@ public class SwordApi {
 		log.debug("Getting bibles");
 		List<Book> documents = Books.installed().getBooks(BookFilters.getBibles());
 		log.debug("Got bibles, Num="+documents.size());
-		isSwordLoaded = true;
-		return documents;
-	}
-
-	public List<Book> getBooks(final BookCategory bookCategory) {
-		log.debug("Getting commentaries");
-		List<Book> documents = Books.installed().getBooks(new BookFilter() {
-			@Override
-	        public boolean test(Book book) {
-	            return book.getBookCategory().equals(bookCategory) && !book.isLocked();
-	        }
-		});
-		log.debug("Got books, Num="+documents.size());
-		isSwordLoaded = true;
-		return documents;
-	}
-
-	public List<Book> getDictionaries() {
-		log.debug("Getting dictionaries");
-		List<Book> documents = Books.installed().getBooks(BookFilters.getDictionaries());
-		log.debug("Got dictionaries, Num="+documents.size());
-		isSwordLoaded = true;
 		return documents;
 	}
 
@@ -157,10 +125,10 @@ public class SwordApi {
 	public List<Book> getDocuments() {
 		log.debug("Getting books");
 		// currently only bibles and commentaries are supported
-		List<Book> allDocuments = Books.installed().getBooks(SUPPORTED_DOCUMENT_TYPES);
+		List<Book> allDocuments = Books.installed().getBooks(BookFilters.getBibles());
+		allDocuments.addAll(Books.installed().getBooks(BookFilters.getCommentaries()));
 		
 		log.debug("Got books, Num="+allDocuments.size());
-		isSwordLoaded = true;
 		return allDocuments;
 	}
 
@@ -170,17 +138,39 @@ public class SwordApi {
 		return Books.installed().getBook(initials);
 	}
 	
-	public List<Book> getDownloadableDocuments() throws InstallException {
+	public List<Book> getDownloadableDocuments() {
 		log.debug("Getting downloadable documents");
 		
-		// currently we just handle bibles, commentaries, or dictionaries
-        return downloadManager.getDownloadableBooks(SUPPORTED_DOCUMENT_TYPES, CROSSWIRE_REPOSITORY);
+		// currently we just handle bibles and commentaries
+		BookFilter filter = BookFilters.either(BookFilters.getBibles(), BookFilters.getCommentaries());
+		
+        InstallManager imanager = new InstallManager();
+
+        // If we know the name of the installer we can get it directly
+        Installer installer = imanager.getInstaller(CROSSWIRE_REPOSITORY);
+
+        // Now we can get the list of books
+        try {
+        	Log.d(TAG, "getting downloadable books");
+        	if (installer.getBooks().size()==0) {
+        		//todo should warn user of implications of downloading book list e.g. from persecuted country
+        		log.warn("Auto reloading book list");
+        		installer.reloadBookList();
+        	}
+        } catch (InstallException e) {
+            e.printStackTrace();
+        }
+
+        // Get a list of all the available books
+        List<Book> documents = installer.getBooks(filter); //$NON-NLS-1$
+		
+    	Log.i(TAG, "number of documents available:"+documents.size());
+
+		return documents;
 	}
-
+	
 	public void downloadDocument(Book document) throws InstallException, BookException {
-		downloadManager.installBook(CROSSWIRE_REPOSITORY, document);
-
-//		downloadManager.installIndex(CROSSWIRE_REPOSITORY, document);
+		new BookInstaller().installBook(CROSSWIRE_REPOSITORY, document);
 	}
 
 	/** this custom index creation has been optimised for slow, low memory devices
@@ -217,7 +207,6 @@ public class SwordApi {
 	{
 		FormattedDocument retVal = new FormattedDocument();
 		if (!book.contains(key)) {
-			//TODO this should include css to change to night mode if necessary
 			retVal.setHtmlPassage("Not found in document");
 		} else {
 			if ("OSIS".equals(book.getBookMetaData().getProperty("SourceType")) &&
@@ -249,7 +238,7 @@ public class SwordApi {
         return retVal;
 	}
 
-	private synchronized FormattedDocument readHtmlTextStandardJSwordMethod(Book book, Key key, int maxKeyCount) throws NoSuchKeyException, BookException, IOException, SAXException, URISyntaxException
+	private FormattedDocument readHtmlTextStandardJSwordMethod(Book book, Key key, int maxKeyCount) throws NoSuchKeyException, BookException, IOException, SAXException, URISyntaxException
 	{
 		log.debug("Using standard JSword to fetch document data");
 		FormattedDocument retVal = new FormattedDocument();
@@ -311,7 +300,7 @@ public class SwordApi {
      * @param reference
      *            a reference, appropriate for the book, of one or more entries
      */
-    public String getCanonicalText(Book book, Key key) throws NoSuchKeyException, BookException, ParseException {
+    public String getCanonicalText(Book book, Key key, int maxKeyCount) throws NoSuchKeyException, BookException {
 		InputStream is = new OSISInputStream(book, key);
 
 		OsisToCanonicalTextSaxHandler osisToCanonical = getCanonicalTextSaxHandler(book);
@@ -320,14 +309,14 @@ public class SwordApi {
 			getSAXParser().parse(is, osisToCanonical);
 		} catch (Exception e) {
 			log.error("SAX parser error", e);
-			throw new ParseException("SAX parser error", e);
+//todo sort MsgBase			throw new BookException("SAX parser error", e);
 		}
 		
 		return osisToCanonical.toString();
     }
 
     private SAXParser saxParser;
-    private SAXParser getSAXParser() throws ParseException {
+    private SAXParser getSAXParser() {
     	try {
 	    	if (saxParser==null) {
 	    		SAXParserFactory spf = SAXParserFactory.newInstance();
@@ -336,7 +325,7 @@ public class SwordApi {
 	    	}
 		} catch (Exception e) {
 			log.error("SAX parser error", e);
-			throw new ParseException("SAX parser error", e);
+//todo sort MsgBase			throw new BookException("SAX parser error", e);
 		}
 		return saxParser;
     }
@@ -388,8 +377,7 @@ public class SwordApi {
 		osisToHtml.setLeftToRight(bmd.isLeftToRight());
 		
 		if (preferences!=null) {
-			// show verse numbers if user has selected to show verse numbers AND teh book is a bible (so don't even try to show verses in a Dictionary)
-			osisToHtml.setShowVerseNumbers(preferences.getBoolean("show_verseno_pref", true) && book.getBookCategory().equals(BookCategory.BIBLE));
+			osisToHtml.setShowVerseNumbers(preferences.getBoolean("show_verseno_pref", true));
 			osisToHtml.setShowNotes(preferences.getBoolean("show_notes_pref", true));
 			if (preferences.getBoolean("night_mode_pref", false)) {
 				osisToHtml.setExtraStylesheet(NIGHT_MODE_STYLESHEET);
@@ -437,13 +425,5 @@ public class SwordApi {
 		if (!dir.exists() || !dir.isDirectory()) {
 			dir.mkdirs();
 		}
-	}
-
-	/** needs to be static because otherwise the constructor triggers initialisation
-	 * 
-	 * @return
-	 */
-	static public boolean isSwordLoaded() {
-		return isSwordLoaded;
 	}
 }
