@@ -1,8 +1,6 @@
 #labels faq
 Frequently Asked Questions
 
-No there isn't much here yet but it should grow
-
 1. Can I manually add modules/documents to And Bible?
 
 Yes, you can copy modules to a jsword directory on your sd card.  Expand the module so that the .conf file is in sdcard/jsword/mods.d and the bible files in a subdirectory of sdcard/jsword/modules e.g. sdcard\jsword\modules\texts\ztext\nettext.
@@ -22,3 +20,7 @@ Hebrew fonts are in Android 2.2 but right-to-left support is still not available
 4. And Bible is very large
 
 If you are on Android 2.2 then you can move it to the SD card.
+
+5. I want integration with Strong's Concordance.
+
+Yes, it is in the pipeline and should be delivered in a few weeks.
