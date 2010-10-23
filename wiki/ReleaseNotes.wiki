@@ -1,6 +1,12 @@
 #labels release,notes
 = Release Notes =
 
+== Release 0.0.13 (23/10/2010) ==
+  * Fix a memory leak
+  * Improve display of any error messages from JSword
+  * Add Help page
+  * update App Market
+
 == Release 0.0.12 (20/10/2010) ==
   * Simple dictionary prototype (no Strongs integration yet)
   * New and tidier look 
