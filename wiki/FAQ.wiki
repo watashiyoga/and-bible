@@ -18,3 +18,7 @@ Submit a question to mobile-devel@crosswire.org (see http://www.crosswire.org/ma
 Hebrew font support was added in Android 2.2.  Although some people have found out how to add Hebrew fonts to older versions of Android that is not supported although it may work for you.
 
 Hebrew fonts are in Android 2.2 but right-to-left support is still not available.
+
+4. And Bible is very large
+
+If you are on Android 2.2 then you can move it to the SD card.
