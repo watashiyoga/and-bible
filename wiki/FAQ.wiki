@@ -24,3 +24,9 @@ If you are on Android 2.2 then you can move it to the SD card.
 5. I want integration with Strong's Concordance.
 
 Yes, it is in the pipeline and should be delivered in a few weeks.
+
+6. Can I generate my ownindexes and manually copy them to my Android mobile.
+
+To allow for auto-uninstall of application generated files indexes are generated to the appropriate module sub-dir of [/mnt]/sdcard/Android/data/net.bible.android.activity/files/lucene/Sword e.g. ESV indexes are in ../lucene/Sword/ESV.
+
+Sword generated indexes work reliably in and-bible so you can generate them using a Sword based application like Xiphos and manually install them.
