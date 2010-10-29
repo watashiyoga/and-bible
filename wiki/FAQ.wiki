@@ -9,7 +9,8 @@ Modules/documents installed via the Download screen in And Bible will be placed 
 
 2. How can I get help?
 
-Submit a question to mobile-devel@crosswire.org (see http://www.crosswire.org/mailman/listinfo/mobile-devel).
+Either submit a question to mobile-devel@crosswire.org (see http://www.crosswire.org/mailman/listinfo/mobile-devel).
+Or to help.andbible@gmail.com.
 
 3. I just see squares instead of the Hebrew bible.
 
