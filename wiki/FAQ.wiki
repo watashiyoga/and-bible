@@ -20,7 +20,7 @@ Hebrew fonts are in Android 2.2 but right-to-left support is still not available
 
 4. And Bible is very large
 
-If you are on Android 2.2 then you can move it to the SD card.
+If you are on Android 2.2 then you can move it to the SD card.  And Bible was reduced from over 5 Mb to 1.5 Mb in version 0.0.14.
 
 5. I want integration with Strong's Concordance.
 
