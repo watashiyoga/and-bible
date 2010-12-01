@@ -1,0 +1,30 @@
+= Warning =
+The following notes are a high level overview.  Please embellish and correct according to your experience.
+
+= Eclipse =
+
+Eclipse is the preferred IDE for Android development.
+
+ # Download and install jdk 1.6.  
+ # Install the Android SDK.  
+ # Install Eclipse 3.5 (3.6 is not yet recommended by Google)  
+ # Install the Eclipse ADT plugin.  
+ # Ensure Eclipse has an svn plugin e.g. see subclipse.tigris.org  
+ # Check out the [http://code.google.com/p/and-bible/source/checkout And Bible source]  
+ # In eclipse right-click the And Bible project and select Run As/Android Application  
+
+= Other IDEs =
+
+Some IDEs like IDEA already have custom embedded Android Tools which can be used.  See this [http://developer.android.com/guide/developing/other-ide.html Google Help Page] for more information.
+
+= Ant =
+
+Much of this information is taken from [http://developer.android.com/guide/developing/other-ide.html Google Help Page]
+
+To compile with ant:
+
+ # Create AndBible/local.properties based on local.properties.example  
+ # Ensure jdk 1.6 is installed and on the path.  
+ # Ensure the Android SDK is installed and the tools directory is on the path.  
+ # Change to the AndBible project directory  
+ # Run 'ant debug'  
