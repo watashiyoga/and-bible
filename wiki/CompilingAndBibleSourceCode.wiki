@@ -1,5 +1,6 @@
-= Warning =
 The following notes are a high level overview.  Please embellish and correct according to your experience.
+
+When compiling you will notice warnings regarding anonymous inner classes.  These can be ignored and are due to libraries compiled with JDK 1.4.
 
 = Eclipse =
 
