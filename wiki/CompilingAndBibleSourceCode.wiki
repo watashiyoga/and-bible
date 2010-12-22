@@ -8,7 +8,7 @@ Eclipse is the preferred IDE for Android development.
 
  # Download and install jdk 1.6.
  # Install the [http://developer.android.com/sdk/index.html Android SDK].
- # Install Eclipse 3.5 (3.6 is not yet recommended by Google)
+ # Install [http://www.eclipse.org/downloads/ Eclipse] for Java EE developers
  # Install the [http://developer.android.com/sdk/eclipse-adt.html Eclipse ADT plugin].
  # Ensure Eclipse has an svn plugin e.g. see subclipse.tigris.org  
  # Check out the [http://code.google.com/p/and-bible/source/checkout And Bible source]
