@@ -1,6 +1,41 @@
 #labels release,notes
 = Release Notes =
 
+== Version 0.0.17 (31/12/2010) ==
+  * Build for App Market
+  * New Polish UI translation and updated Hungarian and Russian UI translations
+  * Minor fixes
+
+== Version 0.0.16 (27/12/2010) ==
+  * Bookmarks - Add a bookmark via the context menu when viewing a bible and edit or return to the bookmark using the Bookmarks manager accessible via the main menu.  
+  * Bookmark Labels - Bookmarks can be grouped together using labels.  Example labels might be  'Memory verses',  'Forgiveness', or 'Evangelism'.  The idea is taken from the way labels are used in gmail.  This is slightly different to the conventional bookmark categories because a bookmark can have several labels but could only be in one category.
+  * New Czech ui translation
+  * Updated French, and Norwegian interface translations
+  * Many changes in JSword code related to upgrading libraries to JDK 1.5 versions
+  * New jars for file download and search
+  * Allow fine adjustment of text size
+  * Retain current commentary selection in quick change button
+  * Smaller apk
+  * Faster downloads
+  * 'Notes and refs' moved to context menu
+  * Bug fixes
+
+== Release 0.0.15 (22/11/2010) ==
+  * Build for App Market
+  * Send current verse via SMS 
+
+== Release 0.0.14 (19/11/2010) ==
+  * Strongs Numbers display and link to Strong's Dictionary
+  * Adjustable text size
+  * Bug fixes - App switching, dictionary
+  * Index download
+  * Percentage complete in download progress bar now reflects actual file size
+  * Delete document, About document accessible via context menu
+  * Quick switch to another bible/commentary via title bar buttons
+  * Copy current verse to Clipboard
+  * Smaller apk (reduced from 5 Mb to 1.5 Mb)
+  * D-Pad support for chapter changes
+
 == Release 0.0.13 (23/10/2010) ==
   * Fix a memory leak
   * Improve display of any error messages from JSword
