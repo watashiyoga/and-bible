@@ -1,0 +1,20 @@
+= User Interface Translation =
+
+This document provides guidance on what is required to translate the And Bible user interface into your local language. 
+
+= Introduction =
+
+There are 2 sets of files to be translated
+* Two And Bible files found in this Google Code svn repository
+* Two JSword files found in the JSword repository
+
+
+
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
