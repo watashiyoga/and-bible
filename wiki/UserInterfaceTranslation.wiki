@@ -5,7 +5,7 @@ This document provides guidance on how to localise (translate) the And Bible use
 = Introduction =
 
 There are 2 sets of files to be translated
-  * Two And Bible files found in this Google Code svn repository
+  * Two And Bible files found in the And Bible Google Code [http://code.google.com/p/and-bible/source/browse/trunk/AndBible#AndBible%2Fres svn repository]
   * Up to two JSword files found in the JSword repository
 
 = And Bible xml files =
