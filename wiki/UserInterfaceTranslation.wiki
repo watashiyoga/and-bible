@@ -1,20 +1,21 @@
 = User Interface Translation =
 
-This document provides guidance on what is required to translate the And Bible user interface into your local language. 
+This document provides guidance on how to localise (translate) the And Bible user interface. 
 
 = Introduction =
 
 There are 2 sets of files to be translated
-* Two And Bible files found in this Google Code svn repository
-* Two JSword files found in the JSword repository
+  * Two And Bible files found in this Google Code svn repository
+  * Up to two JSword files found in the JSword repository
 
+= And Bible xml files =
+All And Bible resource files can be found in the [http://code.google.com/p/and-bible/source/browse/#svn%2Ftrunk%2FAndBible%2Fres res folder] in the And Bible source code repository.
 
+There are 2 And Bible xml files to be translated [http://and-bible.googlecode.com/svn/trunk/AndBible/res/values/strings.xml strings.xml] and [http://and-bible.googlecode.com/svn/trunk/AndBible/res/values/arrays.xml arrays.xml]
 
+These 2 xml files are in UTF-8 encoding so non-standard characters can be entered directly using a text editor like NotePad++.
 
+Only the text between the xml tags should be translated. The xml tags should not be changed.
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= JSword properties files =
+JSword resource files for translation can be found in the JSword source repository under [http://www.crosswire.org/svn/jsword/trunk/jsword/src/main/resources/org/crosswire/jsword/versification/ org.crosswire.jsword.versification].
