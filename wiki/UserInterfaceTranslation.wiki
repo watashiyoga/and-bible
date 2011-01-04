@@ -20,6 +20,6 @@ Only the text between the xml tags should be translated. The xml tags should not
 = JSword properties files =
 JSword resource files for translation can be found in the JSword source repository under [http://www.crosswire.org/svn/jsword/trunk/jsword/src/main/resources/org/crosswire/jsword/versification/ org.crosswire.jsword.versification].
 
-There are 2 properties files to be translated: BibleNames.properties and UserMsg.properties.
+There are 2 properties files to be translated: BibleNames.properties and UserMsg.properties.  Although many translations of BibleNames.properties already exist and so this file may not need to be translated.
 
 Properties files must be encoded in ISO 8859-1 character encoding. Characters that cannot be directly represented in this encoding can be written using Unicode escapes in the format \u1234. The Java native2ascii tool can be used to convert property files to and from other character encodings.  A list of escape numbers can be found in the left column of [http://www.utf8-chartable.de/ this table].
