@@ -26,4 +26,4 @@ Properties files must be encoded in ISO 8859-1 character encoding. Characters th
 
 
 = General Locale information =
-The list of iso639 [http://ftp.ics.uci.edu/pub/ietf/http/related/iso639.txt Language codes].
+The list of iso639 [http://ftp.ics.uci.edu/pub/ietf/http/related/iso639.txt language codes].
