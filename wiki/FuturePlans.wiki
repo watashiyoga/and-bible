@@ -68,10 +68,12 @@ For documents you want on your mobile but don't use often or for non directly us
 ==Better Localisation Support==
 Localisations merit a dedicated resource to organise, support, check, ...  Possibly integrate with Translations LaunchPad.
 
-==More Inter Document Links==
+==Others==
+More Inter Document Links
 Faster Start Up
 Tabbed Document selector
 Pictures & Maps
+Import & export of bookmarks
 
 =No Plans yet=
 
