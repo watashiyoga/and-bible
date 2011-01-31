@@ -80,4 +80,5 @@ Import & export of bookmarks
 Flexible verse selection
 Enhance/fix TTS suppport for non built-in versions like SVOX
 EverNote integration
-Personal Commentary
+Personal Commentary/Notes
+Highlight
