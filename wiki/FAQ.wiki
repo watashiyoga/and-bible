@@ -37,3 +37,8 @@ To allow for auto-uninstall of application generated files indexes are generated
 Sword generated indexes partially work in And Bible but fully compatible indexes must be generated using a recent JSword application on JDK 1.5+.
 
 The best, quickest and most reliable method to get a search index is to download it using And Bible as requested the first time you request a Search.
+
+7. Can you add an Exit button
+
+No.  Exit buttons should not be used in Android applications.
+http://stackoverflow.com/questions/4089496/android-app-exit-button
