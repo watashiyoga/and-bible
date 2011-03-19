@@ -5,11 +5,11 @@ This document provides guidance on how to localise (translate) the And Bible use
 = Introduction =
 
 There are 2 sets of files to be translated
-  * Two And Bible files found in the And Bible Google Code [http://code.google.com/p/and-bible/source/browse/trunk/AndBible#AndBible%2Fres svn repository]
+  * Two And Bible files found in the And Bible Google Code [http://and-bible.googlecode.com/svn/trunk/AndBible/res/ svn repository]
   * Up to two JSword files found in the [http://www.crosswire.org/svn/jsword/trunk/jsword/src/main/resources/org/crosswire/jsword/versification/ JSword repository]
 
 = And Bible xml files =
-All And Bible resource files can be found in the [http://code.google.com/p/and-bible/source/browse/#svn%2Ftrunk%2FAndBible%2Fres res folder] in the And Bible source code repository.
+All And Bible resource files can be found in the [http://and-bible.googlecode.com/svn/trunk/AndBible/res/ res folder] in the And Bible source code repository.
 
 There are 2 And Bible xml files to be translated [http://and-bible.googlecode.com/svn/trunk/AndBible/res/values/strings.xml strings.xml] and [http://and-bible.googlecode.com/svn/trunk/AndBible/res/values/arrays.xml arrays.xml]
 
