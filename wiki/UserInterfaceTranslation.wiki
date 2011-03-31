@@ -1,5 +1,9 @@
 = User Interface Translation =
 
+THE TRANSLATION ARCHITECTURE IS CURRENTLY BEING UPDATED AND THE INSTRUCTIONS BELOW SHOULD NOT BE USED.  PLEASE RETURN TO THIS PAGE IN A WEEK FOR FURTHER INSTRUCTIONS.
+
+
+
 This document provides guidance on how to localise (translate) the And Bible user interface. 
 
 = Introduction =
