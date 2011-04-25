@@ -9,28 +9,37 @@ The main source for modules to manually install is: http://www.crosswire.org/swo
 
 There is a list of module repositories here: http://www.crosswire.org/wiki/Module_Repositories
 
-Modules/documents installed via the Download screen in And Bible will be placed in an application specific directory and, in Android 2.2+, will be removed if the application is removed. 
+Modules/documents installed via the Download screen in And Bible will be placed in an application specific directory and, in Android 2.2+, will be removed if the application is removed.
 
-2. How can I get help?
+2. Can I delete a document from And Bible
+
+To delete a document:
+ * display the documents list
+ * long-press on the document
+ * select Delete
+
+This will also delete the document's index.
+
+3. How can I get help?
 
 Either submit a question to mobile-devel@crosswire.org (see http://www.crosswire.org/mailman/listinfo/mobile-devel).
 Or to help.andbible@gmail.com.
 
-3. I just see squares instead of the Hebrew bible.
+4. I just see squares instead of the Hebrew bible.
 
 Hebrew font support was added in Android 2.2.  Although some people have found out how to add Hebrew fonts to older versions of Android that is not supported although it may work for you.
 
 Hebrew fonts are in Android 2.2 but right-to-left support is still not available.
 
-4. And Bible is very large
+5. And Bible is very large
 
 If you are on Android 2.2 then you can move it to the SD card.  And Bible was reduced from over 5 Mb to 1.5 Mb in version 0.0.14.
 
-5. I want integration with Strong's Concordance.
+6. I want integration with Strong's Concordance.
 
 This has been implemented.  There are several bibles containing Strongs references one of which is the KJV.
 
-6. How can I go to a Strong's Reference Number
+7. How can I go to a Strong's Reference Number
 
 You can go to a Strong's reference by
 * clicking a link in a bible containing Strong's references
@@ -38,7 +47,7 @@ You can go to a Strong's reference by
 * swipe left/right when viewing a Strong's page to go to next/prev ref
 Release 0.4.0 will allow a list of all occurrences of a Strong's number to be displayed.
 
-7. Can I generate my own indexes and manually copy them to my Android mobile.
+8. Can I generate my own indexes and manually copy them to my Android mobile.
 
 To allow for auto-uninstall of application generated files indexes are generated to the appropriate module sub-dir of /mnt/sdcard/Android/data/net.bible.android.activity/files/lucene/Sword e.g. ESV indexes are in ../lucene/Sword/ESV.
 
@@ -46,7 +55,7 @@ Sword generated indexes partially work in And Bible but fully compatible indexes
 
 The best, quickest and most reliable method to get a search index is to download it using And Bible as requested the first time you request a Search.
 
-8. Can you add an Exit button
+9. Can you add an Exit button
 
 No.  Exit buttons should not be used in Android applications.
 http://stackoverflow.com/questions/4089496/android-app-exit-button
