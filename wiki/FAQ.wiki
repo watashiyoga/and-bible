@@ -30,6 +30,14 @@ If you are on Android 2.2 then you can move it to the SD card.  And Bible was re
 
 This has been implemented.  There are several bibles containing Strongs references one of which is the KJV.
 
+6. How can I go to a Strong's Reference Number
+
+You can go to a Strong's reference by
+* clicking a link in a bible containing Strong's references
+* when viewing Strong's select MENU/Contents and then enter the desired no e.g. 02227
+* swipe left/right when viewing a Strong's page to go to next/prev ref
+Release 0.4.0 will allow a list of all occurrences of a Strong's number to be displayed.
+
 6. Can I generate my own indexes and manually copy them to my Android mobile.
 
 To allow for auto-uninstall of application generated files indexes are generated to the appropriate module sub-dir of /mnt/sdcard/Android/data/net.bible.android.activity/files/lucene/Sword e.g. ESV indexes are in ../lucene/Sword/ESV.
