@@ -38,7 +38,7 @@ You can go to a Strong's reference by
 * swipe left/right when viewing a Strong's page to go to next/prev ref
 Release 0.4.0 will allow a list of all occurrences of a Strong's number to be displayed.
 
-6. Can I generate my own indexes and manually copy them to my Android mobile.
+7. Can I generate my own indexes and manually copy them to my Android mobile.
 
 To allow for auto-uninstall of application generated files indexes are generated to the appropriate module sub-dir of /mnt/sdcard/Android/data/net.bible.android.activity/files/lucene/Sword e.g. ESV indexes are in ../lucene/Sword/ESV.
 
@@ -46,7 +46,7 @@ Sword generated indexes partially work in And Bible but fully compatible indexes
 
 The best, quickest and most reliable method to get a search index is to download it using And Bible as requested the first time you request a Search.
 
-7. Can you add an Exit button
+8. Can you add an Exit button
 
 No.  Exit buttons should not be used in Android applications.
 http://stackoverflow.com/questions/4089496/android-app-exit-button
