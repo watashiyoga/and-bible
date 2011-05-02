@@ -2,6 +2,6 @@
 
 If you would like to volunteer to translate the And Bible user interface into another language or to update an existing translation then either e-mail [mailto:help.andbible@gmail.com And Bible Support] or volunteer via the And Bible discussion group.
 
-We are slowly migrating user interface translation over to Amanuens.  Currently And Bible strings are integrated into Amanuens and we are hoping to integrate strings used by JSword library in the near future.
+We are slowly migrating user interface translation over to a tool called Amanuens.  Currently And Bible strings are integrated into Amanuens and we are hoping to integrate strings used by JSword library in the near future.
 
 Mario co-ordinates user interface translation.
