@@ -1,33 +1,7 @@
 = User Interface Translation =
 
-THE TRANSLATION ARCHITECTURE IS CURRENTLY BEING UPDATED AND THE INSTRUCTIONS BELOW SHOULD NOT BE USED.  PLEASE RETURN TO THIS PAGE IN A WEEK FOR FURTHER INSTRUCTIONS.
+If you would like to volunteer to translate the And Bible user interface into another language ot to update an existing translation then either e-mail [mailto:help.andbible@gmail.com And Bible Support] or post to the And Bible discussion group.
 
+We are slowly migrating user interface translation over to Amanuens.  Currently And Bible strings are integrated into Amanuens and we are hoping to integrate strings used by JSword library in the near future.
 
-
-This document provides guidance on how to localise (translate) the And Bible user interface. 
-
-= Introduction =
-
-There are 2 sets of files to be translated
-  * Two And Bible files found in the And Bible Google Code [http://and-bible.googlecode.com/svn/trunk/AndBible/res/ svn repository]
-  * Up to two JSword files found in the [http://www.crosswire.org/svn/jsword/trunk/jsword/src/main/resources/ JSword repository]
-
-= And Bible xml files =
-All And Bible resource files can be found in the [http://and-bible.googlecode.com/svn/trunk/AndBible/res/ res folder] in the And Bible source code repository.
-
-There are 2 And Bible xml files to be translated [http://and-bible.googlecode.com/svn/trunk/AndBible/res/values/strings.xml strings.xml] and [http://and-bible.googlecode.com/svn/trunk/AndBible/res/values/arrays.xml arrays.xml]
-
-These 2 xml files are in UTF-8 encoding so non-standard characters can be entered directly using a text editor like NotePad++.
-
-Only the text between the xml tags should be translated. The xml tags should not be changed.
-
-= JSword properties files =
-JSword resource files for translation can be found in the JSword source repository under [http://www.crosswire.org/svn/jsword/trunk/jsword/src/main/resources/ jsword/src/main/resources].
-
-The most important property file to be translated is BibleNames.properties.  Although many translations of BibleNames.properties already exist and so this file may not need to be translated into your language.
-
-Properties files must be encoded in ISO 8859-1 character encoding. Characters that cannot be directly represented in this encoding can be written using Unicode escapes in the format \u1234. The Java native2ascii tool can be used to convert property files to and from other character encodings.  A simple [https://native2ascii.dev.java.net/ interface for native2ascii] is available.  Alternatively, a list of escape numbers can be found in the left column of [http://www.utf8-chartable.de/ this table].
-
-
-= General Locale information =
-The list of iso639 [http://ftp.ics.uci.edu/pub/ietf/http/related/iso639.txt language codes].
+Mario co-ordinates user interface translation.
