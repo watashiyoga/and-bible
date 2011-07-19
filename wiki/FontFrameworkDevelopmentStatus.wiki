@@ -1,5 +1,3 @@
-#Font Framework Development Status
-
 = Font Framework Development Status =
 
 This page gives an overview of the current status of font framework development.
