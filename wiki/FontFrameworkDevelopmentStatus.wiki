@@ -18,12 +18,12 @@ Here are my current plans.
 Allow experienced Sword users to associate a font with a module using sdcard/jsword/fonts folder.
 
 == Initial Implementation - Automate font override ==
-This will hopefully address Issue 1 and begin to address issue 3 for non complex languages.
+This will hopefully address 1 and begin to address 3 for non complex languages.
 
-1. Store fonts on a server.
-2. Associate fonts with a module or language.
-3. When a module is downloaded check the font association list and download a font if required.
-4. When displaying a page add the css to the header to load any required font
+  # Store fonts on a server.
+  # Associate fonts with a module or language.
+  # When a module is downloaded check the font association list and download a font if required.
+  # When displaying a page add the css to the header to load any required font
 
 == Shaping ==
 It has been suggested that And Bible includes Graphite integration and I hope to look into this and try it out.  Any comments from current users would be appreciated.  Graphite still requires fonts to be distributed so this would build on the initial font distribution framework.
