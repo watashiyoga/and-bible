@@ -32,10 +32,10 @@ The Android integration of Graphite seems to be being refined.
 
 == Current Status ==
 I have been testing various Greek fonts with the SBLGNT module.
-|| GentiumPlus-R.ttf || some missing chars in SBLGNT ||
+|| GentiumPlus-R.ttf || squares due to missing chars in SBLGNT ||
 || SBL_grk.ttf || looks perfect to me ||
-|| LinLibertine_R.otf || some missing chars in SBLGNT ||
-|| LinBiolinum_R.otf || some missing chars in SBLGNT ||
+|| LinLibertine_R.otf || squares due to missing chars in SBLGNT ||
+|| LinBiolinum_R.otf || squares due to missing chars in SBLGNT ||
 || GalSILR.ttf || looks good, possible missing char in Matt 1:6, etc ||
 || GalSILR-webfont.woff || woff doesn't seem to work - I think it is just Android 3.0+ but see http://stackoverflow.com/questions/3200069/css-fonts-on-android for fall back technique ||
 
