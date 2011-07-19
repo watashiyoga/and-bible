@@ -25,8 +25,12 @@ This will hopefully address 1 and begin to address 3 for non complex languages.
   # When a module is downloaded check the font association list and download a font if required.
   # When displaying a page add the css to the header to load any required font
 
+The above will hopefully provide the correct display of modules with no user intervention.  Experienced users will be able to change font using the jsword/fonts folder.
+
 == Shaping ==
-It has been suggested that And Bible includes Graphite integration and I hope to look into this and try it out.  Any comments from current users would be appreciated.  Graphite still requires fonts to be distributed so this would build on the initial font distribution framework.
+It has been suggested that And Bible includes Graphite integration to display rtl and complex languages and I hope to look into this and try it out.  Any comments from current users would be appreciated.  
+
+Graphite still requires fonts to be distributed so this would build on the initial font distribution framework.
 
 The Android integration of Graphite seems to be being refined.
 
