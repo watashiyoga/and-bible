@@ -7,10 +7,10 @@ This page gives an overview of the current status of font framework development.
 There have been lots of e-mails regarding font problems during the past year and I have made a start with an attempt to address some of those problems.  
 
 The main issues that have been raised are:
-# Greek breathing marks are not displayed.
-# Hebrew vowels not displayed because they prevent correct rtl display.
-# Certain language fonts are not available on Android
-# Certain language character shaping and rtl are not correct - related to 2.
+  # Greek breathing marks are not displayed.
+  # Hebrew vowels not displayed because they prevent correct rtl display.
+  # Certain language fonts are not available on Android
+  # Certain language character shaping and rtl are not correct - related to 2.
 
 Here are my current plans.
 
