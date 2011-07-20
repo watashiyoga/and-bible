@@ -45,7 +45,7 @@ So it seems that there are 2 fonts that look fine
 
 = Prototype Framework =
 
-I have built And Bible - Fonts which provides the ability for users to override the fonts used for a module.
+I have built And Bible - Fonts which provides the ability for users to override the fonts used for a module and can be downloaded from the Downloads page.
 
 To try it out
   # Install the new version on your mobile
