@@ -2,8 +2,6 @@
 
 This page gives an overview of the current status of font framework development.
 
-= Details =
-
 There have been lots of e-mails regarding font problems during the past year and I have made a start with an attempt to address some of those problems.  
 
 The main issues that have been raised are:
@@ -45,4 +43,20 @@ I have been testing various Greek fonts with the SBLGNT module.
 
 So it seems that there are 2 fonts that look fine
 
-So my current I have created a wiki page here that I will update as I progress.
+= Prototype Framework =
+
+I have built And Bible - Fonts which provides the ability for users to override the fonts used for a module.
+
+To try it out
+  # Install the new version on your mobile
+  # Start And Bible, download SBLGNT and note the squares that represent missing font characters
+  # Stop And Bible - Settings/Manage applications/And Bible/Force stop
+  # Create this folder on your Android mobile:  mnt/sdcard/jsword/fonts
+  # Copy the attached fonts.properties file which contains 'SBLGNT=GalSILR.ttf' to the above folder
+  # Get GalSil21.zip
+  # Extract GalSilR.ttf from the zip and copy to mnt/sdcard/jsword/fonts
+  # Start And Bible and check that SBLGNT now displays correctly
+
+Now you can associate different modules with other fonts by updating the properties file and copying the required font file to the fonts folder.
+
+Please let us know what works and what doesn't.  Hopefully a list of fonts can be built to automatically download selected fonts to mobiles to help display certain modules or languages.
