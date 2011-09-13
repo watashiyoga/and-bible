@@ -1,0 +1,27 @@
+#summary =Design of Personal Notes Feature
+
+= Introduction =
+
+Preparation for implementation of Personal Notes
+
+= Details =
+
+== Database ==
+Key // OSIS key  
+Timestamp // Date-time of creation  
+Note // User note - simple text at first  
+
+== Navigation Integration ==
+=== Creating a note ===
+[Add|Edit] Note // from Verse menu
+=== Editing a note ===
+[Add|Edit] Note // from Verse menu
+
+How to switch to Note list to pick a previous note?  Maybe 'Notes' menu item on Document menu.
+
+=== Deleting a Note ===
+Context menu on Notes list.
+
+
+== Interface ==
+Passage/Contents Menu item shows list of previous notes including verse, 1st line, date (if landscape)
