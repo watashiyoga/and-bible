@@ -1,7 +1,8 @@
-= Font Framework Development Status =
+= Font Framework =
 
-This page gives an overview of the current status of font framework development.
+Fonts can be overridden by module or language either manually by each user or centrally for all users.
 
+== Reason for Font Framework ==
 There have been lots of e-mails regarding font problems during the past year and I have made a start with an attempt to address some of those problems.  
 
 The main issues that have been raised are:
@@ -10,12 +11,18 @@ The main issues that have been raised are:
   # Certain language fonts are not available on Android
   # Certain language character shaping and rtl are not correct - related to 2.
 
-Here are my current plans.
+== Manual Override ==
 
-== Prototype ==
-Allow experienced Sword users to associate a font with a module using sdcard/jsword/fonts folder.
+Experienced Sword users can associate a font with a module or language using sdcard/jsword/fonts folder.
 
-== Initial Implementation - Automate font override ==
+  # Create this folder on your Android mobile:  mnt/sdcard/jsword/fonts
+  # Create fonts.properties containing mappings like 'SBLGNT=GalSILR.ttf' or 'fr=myFrenchFont.ttf' and copy the file to the above folder
+  # Copy any referenced font (ttf) files to the same folder
+  # Restart And Bible and test the font
+  # To adjust the font size you may also add settings like 'myFrenchFont.ttf=2' to increase the font size by 2.
+
+== Central Font Override ==
+
 This will hopefully address 1 and begin to address 3 for non complex languages.
 
   # Store fonts on a server.
@@ -40,23 +47,3 @@ I have been testing various Greek fonts with the SBLGNT module.
 || LinBiolinum_R.otf || squares due to missing chars in SBLGNT ||
 || GalSILR.ttf || looks good, possible missing char in Matt 1:6, etc ||
 || GalSILR-webfont.woff || woff doesn't seem to work - I think it is just Android 3.0+ but see http://stackoverflow.com/questions/3200069/css-fonts-on-android for fall back technique ||
-
-So it seems that there are 2 fonts that look fine
-
-= Prototype Framework =
-
-I have built And Bible - Fonts which provides the ability for users to override the fonts used for a module and can be downloaded from the Downloads page.
-
-To try it out
-  # Install the new version on your mobile
-  # Start And Bible, download SBLGNT and note the squares that represent missing font characters
-  # Stop And Bible - Settings/Manage applications/And Bible/Force stop
-  # Create this folder on your Android mobile:  mnt/sdcard/jsword/fonts
-  # Copy the attached fonts.properties file which contains 'SBLGNT=GalSILR.ttf' to the above folder
-  # Get GalSil21.zip
-  # Extract GalSilR.ttf from the zip and copy to mnt/sdcard/jsword/fonts
-  # Start And Bible and check that SBLGNT now displays correctly
-
-Now you can associate different modules with other fonts by updating the properties file and copying the required font file to the fonts folder.
-
-Please let us know what works and what doesn't.  Hopefully a list of fonts can be built to automatically download selected fonts to mobiles to help display certain modules or languages.
