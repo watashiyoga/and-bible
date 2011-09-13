@@ -2,7 +2,13 @@
 
 = Introduction =
 
-Preparation for implementation of Personal Notes
+Preparation for implementation of Personal Notes.  Initially a simple implementation allowing notes for any bible verse to be saved in a database on the mobile phone.
+
+There will be an 'Edit Note' screen allowing entry and modification of notes, and a 'Notes List' allowing selection of previous notes.
+
+Two new menu items will be made available.  'Notes' will take you to the Notes list.  'Add/Edit Note will take you to the 'Edit Note' screen.
+
+There will initially be no synchronization, export, backup functions although these may be added in future releases.
 
 = Details =
 
@@ -11,9 +17,12 @@ Key // OSIS key
 Timestamp // Date-time of creation  
 Note // User note - simple text at first  
 
+Do we want some sort of Label functionality?  I think not because we don't have that in Commentaries.
+
 == Navigation Integration ==
 === Creating a note ===
 [Add|Edit] Note // from Verse menu
+
 === Editing a note ===
 [Add|Edit] Note // from Verse menu
 
@@ -22,6 +31,10 @@ How to switch to Note list to pick a previous note?  Maybe 'Notes' menu item on 
 === Deleting a Note ===
 Context menu on Notes list.
 
-
 == Interface ==
+=== Notes List ===
 Passage/Contents Menu item shows list of previous notes including verse, 1st line, date (if landscape)
+
+=== New/Edit Note ===
+Current verse: read-only
+Text Box: enter note here
