@@ -1,0 +1,26 @@
+#summary Planned menu changes
+
+= Introduction =
+
+The Menu stretches over 2 screens via more.  Also i would like to remove the long-press menu that displays verse actions.
+
+I plan to have main menu buttons that reveal associated sub-menus.
+
+= Details =
+  * Application (bad name)
+    * Download Documents
+    * (Select)Document  // shows document selector
+    * History
+    * Bookmarks
+
+  * Document
+    * Passage/Content
+    * Find
+    * Speak
+
+  * Verse (can't call it verse if dict or book)
+    * Content of Verse context menu
+
+  * Administration
+    * Help
+    * Settings
