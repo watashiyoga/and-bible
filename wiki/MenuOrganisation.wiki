@@ -2,24 +2,32 @@
 
 = Introduction =
 
-The Menu stretches over 2 screens via more.  Also i would like to remove the long-press menu that displays verse actions.
+It would be good to 
+  * stop the Menu stretching over 2 screens via 'More'
+  * add some structure to the menus
+  * remove the long-press menu that displays verse actions
 
-I plan to have main menu buttons that reveal associated sub-menus.
+The plan is to have main menu buttons that reveal associated sub-menus.
 
 = Details =
   * Application (bad name)
+    * Document  // shows document selector
     * Download Documents
-    * (Select)Document  // shows document selector
     * History
     * Bookmarks
 
   * Document
     * Passage/Content
     * Find
+    * { Notes } // planned
     * Speak
 
   * Verse (can't call it verse if dict or book)
-    * Content of Verse context menu
+    * { [Add|Edit] note } // planned
+    * Footnotes and references
+    * Add bookmark
+    * Copy current verse
+    * Share current verse
 
   * Administration
     * Help
