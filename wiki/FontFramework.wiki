@@ -32,6 +32,8 @@ This will hopefully address 1 and begin to address 3 for non complex languages.
 
 The above will hopefully provide the correct display of modules with no user intervention.  Experienced users will be able to change font using the jsword/fonts folder.
 
+Currently only the SBLGNT font is overridden.
+
 == Shaping ==
 It has been suggested that And Bible includes Graphite integration to display rtl and complex languages and I hope to look into this and try it out.  Any comments from current users would be appreciated.  
 
