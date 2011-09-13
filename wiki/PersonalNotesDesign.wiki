@@ -1,4 +1,4 @@
-#summary =Design of Personal Notes Feature
+#summary Design of Personal Notes Feature
 
 = Introduction =
 
