@@ -13,9 +13,9 @@ There will initially be no synchronization, export, backup functions although th
 = Details =
 
 == Database ==
-Key // OSIS key  
-Timestamp // Date-time of creation  
-Note // User note - simple text at first  
+Key // OSIS key\\
+Timestamp // Date-time of creation\\
+Note // User note - simple text at first
 
 Do we want some sort of Label functionality?  I think not because we don't have that in Commentaries.
 
