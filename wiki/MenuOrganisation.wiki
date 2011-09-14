@@ -11,18 +11,18 @@ The plan is to have main menu buttons that reveal associated sub-menus.
 
 = Details =
   * Application (bad name)
-    * Document  // shows document selector
-    * Download Documents
+    * Select document  // shows document selector
+    * Download documents
     * History
     * Bookmarks
 
   * Document
-    * Passage/Content
+    * Passage (or Content if dict or book) // shows book/chapter/verse selector
     * Find
-    * { Notes } // planned
-    * Speak
+    * { Notes } // planned - will show a list of personal notes
+    * Speak // opens the Speak dialog
 
-  * Verse (can't call it verse if dict or book)
+  * Verse (or Page if dict or book)
     * { [Add|Edit] note } // planned
     * Footnotes and references
     * Add bookmark
@@ -32,3 +32,4 @@ The plan is to have main menu buttons that reveal associated sub-menus.
   * Administration
     * Help
     * Settings
+    * Export // eventually
