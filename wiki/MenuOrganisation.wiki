@@ -10,16 +10,18 @@ It would be good to
 The plan is to have main menu buttons that reveal associated sub-menus.
 
 = Details =
-  * Application (bad name)
+  * Documents
     * Select document  // shows document selector
     * Download documents
+
+  * Navigation
     * History
     * Bookmarks
-
-  * Document
     * Passage (or Content if dict or book) // shows book/chapter/verse selector
+
+  * moduleName (e.g. ESV/MHC)
     * Find
-    * { Notes } // planned - will show a list of personal notes
+    * { Notes } // planned - will show a list of personal notes (bibles only)
     * Speak // opens the Speak dialog
 
   * Verse (or Page if dict or book)
@@ -32,4 +34,4 @@ The plan is to have main menu buttons that reveal associated sub-menus.
   * Administration
     * Help
     * Settings
-    * Export // eventually
+    * { Export } // eventually
