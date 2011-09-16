@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Initially a simple implementation allowing notes for any bible verse to be saved in a database on the mobile phone.
+Initially a simple implementation allowing notes for any bible verse to be saved in a database on the mobile phone and later viewed or edited via a Notes list.
 
 There will be an 'Edit Note' screen to allow notes to be entered and viewed, and a 'Notes List' allowing selection of previous notes.
 
