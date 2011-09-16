@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Preparation for implementation of Personal Notes.  Initially a simple implementation allowing notes for any bible verse to be saved in a database on the mobile phone.
+Initially a simple implementation allowing notes for any bible verse to be saved in a database on the mobile phone.
 
 There will be an 'Edit Note' screen to allow notes to be entered and viewed, and a 'Notes List' allowing selection of previous notes.
 
