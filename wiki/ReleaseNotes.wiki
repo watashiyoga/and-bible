@@ -1,6 +1,17 @@
 #labels release,notes
 = Release Notes =
 
+== Release 0.7.2 (23/9/2011) ==
+  * Fix various localised interface issues
+
+== Release 0.7.0 (16/9/2011) ==
+  * Font improvements - SBLGNT
+  * References within Strong's are now links
+  * New button to toggle Strong's numbers on/off
+  * Toggle fullscreen on/off by double-tapping the screen
+  * Japanese & Pinyin bibles added
+  * Calvin's commentaries added
+  * Bug: add languages missing from language list in Settings: Croatian, Korean, Latvian, Dutch, Ukrainian
 
 == Version 0.5.07 (15/7/2011) ==
   * Remember line number when switching between commentary, book, or dictionary
