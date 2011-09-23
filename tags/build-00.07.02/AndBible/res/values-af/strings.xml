@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Application text
+ 
+ @author Martin Denham [mjdenham at gmail dot com]
+ @see gnu.lgpl.License for license details.<br>
+      The copyright to this program is held by it's author.
+-->
+<resources>
+  <!-- Passage navigation -->
+  <string name="choosePassageChapterName">Kies Hoofstuk</string>
+  <string name="about">Betreffende</string>
+  <!-- Dictionary -->
+  <string name="dictionary">Woordeboek</string>
+  <!-- General Book -->
+  <string name="general_book">Boek</string>
+  <string name="general_book_contents">Inhoud</string>
+  <string name="doc_type_commentary">Kommentaar</string>
+  <string name="doc_type_dictionary">Woordeboek</string>
+  <string name="doc_type_book">Boek</string>
+  <string name="error">Fout</string>
+</resources>
