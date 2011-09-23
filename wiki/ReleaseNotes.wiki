@@ -4,6 +4,9 @@
 == Release 0.7.2 (23/9/2011) ==
   * Fix various localised interface issues
 
+== Release 0.7.1 (16/9/2011) ==
+  * Fix error in Dutch localisation causing crash
+
 == Release 0.7.0 (16/9/2011) ==
   * Font improvements - SBLGNT
   * References within Strong's are now links
