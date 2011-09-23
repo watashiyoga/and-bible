@@ -1,6 +1,87 @@
 #labels release,notes
 = Release Notes =
 
+
+== Version 0.5.07 (15/7/2011) ==
+  * Remember line number when switching between commentary, book, or dictionary
+  * Turn off Speech on phone call or whenever application moves to background
+  * Option to show words of Christ in red
+  * Option to turn off section headings
+  * Italicize translator's additions in KJV
+  * Bug fixes
+  * Refactor html generation and JSword interface
+
+== Version 0.5.0 (25/6/2011) ==
+Fixes:
+  * Chinese bible names blank outside of China
+  * Swipe sometimes moves forward several pages
+  * FarsiOPV Bible would not display
+Enhancements:  
+  * Cross-reference links e.g. in TSK
+
+== Version 0.4.0 (17/6/2011) ==
+  * Improved user interface localisations
+  * List of occurrences of a Strongs number
+  * Integrate search results into history
+  * Dictionary and Book shortcut keys
+  * Navigate to verse
+  * Robinson's Greek morphological codes displayed
+  * Long press back button to show History list
+  * Bug fixes
+
+== Version 0.3.1 (4/4/2011) ==
+  * Bug fixes
+  * Added Polish Biblia Tysiaclecia
+
+== Version 0.3.0 (26/3/2011) ==
+  * Ability to search in Chinese bibles (contributed by Guan)
+  * Ability to share a verse via Twitter and Facebook (contributed by Filipe)
+  * Ability to display one verse per line (contributed by Stephen)
+  * More powerful speech control
+    * speak multiple chapters
+    * use local pronunciation
+    * repeat speech
+    * speaks bibles, commentaries, dictionaries and books
+  * Christian books e.g. Calvin's Institutes, Hodge's Systematic Theology, Pilgrim's Progress
+  * Gill's Commentary now available
+  * Quick links to module list and navigation in header
+  * Change user interface language
+  * Structured document selector
+  * Fix Strong's links in Russian bibles
+  * Several bug fixes
+
+== Version 0.2.01 (2/2/2011) ==
+  * Fix bug affecting Russian mobile phones
+
+== Version 0.2.00 (28/1/2011) ==
+  * Navigation using grid slide and go
+    * slide to the required book/chapter and lift to go
+  * Better Hebrew bible support
+    # right-to-left display
+    # Vowel points and cantillations removed pending Android fixes to allow rtl display
+  * Use short bible book names in the header when in portrait mode so they always fit
+  * New Lithuanian, Finnish, Hebrew (known issues), Portuguese and Faroese user interface translations (thanks Linas, Jori, Michael, Filipe and Sigurð)
+  * Update to latest JSword including full Java 5 code
+
+== Version 0.0.17 (31/12/2010) ==
+  * Build for App Market
+  * New Polish UI translation and updated Hungarian and Russian UI translations
+  * Minor fixes
+
+== Version 0.0.16 (27/12/2010) ==
+  * Bookmarks - Add a bookmark via the context menu when viewing a bible and edit or return to the bookmark using the Bookmarks manager accessible via the main menu.  
+  * Bookmark Labels - Bookmarks can be grouped together using labels.  Example labels might be  'Memory verses',  'Forgiveness', or 'Evangelism'.  The idea is taken from the way labels are used in gmail.  This is slightly different to the conventional bookmark categories because a bookmark can have several labels but could only be in one category.
+  * New Czech ui translation
+  * Updated French, and Norwegian interface translations
+  * Many changes in JSword code related to upgrading libraries to JDK 1.5 versions
+  * New jars for file download and search
+  * Allow fine adjustment of text size
+  * Retain current commentary selection in quick change button
+  * Smaller apk
+  * Faster downloads
+  * 'Notes and refs' moved to context menu
+  * Bug fixes
+
 == Version 0.0.17 (31/12/2010) ==
   * Build for App Market
   * New Polish UI translation and updated Hungarian and Russian UI translations
