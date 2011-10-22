@@ -10,9 +10,23 @@ Eclipse is the preferred IDE for Android development.
  # Install the [http://developer.android.com/sdk/index.html Android SDK].
  # Install [http://www.eclipse.org/downloads/ Eclipse] for Java EE developers or for Java Developers
  # Install the [http://developer.android.com/sdk/eclipse-adt.html Eclipse ADT plugin].
- # Ensure Eclipse has a Git plugin e.g. eGit 
+ # Ensure Eclipse has a Git plugin e.g. eGit or install Git for use from the command line.
  # Clone the [https://github.com/mjdenham/and-bible And Bible source]
  # In eclipse right-click the And Bible project and select Run As/Android Application
+
+An alternative way to get started quickly is to install [http://developer.motorola.com/docstools/motodevstudio/ MotoDev Studio].  I have been using this myself recently and because it comes pre-configured for Android development it is a quick way to start.
+
+= Git =
+
+You could take one of at least 2 approaches to get And Bible source code from Github - 1) use the EGit plugin for Eclipse 2) use pure git commands e.g 'git pull'
+
+You will probably want to install egit anyway so if you do then you can follow the [http://wiki.eclipse.org/EGit/User_Guide#Starting_from_existing_Git_Repositories 'Starting from existing repositories'] instructions.
+
+If you install basic command line [http://git-scm.com/ git] then you could do the following:
+md andbible
+cd andbible
+git init
+git pull git://github.com/mjdenham/and-bible.git
 
 = Other IDEs =
 
