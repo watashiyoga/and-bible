@@ -10,8 +10,8 @@ Eclipse is the preferred IDE for Android development.
  # Install the [http://developer.android.com/sdk/index.html Android SDK].
  # Install [http://www.eclipse.org/downloads/ Eclipse] for Java EE developers or for Java Developers
  # Install the [http://developer.android.com/sdk/eclipse-adt.html Eclipse ADT plugin].
- # Ensure Eclipse has an svn plugin e.g. see subclipse.tigris.org  
- # Check out the [http://code.google.com/p/and-bible/source/checkout And Bible source]
+ # Ensure Eclipse has a Git plugin e.g. eGit 
+ # Clone the [https://github.com/mjdenham/and-bible And Bible source]
  # In eclipse right-click the And Bible project and select Run As/Android Application
 
 = Other IDEs =
