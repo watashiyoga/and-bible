@@ -1,5 +1,7 @@
 = User Interface Translation =
 
+<a href="http://amanuens.com/get-involved?a=and-bible&k=7F500E447D059B06614013AF0B11636B" title="Help localizing And Bible with Amanuens" class="amanuens-widget" target="_blank"><img src="https://my.amanuens.com/and-bible/Public/Widget/7F500E447D059B06614013AF0B11636B?theme=default" alt="Amanuens Widget" style="width: 210px; height: 60px;" /></a>
+
 If you would like to volunteer to translate the And Bible user interface into another language or to update an existing translation then either e-mail [mailto:help.andbible@gmail.com And Bible Support] or volunteer via the And Bible discussion group.
 
 We use a web based tool named [http://amanuens.com/ Amanuens] to manage and simplify user interface translation.  Both text from And Bible and JSword can be translated via Amanuens.
