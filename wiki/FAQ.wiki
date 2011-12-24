@@ -11,7 +11,17 @@ There is a list of module repositories here: http://www.crosswire.org/wiki/Modul
 
 Modules/documents installed via the Download screen in And Bible will be placed in an application specific directory and, in Android 2.2+, will be removed if the application is removed.
 
-2. Can I delete a document from And Bible
+2. Why do I have to re-Download Documents after upgrading to a new version of And Bible.  
+
+This is caused by a bug in Android 2.2.  And Bible automatically deletes all downloaded documents if And Bible is uninstalled but support for this feature was not implemented correctly by Google in Android 2.2 so documents are deleted on upgrade as well as on uninstall.  This problem does not affect Android 2.3.x or later.
+
+3. I have downloaded one bible but how do I download more bibles, commentaries etc.
+
+To download bibles, commentaries, and books start And Bible and select Menu (sometimes looks like 4 horizontal lines) / More / Download Documents.
+
+Downloads are best done when connected via WiFi but you can download using your normal mobile data connection.
+
+4. Can I delete a document from And Bible
 
 To delete a document:
  * display the documents list
@@ -20,34 +30,34 @@ To delete a document:
 
 This will also delete the document's index.
 
-3. How can I get help?
+5. How can I get help?
 
 Either submit a question to mobile-devel@crosswire.org (see http://www.crosswire.org/mailman/listinfo/mobile-devel).
 Or to help.andbible@gmail.com.
 
-4. I just see squares instead of the Hebrew bible.
+6. I just see squares instead of the Hebrew bible.
 
 Hebrew font support was added in Android 2.2.  Although some people have found out how to add Hebrew fonts to older versions of Android that is not supported although it may work for you.
 
-Hebrew fonts are in Android 2.2 but right-to-left support is still not available.
+Hebrew fonts are in Android 2.2 but RTL does not work if Hebrew vowels are displayed so And Bible does not display Hebrew vowels.
 
-5. And Bible is very large
+7. And Bible is very large
 
 If you are on Android 2.2 then you can move it to the SD card.  And Bible was reduced from over 5 Mb to 1.5 Mb in version 0.0.14.
 
-6. I want integration with Strong's Concordance.
+8. I want integration with Strong's Concordance.
 
 This has been implemented.  There are several bibles containing Strongs references one of which is the KJV.
 
-7. How can I go to a Strong's Reference Number
+9. How can I go to a Strong's Reference Number
 
 You can go to a Strong's reference by
 * clicking a link in a bible containing Strong's references
-* when viewing Strong's select MENU/Contents and then enter the desired no e.g. 02227
+* when viewing Strong's select MENU/Contents and then enter the desired no e.g. 02227 - remember the initial zero.
 * swipe left/right when viewing a Strong's page to go to next/prev ref
 Release 0.4.0 will allow a list of all occurrences of a Strong's number to be displayed.
 
-8. Can I generate my own indexes and manually copy them to my Android mobile.
+10. Can I generate my own indexes and manually copy them to my Android mobile.
 
 To allow for auto-uninstall of application generated files indexes are generated to the appropriate module sub-dir of /mnt/sdcard/Android/data/net.bible.android.activity/files/lucene/Sword e.g. ESV indexes are in ../lucene/Sword/ESV.
 
@@ -55,7 +65,7 @@ Sword generated indexes partially work in And Bible but fully compatible indexes
 
 The best, quickest and most reliable method to get a search index is to download it using And Bible as requested the first time you request a Search.
 
-9. Can you add an Exit button
+11. Can you add an Exit button?
 
-No.  Exit buttons should not be used in Android applications.
+Exit buttons are not normally used in Android applications.
 http://stackoverflow.com/questions/4089496/android-app-exit-button
