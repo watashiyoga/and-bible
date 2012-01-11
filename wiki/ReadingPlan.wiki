@@ -1,0 +1,19 @@
+#Notes on reading plan
+
+= Reading Plan =
+
+TODO
+
+Done button
+  * disable if not all ticked
+  * if all ticked and nothing read/spoken then next day
+  * if something read/spoken then mark day s done and exit 
+  
+Back key
+  * prevent sequences of Reading Plan pages in History due to next/prev
+
+Enable Swipe next/prev
+
+Reset
+  * clear all tick statuses
+
