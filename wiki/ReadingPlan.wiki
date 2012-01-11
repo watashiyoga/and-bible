@@ -17,3 +17,5 @@ Enable Swipe next/prev
 Reset
   * clear all tick statuses
 
+Readings
+  * if only 1 reading then do not show Speak All
