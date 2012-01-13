@@ -4,13 +4,9 @@
 
 TODO
 
-Done button
-  * disable if not all ticked
-  * if all ticked and nothing read/spoken then next day
-  * if something read/spoken then mark day s done and exit 
-  
 Back key
   * prevent sequences of Reading Plan pages in History due to next/prev
+  * add getHistoryIntent() and pass in plan and day so back sets day and plan correctly
 
 Enable Swipe next/prev
 
@@ -19,3 +15,11 @@ Reset
 
 Readings
   * if only 1 reading then do not show Speak All
+
+DONE
+
+Done button
+  * disable if not all ticked
+  * if all ticked and nothing read/spoken then next day
+  * if something read/spoken then mark day s done and exit 
+  
