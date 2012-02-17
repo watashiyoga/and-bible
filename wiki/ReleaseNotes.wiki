@@ -1,6 +1,24 @@
 #labels release,notes
 = Release Notes =
 
+== Release 1.0.2 (5/11/2011) ==
+  * Android 4.0 compatibility fixed
+  * French translation updated
+  * UKJV fixes
+
+== Release 1.0.1 (29/10/2011) ==
+Fixes context menu operation in Android 2.1
+
+== Release 1.0.0 (29/10/2011) ==
+  * Enter and edit My Notes
+    * Add/edit/view MyNote via verse context menu
+    * List MyNotes to view or delete notes via Main menu
+  * Afrikaans user interface translation
+  * Flexible text selection for copy to clipboard
+  * Touch bottom of screen to page down
+  * Improved formatting
+  * Jonathan Edwards' Sermons book
+
 == Release 0.7.2 (23/9/2011) ==
   * Fix various localised interface issues
 
