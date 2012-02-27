@@ -3,7 +3,7 @@
 Here are enhancements I hope to include in teh upcoming releases.  Also see the UserVoice page.
 
 ==Nicer Toolbar==
-It could be prettier but it needs to be small.  The Android Twitter ui is supposed to be a good model but the Toolbar there is very wide.  Also some have suggested allowing full page viewing but I am not sure.  
+Implement a prettier and more powerful toolbar while retaining the current shortcut buttons. 
 
 ==Map Book Module Support==
 Support Sword Map modules
