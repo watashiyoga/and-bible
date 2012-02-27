@@ -1,0 +1,11 @@
+#summary About the developer
+
+= Introduction =
+
+I am an evangelical bible believing Christian living in North London.  I have also been a Java developer for about 15 years.
+
+= And Bible =
+
+With the demise of my favourite bible software, and it's o.s. Windows Mobile I decided to try to create a bible software package that I would be able to modify myself.  Looking around I discovered the great Java combination of JSword and Android and made these 2 technologies the base for And Bible.
+
+I hope you enjoy using And Bible.
