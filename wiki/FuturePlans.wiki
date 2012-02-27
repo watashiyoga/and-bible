@@ -1,4 +1,6 @@
-Obviously this is related to UserVoice, but I don't follow UserVoice influences rather than determines future development plans.
+#summary Plans for the upcoming releases
+
+Here are enhancements I hope to include in teh upcoming releases.  Also see the UserVoice page.
 
 ==Nicer Toolbar==
 It could be prettier but it needs to be small.  The Android Twitter ui is supposed to be a good model but the Toolbar there is very wide.  Also some have suggested allowing full page viewing but I am not sure.  
@@ -15,8 +17,5 @@ Cyanogen and ICS 4.0.3 have fixes for Hebrew vowels so I can show vowels for tho
 ==Downloads==
 Enhance the Download Documents screen so downloaded documents have a green tick, upgrades have an orange arrow(?)
 
-==Hide Document Facility==
-For documents you want on your mobile but don't use often or for non directly used docs like Strongs.
-
-==Japanese Search==
-I have no visibility of the number of japanese users of And Bible so don't know the priority.
+==Reorganise and simplify the Menus==
+I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
