@@ -1,84 +1,22 @@
-=Possibly Next Release=
+Obviously this is related to UserVoice, but I don't follow UserVoice influences rather than determines future development plans.
 
-==Speech==
-I have spent too long thinking about how best to do this.
-Aim: Allow multiple sequential or diverse chapters to be queued for speech.
-Alternative 1: Simple enhancement so that if Speech button is pressed on a chapter not being spoken the chapter is added to the speech for queue.  If Speech is pressed on a chapter just requested to be spoken then all speech is aborted.
-Possibility to allow fewer presses by moving the Speech button to the first screen of menu buttons but which button to remove and how to know if user can/does use Speech.
-Alternative 2: Show Speech Dialog when Speech button is pressed but this would involve a lot more button presses.
-Alternative 3: Add stateful Speak button beside Quick Link buttons (at top) in Portrait mode (more room) if selected in Settings.  The Speak/Silent button would switch between the several states Speak, 2 Chapters, 4 Chapters, Book, Silent. 
-My vote: I prefer Alternative 3 or possibly Alternative 1 because I feel a dialog just to add a chapter is overkill and could frustrate users.
-
-==Allow Xiphos Module Download==
-Include modules from Xiphos in download list.  Is there a Master List we can use?  If not I just plan to merge the Xiphos list with the CrossWire list.
-I also need to add a Refresh List button.
-
-==TSK Links==
-Requested by a couple of users.
-
-==Bad XML Toleration==
-The optimised page loading does not have JSword's bad xml structure toleration for books like WEB.  I plan to try falling back on JSword if the optimised technique fails.
-
-==Strong's List of Ref use==
-Use Lucene index to display a list of all  verses containing a certain Strong's ref
-
-==Remove Create Index Button==
-Does anybody use it?
-
-==RTL Page Header Tidy Up==
-I have considered separating out chapter, verse, book, module into different components to prevent bidi problems and improve layout for rtl languages (Hebrew).  Separate components would also allow us to switch everything around 
-
-==Small Changes==
-More wait cursors e.g. when searching.
-Formatting of text needs more consistency and tidying.
-Splash screen needs better layout.
-Large screen Tablets can't scroll to last verse.
-Nav to Verse or Chapter Setting to optionally 3rd level to Navigation
-
-=Later Release=
-These are things I would like to do but not yet.
-
-==Improve Formatting==
-Important and ongoing.  I have really focussed on ESV but need to look at others more closely.
-
-==Fancy Header==
+==Nicer Toolbar==
 It could be prettier but it needs to be small.  The Android Twitter ui is supposed to be a good model but the Toolbar there is very wide.  Also some have suggested allowing full page viewing but I am not sure.  
 
-==Navigation==
-I don't like putting my fingers all over the screen I am reading but thumbwheels are not so common now so maybe: touch right/left edge to go forward back a chapter, touch bottom corner to scroll down.
+==Map Book Module Support==
+Support Sword Map modules
 
-==Gen Book Module Support==
-Support CrossWire book modules
+==Improved Strongs==
+Support Real Strongs (well maintained) or Strongs from beta.  Aim to have the actual Greek or Hebrew word displayed and support the different sort of links.
 
-==Book Speaker==
-I really like the TTS and would like to use it with Books
+==Hebrew Vowels==
+Cyanogen and ICS 4.0.3 have fixes for Hebrew vowels so I can show vowels for those OS's.
 
-==Chinese Search==
-I had to disable this a few releases ago but I have no visibility of the number of Chinese users of And Bible so don't know the priority.
-
-==Reading Plan==
-I did not know how many people use a reading plan until recently.
-
-==Twitter & Facebook Integration==
-Maybe somebody would like to contribute the code.  I am not even on Twitter.
+==Downloads==
+Enhance the Download Documents screen so downloaded documents have a green tick, upgrades have an orange arrow(?)
 
 ==Hide Document Facility==
 For documents you want on your mobile but don't use often or for non directly used docs like Strongs.
 
-==Better Localisation Support==
-Localisations merit a dedicated resource to organise, support, check, ...  Possibly integrate with Translations LaunchPad.
-
-==Others==
-More Inter Document Links
-Faster Start Up
-Tabbed Document selector
-Pictures & Maps
-Import & export of bookmarks
-
-=No Plans yet=
-
-Flexible verse selection
-Enhance/fix TTS suppport for non built-in versions like SVOX
-EverNote integration
-Personal Commentary/Notes
-Highlight
+==Japanese Search==
+I have no visibility of the number of japanese users of And Bible so don't know the priority.
