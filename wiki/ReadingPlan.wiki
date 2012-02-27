@@ -2,23 +2,23 @@
 
 = Reading Plan =
 
-TODO
+Accessible via Menu/More/Reading Plan.
 
-Enable Swipe next/prev
+On first access you select a plan and are taken to the Daily Reading screen for the first day.
 
-Reset
-  * clear all tick statuses
+The Done button will be enabled after pressing Speak or Passage for each passage.  Done causes the Daily Reading to move to the next day and if you are behind will take you to the next day's readings.
 
-DONE
+== Set Start to Jan 1st ==
+If you started the readings on 1st Jan and have just switched to And Bible then select Menu form the Daily Reading screen and then select 'Start Jan 1'.  However, you will still need to make your way through each Days readings by ressing Speak All, Done.
 
-Back key
-  * prevent sequences of Reading Plan pages in History due to next/prev
-  * add getHistoryIntent() and pass in plan and day so back sets day and plan correctly
+== Abandon Reading Plan ==
+Press Menu/Reset from the Daily Reading screen.
 
-Done button
-  * disable if not all ticked
-  * if all ticked and nothing read/spoken then next day
-  * if something read/spoken then mark day s done and exit 
- 
-Readings
-  * if only 1 reading then do not show Speak All
+== Switch between Reading Plans ==
+Select the first button in the toolbar when in the Daily Reading screen.  By this means it is possible to use several plans simultaneously.
+
+== Preview a plans readings ==
+When in the Daily Reading screen select the second button in the toolbar.
+
+== Go to a specific day ==
+When in the Daily Reading screen select the second button in the toolbar.  Then select the required day from the list.
