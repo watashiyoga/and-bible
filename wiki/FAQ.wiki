@@ -70,4 +70,4 @@ The best, quickest and most reliable method to get a search index is to download
 
 Exit buttons are not normally used in Android applications:
 [http://stackoverflow.com/questions/2033914/quitting-an-application-is-that-frowned-upon/2034238#2034238 Quitting an application - is that frowned upon?]
-http://stackoverflow.com/questions/4089496/android-app-exit-button
+[http://stackoverflow.com/questions/4089496/android-app-exit-button Android App Exit Button]
