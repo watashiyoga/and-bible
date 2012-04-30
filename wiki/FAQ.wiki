@@ -53,9 +53,9 @@ This has been implemented.  There are several bibles containing Strongs referenc
 9. How can I go to a Strong's Reference Number
 
 You can go to a Strong's reference by
-* clicking a link in a bible containing Strong's references
-* when viewing Strong's select MENU/Contents and then enter the desired no e.g. 02227 - remember the initial zero.
-* swipe left/right when viewing a Strong's page to go to next/prev ref
+  * clicking a link in a bible containing Strong's references
+  * when viewing Strong's select MENU/Contents and then enter the desired no e.g. 02227 - remember the initial zero.
+  * swipe left/right when viewing a Strong's page to go to next/prev ref
 Release 0.4.0 will allow a list of all occurrences of a Strong's number to be displayed.
 
 10. Can I generate my own indexes and manually copy them to my Android mobile.
