@@ -17,5 +17,11 @@ Large books like Josephus are very difficult to navigate in And Bible.
 ==Reorganise and simplify the Menus==
 I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
 
+==Touch to Select Verse==
+
+
 ==Nicer Toolbar==
 Implement a prettier and more powerful toolbar while retaining the current shortcut buttons. 
+
+==More Puritan Books==
+I enjoy listening to these so I intend to keep adding them.  I am thinking of another John Owen.
