@@ -1,21 +1,21 @@
 #summary Plans for the upcoming releases
 
-Here are enhancements I hope to include in teh upcoming releases.  Also see the UserVoice page.
+Here are enhancements I hope to include in the upcoming releases.  Also see the UserVoice page.
 
-==Nicer Toolbar==
-Implement a prettier and more powerful toolbar while retaining the current shortcut buttons. 
+==Split Screen==
+A lot of people have requested this.  It is useful i) for comparing 2 bibles e.g. native/Greek, native/English ii)instant commentary view e.g. ESV/JFB.  Please mention other particular uses to assist with planning.
 
-==Map Book Module Support==
-Support Sword Map modules
+==Alternate Versification==
+An increasing number of books provided by Crosswire are using non-KJV versifications and currently cannot be displayed correctly by And Bible.  Many parts of the world e.g. Eastern Europe do not use KJV versification.  I will outline plans more clearly later, but one aim I have is not to allow uninspired text to be confused with inspired text.
 
-==Improved Strongs==
-Support Real Strongs (well maintained) or Strongs from beta.  Aim to have the actual Greek or Hebrew word displayed and support the different sort of links.
+==Improved Strongs & TEI tag support==
+Support Strongs from beta and BDB which rely on TEI.  Aim to have the actual Greek or Hebrew word displayed and support the different sort of links.
 
-==Hebrew Vowels==
-Cyanogen and ICS 4.0.3 have fixes for Hebrew vowels so I can show vowels for those OS's.
-
-==Downloads==
-Enhance the Download Documents screen so downloaded documents have a green tick, upgrades have an orange arrow(?)
+==Better Book Index Navigation==
+Large books like Josephus are very difficult to navigate in And Bible.
 
 ==Reorganise and simplify the Menus==
 I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
+
+==Nicer Toolbar==
+Implement a prettier and more powerful toolbar while retaining the current shortcut buttons. 
