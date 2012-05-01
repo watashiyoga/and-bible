@@ -1,6 +1,6 @@
 #summary Plans for the upcoming releases
 
-Here are enhancements I hope to include in the upcoming releases.  Also see the UserVoice page.
+Here are enhancements I hope to include in the upcoming releases.  Also see the UserVoice page which influences the below list.
 
 ==Split Screen==
 A lot of people have requested this.  It is useful i) for comparing 2 bibles e.g. native/Greek, native/English ii)instant commentary view e.g. ESV/JFB.  Please mention other particular uses to assist with planning.
