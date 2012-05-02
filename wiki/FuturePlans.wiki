@@ -11,6 +11,9 @@ An increasing number of books provided by Crosswire are using non-KJV versificat
 ==Improved Strongs & TEI tag support==
 Support Strongs from beta and BDB which rely on TEI.  Aim to have the actual Greek or Hebrew word displayed and support the different sort of links.
 
+==Bookmark, My Note, Highlight, Label Integration==
+Some people have many bookmarks and would like improved label support for bookmarks and labels.  Also there are many requests for highlighting.  I plan to integrate all the above and improve labels.
+
 ==Better Book Index Navigation==
 Large books like Josephus are very difficult to navigate in And Bible.
 
