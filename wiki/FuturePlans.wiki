@@ -12,7 +12,7 @@ An increasing number of books provided by Crosswire are using non-KJV versificat
 Support Strongs from beta and BDB Glosses for Strongs which rely on TEI.  
 
 ==Bookmark, My Note, Highlight, Label Integration==
-Some people have many bookmarks and would like improved label support for bookmarks and labels.  Also there are many requests for highlighting.  I plan to integrate all the above and improve labels.
+Some people have many bookmarks and would like improved label support for bookmarks and to be able to label My Notes.  Also there are many requests for highlighting.  I plan to integrate all the above and improve labels.
 
 ==Better Book Index Navigation==
 Large books like Josephus are very difficult to navigate in And Bible.
@@ -21,10 +21,13 @@ Large books like Josephus are very difficult to navigate in And Bible.
 I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
 
 ==Touch to Select Verse==
-
+Allow multi-verse selection via touch.
 
 ==Nicer Toolbar==
 Implement a prettier and more powerful toolbar while retaining the current shortcut buttons. 
 
 ==More Puritan Books==
 I enjoy listening to these so I intend to keep adding them.  I am thinking of another John Owen.
+
+
+I do this in my spare time so please be aware all this will happen slowly.
