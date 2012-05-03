@@ -9,7 +9,7 @@ A lot of people have requested this.  It is useful i) for comparing 2 bibles e.g
 An increasing number of books provided by Crosswire are using non-KJV versifications and currently cannot be displayed correctly by And Bible.  Many parts of the world e.g. Eastern Europe do not use KJV versification.  Uninspired text must not to be confused with inspired text and so initially uninspired text will not be displayed, later it may be displayed separately, like in an Appendix.
 
 ==Improved Strongs & TEI tag support==
-Support Strongs from beta and BDB which rely on TEI.  Aim to have the actual Greek or Hebrew word displayed and support the different sort of links.
+Support Strongs from beta and BDB Glosses for Strongs which rely on TEI.  
 
 ==Bookmark, My Note, Highlight, Label Integration==
 Some people have many bookmarks and would like improved label support for bookmarks and labels.  Also there are many requests for highlighting.  I plan to integrate all the above and improve labels.
