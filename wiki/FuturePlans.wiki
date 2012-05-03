@@ -6,7 +6,7 @@ Here are enhancements I hope to include in the upcoming releases.  Also see the 
 A lot of people have requested this.  It is useful i) for comparing 2 bibles e.g. native/Greek, native/English ii)instant commentary view e.g. ESV/JFB iii)Document selector/view.  Please mention other particular uses to assist with planning.
 
 ==Alternate Versification==
-An increasing number of books provided by Crosswire are using non-KJV versifications and currently cannot be displayed correctly by And Bible.  Many parts of the world e.g. Eastern Europe do not use KJV versification.  I will outline plans more clearly later, but one aim I have is not to allow uninspired text to be confused with inspired text.
+An increasing number of books provided by Crosswire are using non-KJV versifications and currently cannot be displayed correctly by And Bible.  Many parts of the world e.g. Eastern Europe do not use KJV versification.  Uninspired text must not to be confused with inspired text and so initially uninspired text will not be displayed, later it may be displayed separately, like in an Appendix.
 
 ==Improved Strongs & TEI tag support==
 Support Strongs from beta and BDB which rely on TEI.  Aim to have the actual Greek or Hebrew word displayed and support the different sort of links.
