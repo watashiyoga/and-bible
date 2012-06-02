@@ -10,6 +10,10 @@ An increasing number of books provided by Crosswire are using non-KJV versificat
 
 ==Improved Strongs & TEI tag support==
 Support Strongs from beta and BDB Glosses for Strongs which rely on TEI.  
+This is a part of the next release but is not widely utilised by current modules.  Strongs in Sword beta uses TEI but is still in beta and seems to have various other problems.
+
+==Speak Improvements==
+Add Quick Speak button.  Add Pause/FF/Rew - this is tricky and I have tried to do this already.
 
 ==Bookmark, My Note, Highlight, Label Integration==
 Some people have many bookmarks and would like improved label support for bookmarks and to be able to label My Notes.  Also there are many requests for highlighting.  I plan to integrate all the above and improve labels.
