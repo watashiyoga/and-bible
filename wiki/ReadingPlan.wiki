@@ -11,7 +11,7 @@ The Done button will be enabled after pressing Speak or Passage for each passage
 == Custom Reading Plans ==
 From release 1.6.0 it will be possible to create a custom reading plan for use with And Bible.
 
-You will need to create a file similar to the examples [https://github.com/mjdenham/and-bible/tree/master/AndBible/assets/readingplan here] which are the reading plans distributed with And Bible.  The name of the file will be the name of the plan.  The file extension must be .properties and you must place it on your mobile's sdcard in a folder named jsword/readingplan.  Use a simple text editor to create the file e.g. Notepad (I use Notepad++) and do not use something like Word.  The file must contain a series of rows in the format day=reading1,reading2 E.g.  
+You will need to create a file similar to the examples [https://github.com/mjdenham/and-bible/tree/master/AndBible/assets/readingplan here] which are the reading plans distributed with And Bible.  The name of the file will be the name of the plan.  The file extension must be .properties and you must place it on your mobile's sdcard in a folder named jsword/readingplan.  Use a simple text editor to create the file e.g. Notepad++ and do not use something like Word.  The file must contain a series of rows in the format day=reading1,reading2 E.g.  
 {{{
 1=Gen 1, Matt 1
 2=Gen 2, Matt 2
@@ -29,6 +29,9 @@ It is possible to skip days e.g. if you do not wish to a reading at the weekend.
 }}}
 
 Foreign language Bible book names may be supported if the book list in And Bible also contains the foreign language names.
+
+Do not include any accented, or other non ASCII characters in the properties file.
+
 
 == Set Start to Jan 1st ==
 If you started the readings on 1st Jan and have just switched to And Bible then select Menu form the Daily Reading screen and then select 'Start Jan 1'.  However, you will still need to make your way through each Days readings by ressing Speak All, Done.
