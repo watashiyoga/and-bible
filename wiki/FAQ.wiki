@@ -2,7 +2,13 @@
 #labels faq
 Frequently Asked Questions
 
-1. Can I manually add modules/documents to And Bible?
+1. I have downloaded one bible but how do I download more bibles, commentaries etc.
+
+To download bibles, commentaries, and books start And Bible and select Menu (sometimes looks like 4 horizontal lines) / More / Download Documents.
+
+Downloads are best done when connected via WiFi but you can download using your normal mobile data connection.
+
+2. Can I manually add modules/documents to And Bible?
 
 Yes, you can copy modules to a jsword directory on your sd card.  Expand the module so that the .conf file is in sdcard/jsword/mods.d and the bible files in a subdirectory of sdcard/jsword/modules e.g. sdcard\jsword\modules\texts\ztext\nettext.
 
@@ -12,15 +18,9 @@ There is a list of module repositories here: http://www.crosswire.org/wiki/Modul
 
 Modules/documents installed via the Download screen in And Bible will be placed in an application specific directory and, in Android 2.2+, will be removed if the application is removed.
 
-2. Why do I have to re-Download Documents after upgrading to a new version of And Bible.  
+3. Why do I have to re-Download Documents after upgrading to a new version of And Bible.  
 
 This is caused by a bug in Android 2.2.  And Bible automatically deletes all downloaded documents if And Bible is uninstalled but support for this feature was not implemented correctly by Google in Android 2.2 so documents are deleted on upgrade as well as on uninstall.  This problem does not affect Android 2.3.x or later.
-
-3. I have downloaded one bible but how do I download more bibles, commentaries etc.
-
-To download bibles, commentaries, and books start And Bible and select Menu (sometimes looks like 4 horizontal lines) / More / Download Documents.
-
-Downloads are best done when connected via WiFi but you can download using your normal mobile data connection.
 
 4. Can I delete a document from And Bible
 
