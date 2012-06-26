@@ -9,7 +9,7 @@ On first access you select a plan and are taken to the Daily Reading screen for 
 The Done button will be enabled after pressing Speak or Passage for each passage.  Done causes the Daily Reading to move to the next day and if you are behind will take you to the next day's readings.
 
 == Custom Reading Plans ==
-From release 1.6.0 it will be possible to create a custom reading plan for use with And Bible.
+It is possible to create a custom reading plan for use with And Bible.
 
 You will need to create a file similar to the examples [https://github.com/mjdenham/and-bible/tree/master/AndBible/assets/readingplan here] which are the reading plans distributed with And Bible.  The name of the file will be the name of the plan.  The file extension must be .properties and you must place it on your mobile's sdcard in a folder named jsword/readingplan.  Use a simple text editor to create the file e.g. Notepad++ and do not use something like Word.  The file must contain a series of rows in the format day=reading1,reading2 E.g.  
 {{{
