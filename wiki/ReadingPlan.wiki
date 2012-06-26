@@ -34,7 +34,7 @@ Do not include any accented, or other non ASCII characters in the properties fil
 
 
 == Set Start to Jan 1st ==
-If you started the readings on 1st Jan and have just switched to And Bible then select Menu form the Daily Reading screen and then select 'Start Jan 1'.  However, you will still need to make your way through each Days readings by ressing Speak All, Done.
+If you started the readings on 1st Jan and have just switched to And Bible then select Menu form the Daily Reading screen and then select 'Start Jan 1'.  You may then jump to 'Move the current day to a specific day' below to skip over readings you have already done.
 
 == Abandon Reading Plan ==
 Press Menu/Reset from the Daily Reading screen.
