@@ -2,13 +2,15 @@
 #labels faq
 Frequently Asked Questions
 
-1. I have downloaded one bible but how do I download more bibles, commentaries etc.
+<wiki:toc max_depth="1" />
+
+= I have downloaded one bible but how do I download more bibles, commentaries etc.
 
 To download bibles, commentaries, and books start And Bible and select Menu (sometimes looks like 4 horizontal lines) / More / Download Documents.
 
 Downloads are best done when connected via WiFi but you can download using your normal mobile data connection.
 
-2. Can I manually add modules/documents to And Bible?
+= Can I manually add modules/documents to And Bible?
 
 Yes, you can copy modules to a jsword directory on your sd card.  Expand the module so that the .conf file is in sdcard/jsword/mods.d and the bible files in a subdirectory of sdcard/jsword/modules e.g. sdcard\jsword\modules\texts\ztext\nettext.
 
