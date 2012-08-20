@@ -4,7 +4,7 @@
 <wiki:toc max_depth="2" />
 
 == How can I scroll to the next chapter ==
-Swipe right/left to go to the previous/next chapter.  This is on the splash screen and the Help page but a lot of people still ask.
+Swipe right/left to go to the previous/next chapter.
 
 == I have downloaded one bible but how do I download more bibles, commentaries etc. ==
 
