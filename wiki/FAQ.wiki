@@ -3,6 +3,9 @@
 =And Bible FAQ=
 <wiki:toc max_depth="2" />
 
+== How can I scroll to the next chapter ==
+Swipe right/left to go to the previous/next chapter.  This is on the splash screen and the Help page but a lot of people still ask.
+
 == I have downloaded one bible but how do I download more bibles, commentaries etc. ==
 
 To download bibles, commentaries, and books start And Bible and select Menu (sometimes looks like 4 horizontal lines) / More / Download Documents.
