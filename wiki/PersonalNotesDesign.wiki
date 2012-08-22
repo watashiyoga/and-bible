@@ -21,11 +21,10 @@ Menu will contain: My Notes (list)
 == My Notes (list) ==
 Similar to Bookmarks list showing either verse or note (if there is a note).  Can view just notes, bookmarks, or highlights.
 
-Select: Notes, Bookmarks, Highlights, All  < top row will have
-Select: <Labels>, ...                      < 2 select boxes
+Select: Notes, Bookmarks, Highlights, All  < top row will have 2 select boxes
+Select: label1, label2,  
 
 Menu will contain: Sort by date
-
 
 
 
