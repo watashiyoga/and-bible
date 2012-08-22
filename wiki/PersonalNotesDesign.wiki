@@ -4,7 +4,7 @@
 
 == Objective ==
 
-The new design will require fewer menu items but be more consistent and comprehensive for both bookmark and note use, eventually highlights will be added to the My Notes functionality.
+The new design will require fewer menu items but be more consistent and comprehensive for both bookmark and note use. The flow will mean it is easier to add labels to new bookmarks immediately.  Eventually highlights will be added to the My Notes functionality.
 
 == Overview ==
 In Standard Menu there will be a single "My Notes" menu item instead of Bookmarks, and My Notes.  The context menu will have just Add/Edit My Note.
