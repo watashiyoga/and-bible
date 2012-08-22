@@ -1,5 +1,36 @@
 #summary Design of Personal Notes Feature
 
+= New Design with Integrated Notes, Bookmarks, Highlights =
+
+== Objective ==
+
+The new design will require fewer menu items but be more consistent and comprehensive for both bookmark and note use, eventually highlights will be added to the My Notes functionality.
+
+== Overview ==
+In Standard Menu there will be a single "My Notes" menu item instead of Bookmarks, and My Notes.  The context menu will have just Add/Edit My Note.
+
+== Add/Edit My Note Screen ==
+To the current My Note screen will be added checkboxes for Bookmark and Highlight, and a button providing access to Labels functionality.
+
+Layout:
+Bookmark   Highlight  Labels  < 2 check boxes and a button or test field
+Large text field for note < the current note entry field
+
+Menu will contain: My Notes (list)
+
+== My Notes (list) ==
+Similar to Bookmarks list showing either verse or note (if there is a note).  Can view just notes, bookmarks, or highlights.
+
+Select: Notes, Bookmarks, Highlights, All  < top row will have
+Select: <Labels>, ...                      < 2 select boxes
+
+Menu will contain: Sort by date
+
+
+
+
+= Old Design of My Notes (to be deprecated) =
+
 = Introduction =
 
 Initially a simple implementation allowing notes for any bible verse to be saved in a database on the mobile phone and later viewed or edited via a Notes list.
