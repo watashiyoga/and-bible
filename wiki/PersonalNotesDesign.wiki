@@ -1,4 +1,4 @@
-#Plans for a new design for integrated notes and bookmarks
+# Plans for a new design for integrated notes and bookmarks
 
 = New Design with Integrated Notes, Bookmarks, Highlights =
 
