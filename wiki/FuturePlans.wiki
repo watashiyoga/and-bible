@@ -10,7 +10,7 @@ An increasing number of books provided by Crosswire are using non-KJV alternate 
 
 Uninspired text e.g. Tobit, must not to be confused with inspired text and so initially uninspired text will not be displayed, later it may be displayed separately e.g. in an Appendix.  This approach is controversial; some would emphasise the need to display as the module creator intended, which And Bible would not necessarily be doing.
 
-And Bible use the JSword library to access documents and will not support av11n bibles until JSword has completed av11n support.
+And Bible uses the JSword library to access documents and will not support av11n bibles until JSword has completed av11n support.
 
 ==Improved Strongs & TEI tag support==
 Support Strongs from beta and BDB Glosses for Strongs which rely on TEI.  
