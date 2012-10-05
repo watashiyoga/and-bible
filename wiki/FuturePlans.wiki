@@ -1,6 +1,6 @@
 #summary Plans for the upcoming releases
 
-Here are enhancements I hope to include in the upcoming releases.  Also see the UserVoice page which influences the below list.
+Here are enhancements I hope to include in the upcoming releases.  Also see the [https://andbible.uservoice.com UserVoice page] which influences the below list.
 
 ==Split Screen==
 A lot of people have requested this.  It is useful i) for comparing 2 bibles e.g. native/Greek, native/English ii)instant commentary view e.g. ESV/JFB iii)Document selector/view iv) making (sermon) notes while reading v) unlinked so that you could have the main window open to the primary study chapter and the secondary window could be used to look up related references. (Please mention other particular uses to assist with planning).
