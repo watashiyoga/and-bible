@@ -30,7 +30,7 @@ The main source for modules to manually install is: http://www.crosswire.org/swo
 
 There is a list of module repositories here: http://www.crosswire.org/wiki/Module_Repositories
 
-Modules/documents installed via the Download screen in And Bible will be placed in an application specific directory and, in Android 2.2+, will be removed if the application is removed.
+Modules/documents installed via the Download screen in And Bible will be placed in a different directory.
 
 == Why do I have to re-Download Documents after upgrading to a new version of And Bible ==
 
