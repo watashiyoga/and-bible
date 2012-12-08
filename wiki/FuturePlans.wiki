@@ -34,7 +34,7 @@ Allow multi-verse selection via touch.
 Implement a prettier and more powerful toolbar while retaining the current shortcut buttons. 
 
 ==More Puritan Books==
-I enjoy listening to these so I intend to keep adding them.  I am thinking of another John Owen.
+I enjoy listening to these so I intend to keep adding them.  I added 'Communion with God' by John Owen recently.
 
 ==Lookup Word in Dictionary==
 If page is not auto-scrolling a single touch on  a word will invoke a lookup on all installed dictionaries with a pop-up box to show results.  E.g. touch Gilgal would show an occurrence in ISBE, possibly elsewhere too.
