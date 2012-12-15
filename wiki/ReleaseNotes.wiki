@@ -1,6 +1,18 @@
 #labels release,notes
 = Release Notes =
 
+== Release 1.7.0 (15th December 2012) ==
+  * Speak controls (Pause/Rewind/Forward)
+  * Hindi localisation (Sijo)
+  * Improved Chinese localisation (Chislon)
+  * Arabic localisation (Emad)
+  * Malayalam localisation (Android 4.1+; Jeesmon)
+  * Improved Latvian localisation (Martins)
+  * Partial Japanese localisation (Kyongun/Chislon)
+  * Auto-scroll optimised and acceleration adjusted
+  * Bookmarks page now included in History
+  * Various bug fixes
+
 == Release 1.6.0 (August 12th 2012) ==
   * Italian localisation (Orall & Carla)
   * Estonian localisation (Rivo)
