@@ -13,7 +13,7 @@
   * Bookmarks page now included in History
   * Various bug fixes
 
-== Release 1.6.0 (August 12th 2012) ==
+== Release 1.6.0 (12th August 2012) ==
   * Italian localisation (Orall & Carla)
   * Estonian localisation (Rivo)
   * Partial Arabic localisation (Emad)
