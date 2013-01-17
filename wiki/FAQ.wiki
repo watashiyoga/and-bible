@@ -49,8 +49,9 @@ This will also delete the document's index.
 
 == How can I get help? ==
 
-Either submit a question to mobile-devel@crosswire.org (see http://www.crosswire.org/mailman/listinfo/mobile-devel).
-Or to help.andbible@gmail.com.
+The [https://groups.google.com/group/and-bible And Bible Discussion Group] allows you to ask questions or discuss And Bible features.
+
+Alternatively e-mail help.andbible@gmail.com
 
 == I just see squares instead of the Hebrew bible ==
 
