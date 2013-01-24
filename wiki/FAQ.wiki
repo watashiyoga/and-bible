@@ -59,9 +59,9 @@ Hebrew font support was added in Android 2.2.  Although some people have found o
 
 Hebrew fonts are in Android 2.2 but RTL does not work if Hebrew vowels are displayed so And Bible does not display Hebrew vowels.
 
-== And Bible is very large ==
+== And Bible is large ==
 
-If you are on Android 2.2 then you can move it to the SD card.  And Bible was reduced from over 5 Mb to 1.5 Mb in version 0.0.14.
+It is actually smaller than most other programs but if you are on Android 2.2+ then you can move it to the SD card.  And Bible was reduced from over 5 Mb to 1.5 Mb in version 0.0.14.
 
 == I want integration with Strong's Concordance ==
 
