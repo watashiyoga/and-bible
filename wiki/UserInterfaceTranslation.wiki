@@ -6,4 +6,5 @@ If you would like to volunteer to translate the And Bible user interface into an
 
 We use a web based tool named [http://amanuens.com/ Amanuens] to manage and simplify user interface translation.  Both text from And Bible and JSword can be translated via Amanuens.
 
-Mario is the user interface translation co-ordinator.
+Interface translation statistics:<br/>
+<img border="0" src="https://www.transifex.com/projects/p/andbible/resource/and-bible-stringsxml/chart/image_png"/><br/>
