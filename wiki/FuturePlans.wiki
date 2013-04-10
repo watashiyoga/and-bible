@@ -2,21 +2,12 @@
 
 Here are enhancements I hope to include in the upcoming releases.  Also see the [https://andbible.uservoice.com UserVoice page] which influences the below list.
 
-==Split Screen==
-A lot of people have requested this.  It is useful i) for comparing 2 bibles e.g. native/Greek, native/English ii)instant commentary view e.g. ESV/JFB iii)Document selector/view iv) making (sermon) notes while reading v) unlinked so that you could have the main window open to the primary study chapter and the secondary window could be used to look up related references. (Please mention other particular uses to assist with planning).
-
 ==Alternate Versification==
 An increasing number of bibles provided by Crosswire are using non-KJV alternate versifications (av11n) and currently cannot be displayed correctly by And Bible.  Many parts of the world e.g. Eastern Europe do not use KJV versification.  
 
 Uninspired text e.g. Tobit, must not to be confused with inspired text and so initially uninspired text will not be displayed, later it may be displayed separately e.g. in an Appendix.  This approach is controversial; some would emphasise the need to display as the module creator intended, which And Bible would not necessarily be doing.
 
 And Bible uses the JSword library to access documents and will not support av11n bibles until JSword has completed av11n support.
-
-==Speak Improvements==
-Add Quick Speak button - Done.  Add Pause/FF/Rew - Next release.
-
-==And Bible Specific Screen Timout==
-I set mine default timeout to 10 minutes which I find fine, but many people have requested this so the plan is to add a new Setting allowing selection of Screen Timeout just for And Bible.  Meanwhile, if you want the screen to stay on, you could use the "Screen On" Android app to keep the screen on always when using And Bible.
 
 ==Bookmark, My Note, Highlight, Label Integration==
 Some people have many bookmarks and would like improved label support for bookmarks and to be able to label My Notes.  Also there are many requests for highlighting.  I plan to integrate all the above and improve labels.
