@@ -1,4 +1,4 @@
-#summary Moved from 'Planned Work' after completion
+#summary Moved from 'Future Plans' after completion
 
 = Recent Changes =
 
