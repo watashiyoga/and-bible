@@ -8,11 +8,13 @@ Swipe right/left to go to the previous/next chapter.
 
 == I have downloaded one bible but how do I download more bibles, commentaries etc. ==
 
-To download bibles, commentaries, and books start And Bible and select Menu button (see below) / More / Download Documents.
-
-The Menu button is not always clearly visible on some recent phones.  Sometimes it is represented by 4 horizontal lines or 3 vertical dots.  Recent HTC devices may have a stripe along the bottom of the screen containing only 3 dots, or you may need to long-press the App-switcher or Home button.
+To download bibles, commentaries, and books start And Bible and select Menu button (see 'Where is the Menu Button' below) / More / Download Documents.
 
 Downloads are best done when connected via WiFi but you can download using your normal mobile data connection.
+
+== Where is the Menu button ==
+
+The Menu button is not always clearly visible on some recent phones.  Sometimes it is represented by 4 horizontal lines or 3 vertical dots.  Recent HTC devices may have a stripe along the bottom of the screen containing only 3 dots, or you may need to long-press the App-switcher or Home button.
 
 == Can you add an Exit button? ==
 
