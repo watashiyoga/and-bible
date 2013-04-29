@@ -9,6 +9,11 @@ Uninspired text e.g. Tobit, must not to be confused with inspired text and so in
 
 And Bible uses the JSword library to access documents and will not support av11n bibles until JSword has completed av11n support.
 
+==Technical Changes==
+Build with Gradle.  This is Google's future planned build mechanism.
+Add Guice to facilitate unit testing and dependencies between different sections of code.
+More unit tests, starting with the XML->HTML conversion.
+
 ==Bookmark, My Note, Highlight, Label Integration==
 Some people have many bookmarks and would like improved label support for bookmarks and to be able to label My Notes.  Also there are many requests for highlighting.  I plan to integrate all the above and improve labels.
 
