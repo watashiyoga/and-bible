@@ -1,6 +1,25 @@
 #labels release,notes
 = Release Notes =
 
+== Release 1.9.0 (13th June 2013) ==
+  * Alternate versifications
+  * Mapping between Synodal, German, Leningrad, Vulgate, KJV, and NRSV versifications
+  * See versification demonstration video at http://youtu.be/dTSTW6s_qFU
+  * Completed Spanish localisation (Laura)
+  * Greek localisation (Wasilis)
+  * Updated JSword library
+  * Central Asian documents from IBT now available
+  * Russian Synodal Bible now available
+  * Bug fixes
+== Release 1.8.0 (19th March 2013) ==
+  * Split screen functionality - see [http://tinyurl.com/SplitDemo demonstration video]
+  * Support for Samsung multi-window
+  * Ability to limit Search to current Bible book
+  * Bug fixes
+== Release 1.7.3 (9th January 2013) ==
+  * Custom And Bible screen sleep timeout setting
+  * Partial Spanish translation
+  * Font framework fixes
 == Release 1.7.0 (15th December 2012) ==
   * Speak controls (Pause/Rewind/Forward)
   * Hindi localisation (Sijo)
