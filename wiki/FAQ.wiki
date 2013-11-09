@@ -49,6 +49,8 @@ To delete a document:
 
 This will also delete the document's index.
 
+Documents currently being displayed cannot be deleted, and neither can documents that have only just been downloaded.
+
 == How can I get help? ==
 
 The [https://groups.google.com/group/and-bible And Bible Discussion Group] allows you to ask questions or discuss And Bible features.
