@@ -47,5 +47,5 @@ To compile with ant:
 = Future Use of App Bar Compat =
 The App Bar Compat library will be required in the future.  If using Eclipse this must be configured as a Library Project.
 
-Follow [http://developer.android.com/tools/support-library/setup.html#libs-with-res Adding libraries with resources] on the Android [Support Library] page.
-Check <appcompat>/project.properties to ensure the compat library sdk version is consistent with And Bible's and has been downloaded using the Android SDK.
+Follow [http://developer.android.com/tools/support-library/setup.html#libs-with-res Adding libraries with resources] on the Android [http://developer.android.com/tools/support-library Support Library] page.
+Check appcompat-proj/project.properties to ensure the compat library sdk version is consistent with And Bible's and has been downloaded using the Android SDK.
