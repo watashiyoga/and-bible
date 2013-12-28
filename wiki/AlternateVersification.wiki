@@ -1,0 +1,6 @@
+#summary Alternate Versification
+
+==Alternate Versification==
+An increasing number of bibles provided by Crosswire are using non-KJV alternate versifications (av11n).  Many parts of the world e.g. Eastern Europe do not use KJV versification.  
+
+Uninspired text e.g. Tobit, must not to be confused with inspired text and so initially uninspired text will not be displayed, later it may be displayed separately e.g. in an Appendix.  This approach is controversial; some would emphasise the need to display as the module creator intended, which And Bible would not necessarily be doing.
