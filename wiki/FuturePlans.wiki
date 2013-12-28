@@ -2,12 +2,11 @@
 
 Here are enhancements I hope to include in the upcoming releases.  Also see the [https://andbible.uservoice.com UserVoice page] which influences the below list.
 
-==Alternate Versification==
-An increasing number of bibles provided by Crosswire are using non-KJV alternate versifications (av11n) and currently cannot be displayed correctly by And Bible.  Many parts of the world e.g. Eastern Europe do not use KJV versification.  
+==Nicer Toolbar==
+Implement a standard, prettier and more powerful toolbar while retaining the current shortcut buttons. As the standard Android toolbar proliferates many phones hide the Menu button and users do not know how to access anything in the menus.
 
-Uninspired text e.g. Tobit, must not to be confused with inspired text and so initially uninspired text will not be displayed, later it may be displayed separately e.g. in an Appendix.  This approach is controversial; some would emphasise the need to display as the module creator intended, which And Bible would not necessarily be doing.
-
-And Bible uses the JSword library to access documents and will not support av11n bibles until JSword has completed av11n support.
+==Reorganise and simplify the Menus==
+I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
 
 ==Technical Changes==
 Build with Gradle.  This is Google's future planned build mechanism.
@@ -20,14 +19,8 @@ Some people have many bookmarks and would like improved label support for bookma
 ==Better Book Index Navigation==
 Large books like Josephus are very difficult to navigate in And Bible.
 
-==Reorganise and simplify the Menus==
-I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
-
 ==Touch to Select Verse==
 Allow multi-verse selection via touch.
-
-==Nicer Toolbar==
-Implement a prettier and more powerful toolbar while retaining the current shortcut buttons. 
 
 ==More Puritan Books==
 I enjoy listening to these so I intend to keep adding them.  I added 'Communion with God' by John Owen recently.
