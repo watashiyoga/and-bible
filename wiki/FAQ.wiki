@@ -20,7 +20,7 @@ The Menu button is not always clearly visible on some recent phones.  Sometimes 
 
 This is done by backing up on one phone and restoring on the other.
   * On the old phone select Menu/More/Backup/Backup
-  * Note the backup directory location in the ensuing message
+  * Note the backup directory location in the confirmation message
   * Either copy the backup folder to the new phone or move the SD card.
   * On the new phone select Menu/More/Backup/Restore
 
