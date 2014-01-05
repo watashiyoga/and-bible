@@ -16,6 +16,16 @@ Downloads are best done when connected via WiFi but you can download using your 
 
 The Menu button is not always clearly visible on some recent phones.  Sometimes it is represented by 4 horizontal lines or 3 vertical dots.  Recent HTC devices may have a stripe along the bottom of the screen containing only 3 dots, or you may need to long-press the App-switcher or Home button.  The Acer Z3 requires that you double tap the multitask button.
 
+== How do I copy My Notes and Bookmarks to my new phone ==
+
+This is done by backing up on one phone and restoring on the other.
+* On the old phone select Menu/More/Backup/Backup
+* Note the backup directory location in the ensuing message
+* Either copy the backup folder to the new phone or move the SD card.
+* On the new phone select Menu/More/Backup/Restore
+
+If one device has an internal and external SD card the location of the backup folder may not be on the removable SD card but can still be copied via USB cable.
+
 == Can you add an Exit button? ==
 
 Pressing the Home button takes you to the main Android screen from which you can see all your other applications.  Long-pressing the Home button allows you to jump straight to any recent application.  This is the standard way Android applications work.
