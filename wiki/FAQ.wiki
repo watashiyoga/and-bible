@@ -19,10 +19,10 @@ The Menu button is not always clearly visible on some recent phones.  Sometimes 
 == How do I copy My Notes and Bookmarks to my new phone ==
 
 This is done by backing up on one phone and restoring on the other.
-* On the old phone select Menu/More/Backup/Backup
-* Note the backup directory location in the ensuing message
-* Either copy the backup folder to the new phone or move the SD card.
-* On the new phone select Menu/More/Backup/Restore
+  * On the old phone select Menu/More/Backup/Backup
+  * Note the backup directory location in the ensuing message
+  * Either copy the backup folder to the new phone or move the SD card.
+  * On the new phone select Menu/More/Backup/Restore
 
 If one device has an internal and external SD card the location of the backup folder may not be on the removable SD card but can still be copied via USB cable.
 
