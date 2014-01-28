@@ -1,6 +1,20 @@
 #labels release,notes
 = Release Notes =
 
+== Release 1.9.3 (1st January 2014) ==
+  * Allow selection of Bookmark sort order - date or Biblical.
+  * Allow selection of My Note sort order - date or Biblical.
+  * Allow edit/rename of bookmark labels via label context menu.
+  * Fix multiple Bookmark lists in History after Label view
+  * Cope with missing repositories in Download Documents
+== Release 1.9.2 (30th November 2013) ==
+  * Change Speak Smiley to Speaker icon
+  * Fix for squashed verse button on small screens if Strongs available
+  * Fix to show verse button in My Note
+  * Fix auto-scroll after return from My Note
+== Release 1.9.1 (23rd November 2013) ==
+  * Kazakh, Kirgyz, Slovenian, and Telugu interface translations
+  * Bug fixes
 == Release 1.9.0 (13th June 2013) ==
   * Alternate versifications
   * Mapping between Synodal, German, Leningrad, Vulgate, KJV, and NRSV versifications
