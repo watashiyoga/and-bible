@@ -1,0 +1,27 @@
+= Alpha Build Release Notes =
+
+Below are release notes for recent unreleased alpha builds.
+
+== 20130128 ==
+  * Fix bug leading to Actionbar not updating after Speak terminates
+  * Move MyNote & Bookmark Sort button to ActionBar
+  * JSword - remove 'zerosUnmapped' from JSword versification to prevent error when mapping verse 0
+
+== 20130127 ==
+  * Verse/Passage shortcuts restored to toolbar
+  * New Day theme
+  * Lights out mode when maximised
+  * Split button size fixed
+  * Fix error when last book in last language deleted
+  * All original toolbar buttons now available in the ActionBar (almost)
+  * JSword library updated
+  * New JSword Versification mappings are now used
+  * Android 2.1 support removed due to few users and poor xml support
+  * Remove Crosswire AV repo
+
+== 20130110 ==
+  * Partial migration to standard Actionbar
+  * Experimental navigation  drawer
+  * New Ichthys Launcher icon
+  * Larger possible text size (was 36 but now 60)
+  * Updated localisations cs, hu, ru, tr, kk
