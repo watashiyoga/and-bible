@@ -1,6 +1,6 @@
-#Alpha and Beta Testing
+#summary Alpha and Beta Testing
 
-##Register as Google Play Beta tester
+=Register as Google Play Beta tester=
 
 The And Bible Project invites all members of the and-bible Google Group to register with Google Play as a Beta tester of the And Bible app for Android. This will allow you to install the latest Beta version and receive automatic upgrades as new Beta versions are released.
 
