@@ -2,6 +2,18 @@
 
 Below are release notes for recent unreleased alpha builds.
 
+== 20130212 ==
+  * Switch History menu option with Speak (now same as previous release version)
+  * Minor fixes
+  * Translation updates
+
+== 20130208 ==
+  * More characters in ActionBar buttons for tablet users
+  * Fix status bar icon size - shown when downloading
+  * Memory optimisations
+  * Prefer StrongsReal or Strongs if installed to avoid default use of incompatible lexicons
+  * Add various menu items to ActionBar in Documents, Reading plan, Downloads
+
 == 20130128 ==
   * Fix bug leading to Actionbar not updating after Speak terminates
   * Move MyNote & Bookmark Sort button to ActionBar
