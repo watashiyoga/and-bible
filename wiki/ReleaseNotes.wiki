@@ -1,6 +1,13 @@
 #labels release,notes
 = Release Notes =
 
+== Release 2.0.0 (15 february 2014) ==
+  * New Ichthys launcher icon which is safer for persecuted users
+  * More standard ActionBar replaces toolbar
+  * Possible to increase text size more for the poor sighted
+  * JSword Updates and optimizations in JSword library
+  * Lights out mode when maximized
+  * Bug fixes
 == Release 1.9.3 (1st January 2014) ==
   * Allow selection of Bookmark sort order - date or Biblical.
   * Allow selection of My Note sort order - date or Biblical.
