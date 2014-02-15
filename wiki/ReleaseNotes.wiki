@@ -1,7 +1,7 @@
 #labels release,notes
 = Release Notes =
 
-== Release 2.0.0 (15 february 2014) ==
+== Release 2.0.0 (15 February 2014) ==
   * New Ichthys launcher icon which is safer for persecuted users
   * More standard ActionBar replaces toolbar
   * Possible to increase text size more for the poor sighted
