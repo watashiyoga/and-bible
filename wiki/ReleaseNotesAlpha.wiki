@@ -2,6 +2,13 @@
 
 Below are release notes for recent unreleased alpha builds.
 
+== 2.0.0 (15 Feb) ==
+  * Correct initial state of Strongs action bar button
+  * Ensure Jubilee2000 is split before 2 for display in title
+
+== 2.0.0 (14 Feb) ==
+Preparation for release
+
 == 20130212 ==
   * Switch History menu option with Speak (now same as previous release version)
   * Minor fixes
