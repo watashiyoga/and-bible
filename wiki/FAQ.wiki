@@ -89,7 +89,7 @@ You can go to a Strong's reference by
   * swipe left/right when viewing a Strong's page to go to next/prev ref
 Release 0.4.0 will allow a list of all occurrences of a Strong's number to be displayed.
 
-== Does And Bible work on BlackBerry 10 OS ==
+== Does And Bible Work on BlackBerry 10 OS ==
 
 And Bible has been successfully installed by a user on BlackBerry 10 OS without any known issues.  Here are the user's comments:
 
