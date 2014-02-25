@@ -89,6 +89,12 @@ You can go to a Strong's reference by
   * swipe left/right when viewing a Strong's page to go to next/prev ref
 Release 0.4.0 will allow a list of all occurrences of a Strong's number to be displayed.
 
+== Does And Bible work on BlackBerry 10 OS ==
+
+And Bible has been successfully installed by a user on BlackBerry 10 OS without any known issues.  Here are the user's comments:
+
+I've just installed And Bible App for BlackBerry 10 OS on my BlackBerry Z10 using Sideload Google Play Client Snap for Andriod Apps. This link provides the instruction for installing Snap should any you encounter anyone who needs help in having And Bible for BlackBerry 10 OS. http://blackberryempire.com/how-to-sideload-google-play-snap-android-apps-blackberry-10/
+
 == Can I generate my own indexes and manually copy them to my Android mobile ==
 
 To allow for auto-uninstall of application generated files indexes are generated to the appropriate module sub-dir of /mnt/sdcard/Android/data/net.bible.android.activity/files/lucene/Sword e.g. ESV indexes are in ../lucene/Sword/ESV.
