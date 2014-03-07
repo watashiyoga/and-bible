@@ -2,45 +2,10 @@
 
 Below are release notes for recent unreleased alpha builds.
 
-== 2.0.0 (15 Feb) ==
-  * Correct initial state of Strongs action bar button
-  * Ensure Jubilee2000 is split before 2 for display in title
+== 2.0.1 (7 March) ==
+  * Updated Chinese and Hebrew localisations
+  * Catch several exceptions
+  * Workaround to avoid Document update error
 
 == 2.0.0 (14 Feb) ==
 Preparation for release
-
-== 20130212 ==
-  * Switch History menu option with Speak (now same as previous release version)
-  * Minor fixes
-  * Translation updates
-
-== 20130208 ==
-  * More characters in ActionBar buttons for tablet users
-  * Fix status bar icon size - shown when downloading
-  * Memory optimisations
-  * Prefer StrongsReal or Strongs if installed to avoid default use of incompatible lexicons
-  * Add various menu items to ActionBar in Documents, Reading plan, Downloads
-
-== 20130128 ==
-  * Fix bug leading to Actionbar not updating after Speak terminates
-  * Move MyNote & Bookmark Sort button to ActionBar
-  * JSword - remove 'zerosUnmapped' from JSword versification to prevent error when mapping verse 0
-
-== 20130127 ==
-  * Verse/Passage shortcuts restored to toolbar
-  * New Day theme
-  * Lights out mode when maximised
-  * Split button size fixed
-  * Fix error when last book in last language deleted
-  * All original toolbar buttons now available in the ActionBar (almost)
-  * JSword library updated
-  * New JSword Versification mappings are now used
-  * Android 2.1 support removed due to few users and poor xml support
-  * Remove Crosswire AV repo
-
-== 20130110 ==
-  * Partial migration to standard Actionbar
-  * Experimental navigation  drawer
-  * New Ichthys Launcher icon
-  * Larger possible text size (was 36 but now 60)
-  * Updated localisations cs, hu, ru, tr, kk
