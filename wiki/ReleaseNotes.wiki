@@ -1,7 +1,7 @@
 #labels release,notes
 = Release Notes =
 
-== Release 2.0.1 (8 March) ==
+== Release 2.0.1 (8 March 2014) ==
   * Updated Chinese and Hebrew localisations
   * Fix some exceptions
   * Workaround to avoid error when updating to a newer Document
