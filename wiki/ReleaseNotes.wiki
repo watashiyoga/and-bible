@@ -1,6 +1,10 @@
 #labels release,notes
 = Release Notes =
 
+== 2.0.1 (8 March) ==
+  * Updated Chinese and Hebrew localisations
+  * Catch several exceptions
+  * Workaround to avoid error when updating to a newer Document
 == Release 2.0.0 (15 February 2014) ==
   * New Ichthys launcher icon which is safer for persecuted users
   * More standard ActionBar replaces toolbar
