@@ -6,3 +6,4 @@ Below are release notes for recent unreleased alpha builds.
   * Switch to standard Phone call monitoring and allow Speak to continue when app is in background, but stop Speak when a phone call occurs.
   * Improve Bible book selection - list by column in Portrait to show longer lists i.e. 6x11 instead of 11x6.
   * Toggle dc book page in Passage selector.
+  * Fix position restore error when returning to large pages e.g. Clarke Gen 1.1
