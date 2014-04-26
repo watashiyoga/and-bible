@@ -3,12 +3,12 @@
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
 == 2014-04-26 ==
-  * Switch to standard Phone call monitoring.  Allow Speak to continue when app is in background.  Stop Speak when a phone call occurs but not when app moves to background.
   * Improve Bible book selection:
     * List by column in Portrait to show longer lists i.e. 6x11 instead of 11x6.
     * Enable sort alphabetically (for novices) or Biblical order
     * Page for deuterocanonical books in passage selector and search results.
     * Only display available books e.g. NT only
+  * Switch to standard Phone call monitoring.  Allow Speak to continue when app is in background.  Stop Speak when a phone call occurs but not when app moves to background.
   * Fix position restore error when returning to large pages e.g. Clarke Gen 1.1
   * Include modules from Wycliffe repository
   * Updated JSword library
