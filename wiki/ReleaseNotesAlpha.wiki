@@ -8,6 +8,7 @@ Below are release notes for recent alpha builds.  See [AlphaBetaTesting this pag
     * List by column in Portrait to show longer lists i.e. 6x11 instead of 11x6.
     * Enable sort alphabetically (for novices) or Biblical order
     * Page for deuterocanonical books in passage selector and search results.
+    * Only display available books e.g. NT only
   * Fix position restore error when returning to large pages e.g. Clarke Gen 1.1
   * Include modules from Wycliffe repository
   * Updated JSword library
