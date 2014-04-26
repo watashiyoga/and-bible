@@ -2,7 +2,7 @@
 
 Below are release notes for recent unreleased alpha builds.
 
-== Next Alpha ==
+== 2014-04-26 ==
   * Switch to standard Phone call monitoring.  Allow Speak to continue when app is in background.  Stop Speak when a phone call occurs but not when app moves to background.
   * Improve Bible book selection:
     * List by column in Portrait to show longer lists i.e. 6x11 instead of 11x6.
@@ -10,3 +10,4 @@ Below are release notes for recent unreleased alpha builds.
     * Page for deuterocanonical books in passage selector and search results.
   * Fix position restore error when returning to large pages e.g. Clarke Gen 1.1
   * Include modules from Wycliffe repository
+  * Updated JSword library
