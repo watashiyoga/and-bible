@@ -1,6 +1,6 @@
 = Alpha Build Release Notes =
 
-Below are release notes for recent unreleased alpha builds.
+Below are release notes for recent alpha builds.  See [http://code.google.com/p/and-bible/wiki/AlphaBetaTesting this page] for access to alpha releases.
 
 == 2014-04-26 ==
   * Switch to standard Phone call monitoring.  Allow Speak to continue when app is in background.  Stop Speak when a phone call occurs but not when app moves to background.
