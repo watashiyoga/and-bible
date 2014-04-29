@@ -2,6 +2,10 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
+== 2014-04-29 ==
+  * Fix alphabetic sorting of Bible books
+  * Fix missing documents after restart error
+
 == 2014-04-26 ==
   * Improve Bible book selection:
     * List by column in Portrait to show longer lists i.e. 6x11 instead of 11x6.
