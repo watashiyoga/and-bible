@@ -2,6 +2,10 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
+== 2014-05-06 ==
+  * Fix initial page positioning
+  * Fix display of hierarchical GenBooks
+
 == 2014-04-29 ==
   * Fix alphabetic sorting of Bible books
   * Fix missing documents after restart error
