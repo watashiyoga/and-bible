@@ -2,16 +2,18 @@
 
 Here are enhancements I hope to include in the upcoming releases.  Also see the [https://andbible.uservoice.com UserVoice page] which influences the below list.
 
-==Nicer Toolbar==
-Implement a standard, prettier and more powerful toolbar while retaining the current shortcut buttons. As the standard Android toolbar proliferates many phones hide the Menu button and users do not know how to access anything in the menus.
-
-==Reorganise and simplify the Menus==
-I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
-
 ==Technical Changes==
+Integrate EventBus to simplify component interactions.
+Separate out the XML->HTML code as a separate module and add specific unit tests.
 Build with Gradle.  This is Google's future planned build mechanism.
 Add Guice to facilitate unit testing and dependencies between different sections of code.
 More unit tests, starting with the XML->HTML conversion.
+
+==Fix Daily Readings==
+Convert to uses of OSIS references and SimpleOSISParser which will avoid problems with simple books and book name translations.
+
+==Reorganise and simplify the Menus==
+I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
 
 ==Bookmark, My Note, Highlight, Label Integration==
 Some people have many bookmarks and would like improved label support for bookmarks and to be able to label My Notes.  Also there are many requests for highlighting.  I plan to integrate all the above and improve labels.
