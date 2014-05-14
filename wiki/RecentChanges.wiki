@@ -2,11 +2,11 @@
 
 = Recent Changes =
 
-==Split Screen==
-A lot of people have requested this.  It is useful i) for comparing 2 bibles e.g. native/Greek, native/English ii)instant commentary view e.g. ESV/JFB iii)Document selector/view iv) making (sermon) notes while reading v) unlinked so that you could have the main window open to the primary study chapter and the secondary window could be used to look up related references. (Please mention other particular uses to assist with planning).
+==Nicer Toolbar==
+Implement a standard, prettier and more powerful toolbar while retaining the current shortcut buttons. As the standard Android toolbar proliferates many phones hide the Menu button and users do not know how to access anything in the menus.
 
-==Speak Improvements==
-Add Quick Speak button - Done.  Add Pause/FF/Rew.
+==Persecuted Users==
+Use less obviously Christian icon to reduce probability of causing persecution for users.
 
-==And Bible Specific Screen Timout==
-I set mine default timeout to 10 minutes which I find fine, but many people have requested this so the plan is to add a new Setting allowing selection of Screen Timeout just for And Bible.  Meanwhile, if you want the screen to stay on, you could use the "Screen On" Android app to keep the screen on always when using And Bible.
+==Alternate Versifications==
+Support users with different order of Bible books and different chapter divisions.
