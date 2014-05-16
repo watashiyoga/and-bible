@@ -1,10 +1,23 @@
 #labels release,notes
 = Release Notes =
 
+== Release 2.1.0 (17 May 2014) ==
+Improve Bible book selection:
+  * List by column in Portrait to show longer lists i.e. 6x11 instead of 11x6.
+  * Enable sort alphabetically (for novices) or Biblical order
+  * Page for deuterocanonical books.
+  * Only display books available in current document e.g. NT only
+Other changes:
+  * Pause Speak when a phone call occurs, not when app moves to background.
+  * Include modules from Wycliffe repository
+  * Updated JSword library
+  * Bug fixes
+
 == Release 2.0.1 (8 March 2014) ==
   * Updated Chinese and Hebrew localisations
   * Fix some exceptions
   * Workaround to avoid error when updating to a newer Document
+
 == Release 2.0.0 (15 February 2014) ==
   * New Ichthys launcher icon which is safer for persecuted users
   * More standard ActionBar replaces toolbar
