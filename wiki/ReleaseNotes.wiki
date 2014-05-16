@@ -2,7 +2,7 @@
 = Release Notes =
 
 == Release 2.1.0 (17 May 2014) ==
-Improve Bible book selection:
+Improve Bible book selector:
   * List by column in Portrait to show longer lists i.e. 6x11 instead of 11x6.
   * Enable sort alphabetically (for novices) or Biblical order
   * Page for deuterocanonical books.
