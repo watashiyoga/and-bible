@@ -1,0 +1,4 @@
+#summary Downloads
+
+= And Bible Downloads =
+Google code has ceased to host downloads.  Old And Bible releases can be found [http://code.google.com/p/and-bible/downloads/list here] whereas new And Bible releases can be found [https://drive.google.com/folderview?id=0B1yZK0LYUsB7aF84RFRQRDN4RzA&usp=sharing here].
