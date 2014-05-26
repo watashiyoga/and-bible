@@ -5,6 +5,6 @@ Below are release notes for recent alpha builds.  See [AlphaBetaTesting this pag
 == 2014-05-26 ==
   * New Slovak localisation
   * Updated es, fr, hu, kk, ky localisations
-  * Shorten each section of document name in short-cut rather than whole
-  * Fix: Book sort order by initials in short-cut buttons
+  * Improve abbreviated document names in Action bar buttons
+  * Fix: Book sort order by initials in Action bar quick buttons
   * Fix: Bookmarks and selected label added to History list allowing Back to previous bookmark selection
