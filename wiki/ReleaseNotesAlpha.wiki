@@ -2,5 +2,9 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
-== 2014-??-?? ==
-  * Fix: Bookmarks and selected label added to History list
+== 2014-05-26 ==
+  * New Slovak localisation
+  * Updated es, fr, hu, kk, ky localisations
+  * Shorten each section of document name in short-cut rather than whole
+  * Fix: Book sort order by initials in short-cut buttons
+  * Fix: Bookmarks and selected label added to History list allowing Back to previous bookmark selection
