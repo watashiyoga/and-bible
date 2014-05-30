@@ -34,8 +34,8 @@ Do not include any accented, or other non ASCII characters in the properties fil
 
 ===== Deuterocanonical Books=====
 The default versification for reading plans is KJV.  If you wish to include deuterocanonical books  in your plan you must specify the versification in the properties file.  E.g.:
-Versification=Vulg
 {{{
+Versification=Vulg
 1=Sir 1-2
 2=1Macc 1-2
 3=Bar 1-2
