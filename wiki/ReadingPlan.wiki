@@ -32,6 +32,15 @@ Foreign language Bible book names may be supported if the book list in And Bible
 
 Do not include any accented, or other non ASCII characters in the properties file.
 
+===== Deuterocanonical Books=====
+The default versification for reading plans is KJV.  If you wish to include deuterocanonical books  in your plan you must specify the versification in the properties file.  E.g.:
+Versification=Vulg
+{{{
+1=Sir 1-2
+2=1Macc 1-2
+3=Bar 1-2
+4=Luk 3
+}}}
 
 == Set Start to Jan 1st ==
 If you started the readings on 1st Jan and have just switched to And Bible then select Menu form the Daily Reading screen and then select 'Start Jan 1'.  You may then jump to 'Move the current day to a specific day' below to skip over readings you have already done.
