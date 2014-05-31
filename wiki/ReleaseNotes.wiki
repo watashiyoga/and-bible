@@ -1,7 +1,7 @@
 #labels release,notes
 = Release Notes =
 
-== Release 2.1.1 ==
+== Release 2.1.1 (31 May 2014) ==
   * Fix crash when adding MyNote for deuterocanonical verse
   * Allow deuterocanonical passages in personal reading plans
   * Fix occasional missing verse number in action bar
