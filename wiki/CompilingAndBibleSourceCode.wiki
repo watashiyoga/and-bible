@@ -4,7 +4,7 @@ When compiling you will notice warnings regarding anonymous inner classes.  Thes
 
 = Eclipse =
 
-Eclipse is the preferred IDE for Android development.
+Eclipse is the IDE used for development of And Bible.
 
  # Download and install jdk 1.6.
  # Install the [http://developer.android.com/sdk/index.html Android SDK].
@@ -13,8 +13,6 @@ Eclipse is the preferred IDE for Android development.
  # Ensure Eclipse has a Git plugin e.g. eGit or install Git for use from the command line (see below for more details).
  # Clone the [https://github.com/mjdenham/and-bible And Bible source]
  # In eclipse right-click the And Bible project and select Run As/Android Application
-
-An alternative way to get started quickly is to install [http://developer.motorola.com/docstools/motodevstudio/ MotoDev Studio].  I have been using this myself recently and because it comes pre-configured for Android development it is a quick way to start.
 
 = Git =
 
@@ -28,24 +26,26 @@ cd andbible
 git init
 git pull git://github.com/mjdenham/and-bible.git
 
+= App Bar Compat =
+The App Bar Compat library is now required.  If using Eclipse this must be configured as a Library Project.
+
+Follow [http://developer.android.com/tools/support-library/setup.html#libs-with-res Adding libraries with resources] on the Android [http://developer.android.com/tools/support-library Support Library] page.
+Check appcompat-proj/project.properties to ensure the compat library sdk version is consistent with And Bible's and has been downloaded using the Android SDK.
+
 = Other IDEs =
 
 Some IDEs like IDEA already have custom embedded Android Tools which can be used.  See this [http://developer.android.com/guide/developing/other-ide.html Google Help Page] for more information.
 
-= Ant =
+= Future Gradle =
+In the future gradle will be used for builds, alongside eclipse builds.  However, libraries will no longer be stored in teh libs folder but a gradle command will download and copy the required libraries to the libs folder for use in eclipse builds.
 
-Much of this information is taken from [http://developer.android.com/guide/developing/other-ide.html Google Help Page]
+Gradle 1.12 should be installed as described at:
+http://www.gradle.org/installation
 
-To compile with ant:
+The Enide Gradle eclipse plugin can be downloaded from the Eclipse Marketplace.
 
- # Create AndBible/local.properties based on local.properties.example  
- # Ensure jdk 1.6 is installed and on the path.  
- # Ensure the Android SDK is installed and the tools directory is on the path.  
- # Change to the AndBible project directory  
- # Run 'ant debug'  
-
-= Future Use of App Bar Compat =
-The App Bar Compat library will be required in the future.  If using Eclipse this must be configured as a Library Project.
-
-Follow [http://developer.android.com/tools/support-library/setup.html#libs-with-res Adding libraries with resources] on the Android [http://developer.android.com/tools/support-library Support Library] page.
-Check appcompat-proj/project.properties to ensure the compat library sdk version is consistent with And Bible's and has been downloaded using the Android SDK.
+To build either:
+  * right-click build.gradle in the And Bible project and select:
+Run As/Gradle installDebug Gradle Android start
+Or
+  * from the command prompt type: gradle appStart
