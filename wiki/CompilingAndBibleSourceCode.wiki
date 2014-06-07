@@ -37,7 +37,7 @@ Check appcompat-proj/project.properties to ensure the compat library sdk version
 Some IDEs like IDEA already have custom embedded Android Tools which can be used.  See this [http://developer.android.com/guide/developing/other-ide.html Google Help Page] for more information.
 
 = Future Gradle =
-In the future gradle will be used for builds, alongside eclipse builds.  However, libraries will no longer be pre-installed in the libs folder but using gradle will automatically download and copy the required libraries to the libs folder for use in eclipse builds.  To force population of the libs folder run:  
+In the future gradle will be used for builds but eclipse builds (as now) will be supported in parallel.  However, libraries will no longer be pre-installed in the libs folder but using gradle will automatically download and copy the required libraries to the libs folder for use in eclipse builds.  To force population of the libs folder run:  
 gradle copyJarDependencies
 
 Gradle 1.12 should be installed as described at:
