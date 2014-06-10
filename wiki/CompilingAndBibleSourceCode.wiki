@@ -47,6 +47,12 @@ http://www.gradle.org/installation
 
 The Enide Gradle eclipse plugin can be downloaded from the Eclipse Marketplace.
 
+== Initialisation ==
+After first install you will need to force Gradle to download required jars and make them available to eclipse in teh libs folder by:
+  * right-click build.gradle in the And Bible project and select: Run As/Gradle build Gradle build
+  * press F5 on the libs folder to refresh it
+
+
 To build either:
   * right-click build.gradle in the And Bible project and select: Run As/Gradle installDebug Gradle Android start  
 Or
