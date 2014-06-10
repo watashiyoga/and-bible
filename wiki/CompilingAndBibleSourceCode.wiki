@@ -32,6 +32,8 @@ The App Bar Compat library is now required.  If using Eclipse this must be confi
 Follow [http://developer.android.com/tools/support-library/setup.html#libs-with-res Adding libraries with resources] on the Android [http://developer.android.com/tools/support-library Support Library] page.
 Check appcompat-proj/project.properties to ensure the compat library sdk version is consistent with And Bible's and has been downloaded using the Android SDK.
 
+After installation you should see a project named android-support-v7-appcompat in your eclipse IDE.
+
 = Other IDEs =
 
 Some IDEs like IDEA already have custom embedded Android Tools which can be used.  See this [http://developer.android.com/guide/developing/other-ide.html Google Help Page] for more information.
@@ -49,3 +51,7 @@ To build either:
   * right-click build.gradle in the And Bible project and select: Run As/Gradle installDebug Gradle Android start  
 Or
   * from the command prompt type: gradle appStart
+
+= Problems =
+== ActionBar cannot be resolved to a type == 
+You need to install the App Bar Compat library as described in the links above.
