@@ -9,6 +9,7 @@ Eclipse is the IDE used for development of And Bible.
  # Download and install jdk 1.6.
  # Install the [http://developer.android.com/sdk/index.html Android SDK].
  # Install [http://www.eclipse.org/downloads/ Eclipse] for Java EE developers or for Java Developers
+ # Select Java 6 as the installed jre and compliance level in Window/Preferences.
  # Install the [http://developer.android.com/sdk/eclipse-adt.html Eclipse ADT plugin].
  # Ensure Eclipse has a Git plugin e.g. eGit or install Git for use from the command line (see below for more details).
  # Clone the [https://github.com/mjdenham/and-bible And Bible source]
