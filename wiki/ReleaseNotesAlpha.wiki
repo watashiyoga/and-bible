@@ -2,16 +2,7 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
-== 2014-05-30 ==
-  * Fix crash when adding MyNote for deuterocanonical verse
-  * Allow deuterocanonical passages in personal reading plans
-
-== 2014-05-28 ==
-  * Fix occasional missing verse number in action bar
-
-== 2014-05-26 ==
-  * New Slovak localisation
-  * Updated es, fr, hu, kk, ky localisations
-  * Improve abbreviated document names in Action bar buttons
-  * Fix: Book sort order by initials in Action bar quick buttons
-  * Fix: Bookmarks and selected label added to History list allowing Back to previous bookmark selection
+== Next alpha ==
+Changes to the app structure to make development easier:
+  * Built using Gradle (see [CompilingAndBibleSourceCode])
+  * Components kept in synch using EventBus rather than mediator and listeners.
