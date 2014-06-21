@@ -46,7 +46,7 @@ There is a list of module repositories here: http://www.crosswire.org/wiki/Modul
 
 Modules/documents installed via the Download screen in And Bible will be placed in a different directory.
 
-== Why are the Bible books listed vertically in the portrait mode passage selector ==
+== Why are Bible books listed vertically in the portrait mode passage selector ==
 
 Listing books vertically when in portrait mode allows longer sequences of books and therefore makes it easier to locate the correct column for the book you are seeking.
 
