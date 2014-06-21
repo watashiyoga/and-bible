@@ -46,9 +46,15 @@ There is a list of module repositories here: http://www.crosswire.org/wiki/Modul
 
 Modules/documents installed via the Download screen in And Bible will be placed in a different directory.
 
-== Why do I have to re-Download Documents after upgrading to a new version of And Bible ==
+== Why are the Bible books listed vertically in the portrait mode passage selector ==
 
-This is caused by a bug in Android 2.2.  And Bible automatically deletes all downloaded documents if And Bible is uninstalled but support for this feature was not implemented correctly by Google in Android 2.2 so documents are deleted on upgrade as well as on uninstall.  This problem does not affect Android 2.3.x or later.
+Listing books vertically when in portrait mode allows longer sequences of books and therefore makes it easier to locate the correct column for the book you are seeking.
+
+This is in some ways similar to the list of books at the front of bibles which normally run vertically in 2 or 3 columns. 
+
+Landscape mode Bible books are listed horizontally for the same reason as above.
+
+In the future I hope to add a vertical line separator between OT and NT books to guide user's eyes.
 
 == Can I delete a document from And Bible ==
 
@@ -72,6 +78,10 @@ Alternatively e-mail help.andbible@gmail.com
 Hebrew font support was added in Android 2.2.  Although some people have found out how to add Hebrew fonts to older versions of Android that is not supported although it may work for you.
 
 Hebrew fonts are in Android 2.2 but RTL does not work if Hebrew vowels are displayed so And Bible does not display Hebrew vowels.
+
+== Why do I have to re-Download Documents after upgrading to a new version of And Bible ==
+
+This is caused by a bug in Android 2.2.  And Bible automatically deletes all downloaded documents if And Bible is uninstalled but support for this feature was not implemented correctly by Google in Android 2.2 so documents are deleted on upgrade as well as on uninstall.  This problem does not affect Android 2.3.x or later.
 
 == And Bible is large ==
 
