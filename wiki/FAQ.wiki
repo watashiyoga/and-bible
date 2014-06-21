@@ -48,13 +48,11 @@ Modules/documents installed via the Download screen in And Bible will be placed 
 
 == Why are Bible books listed vertically in the portrait mode passage selector ==
 
-Listing books vertically when in portrait mode allows longer sequences of books and therefore makes it easier to locate the correct column for the book you are seeking.
+Listing books vertically when in portrait mode allows longer sequences of books and therefore makes it easier to locate the correct column for the book you are seeking.  In the future I plan to add a vertical line separator between OT and NT books to guide user's eyes.
 
 This is in some ways similar to the list of books at the front of bibles which normally run vertically in 2 or 3 columns. 
 
 Landscape mode Bible books are listed horizontally for the same reason as above.
-
-In the future I hope to add a vertical line separator between OT and NT books to guide user's eyes.
 
 == Can I delete a document from And Bible ==
 
