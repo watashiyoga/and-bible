@@ -48,6 +48,9 @@ http://www.gradle.org/installation
 
 The Enide Gradle eclipse plugin can be downloaded from the Eclipse Marketplace.
 
+Ensure ANDROID_HOME environment variable is set correctly.  In Linux I found this needed to be in .profile (not .bashrc) and do a restart after setting it:
+export ANDROID_HOME=/opt/android-sdk-linux
+
 == Initialisation ==
 After first install you will need to force Gradle to download required jars and make them available to eclipse in the libs folder by:
   * right-click build.gradle in the And Bible project and select: Run As/Gradle build Gradle build
