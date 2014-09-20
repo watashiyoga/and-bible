@@ -4,6 +4,7 @@ Below are release notes for recent alpha builds.  See [AlphaBetaTesting this pag
 
 == Next alpha ==
 Changes to the app structure to make development easier:
+  * The previous alpha had a problem which caused teh History mechanism to fail but this should be fixed in the next alpha.
   * Reading plans now use OSIS references to fix single chapter book, and non-English reference problems.
   * Can build using Gradle (see [CompilingAndBibleSourceCode])
   * Components kept in synch using EventBus rather than mediator and listeners.
