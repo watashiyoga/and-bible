@@ -2,12 +2,11 @@
 
 = Update =
 
-To avoid problems with incorrect readings for non-English readers and difficulty specifying single chapter books reading Plans are changing to use OSIS ids instead of the current free format passage references.
+To avoid problems with incorrect readings for non-English readers and difficulty specifying single chapter books Reading Plans are being changed to use OSIS ids instead of the current free format passage references.
 
-To use OSIS ids you need to add the following line to your reading plan:
-PassageReferenceType=OSIS
+Non-OSIS references will be deprecated.  I have made some attempt to ensure old free-format references will continue to work but this is not guaranteed.
 
-Then convert passages from the following style: "Gen 1, Matt 1-2"  
+Passages references must be changed from the following style: "Gen 1, Matt 1-2"  
 To: "Gen.1,Matt.1-Matt.2"  
 
 A full list of OSIS book names can be found [http://www.crosswire.org/wiki/OSIS_Book_Abbreviations here]
