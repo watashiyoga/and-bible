@@ -3,7 +3,7 @@
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
 == 2014-09-25 ==
-  * The previous test releases had a problem which caused the History mechanism to fail but this is now fixed.
+  * The previous test release had a problem which caused the History mechanism to fail but this is now fixed.
   * Reading plans now use OSIS references to fix single chapter book, and non-English reference problems.
   * Remember all Search settings when using Back/History to return to a previous Search screen.
 
