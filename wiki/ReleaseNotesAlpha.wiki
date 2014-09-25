@@ -10,3 +10,4 @@ Below are release notes for recent alpha builds.  See [AlphaBetaTesting this pag
 == 2014-07-24 ==
   * Can build using Gradle (see [CompilingAndBibleSourceCode])
   * Components kept in synch using EventBus rather than mediator and listeners.
+  * Fix missing-search-results problem.
