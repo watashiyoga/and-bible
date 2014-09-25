@@ -2,9 +2,11 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
-== Next alpha ==
-Changes to the app structure to make development easier:
-  * The previous alpha had a problem which caused teh History mechanism to fail but this should be fixed in the next alpha.
+== 2014-09-25 ==
+  * The previous test releases had a problem which caused the History mechanism to fail but this is now fixed.
   * Reading plans now use OSIS references to fix single chapter book, and non-English reference problems.
+  * Remember all Search settings when using Back/History to return to a previous Search screen.
+
+== 2014-07-24 ==
   * Can build using Gradle (see [CompilingAndBibleSourceCode])
   * Components kept in synch using EventBus rather than mediator and listeners.
