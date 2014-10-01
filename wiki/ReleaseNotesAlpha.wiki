@@ -2,6 +2,10 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
+== Next ==
+  * Azerbaijani localisation
+  * Fix splash screen broken in 2014-07-24 alpha
+
 == 2014-09-25 ==
   * The previous test release had a problem which caused the History mechanism to fail but this is now fixed.
   * Reading plans now use OSIS references to fix single chapter book, and non-English reference problems.
