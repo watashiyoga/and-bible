@@ -2,7 +2,11 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
-== Next ==
+== 2014-10-06 ==
+  * Remove debug which occasionally prevents History working
+  * Fix minor JSword bug preventing index of Gill
+
+== 2014-10-01 ==
   * Azerbaijani localisation
   * Fix splash screen broken in 2014-07-24 alpha
 
