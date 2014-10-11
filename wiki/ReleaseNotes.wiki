@@ -1,6 +1,15 @@
 #labels release,notes
 = Release Notes =
 
+== Release 2.1.5 (11 Oct 2014) ==
+- Fix minor JSword bug preventing index of Gill
+- Azerbaijani localisation
+- Reading plans now use OSIS references to fix single chapter book, and non-English reference problems.
+- Remember all Search settings when using Back/History to return to a previous Search screen
+- Can build using Gradle
+- Components kept in synch using EventBus rather than mediator and listeners
+- Fix missing-search-results problem
+
 == Release 2.1.1 (31 May 2014) ==
   * Fix crash when adding MyNote for deuterocanonical verse
   * Allow deuterocanonical passages in personal reading plans
