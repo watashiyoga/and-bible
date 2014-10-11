@@ -6,8 +6,8 @@ To avoid problems with incorrect readings for non-English readers and difficulty
 
 Non-OSIS references will be deprecated.  I have made some attempt to ensure old free-format references will continue to work but this is not guaranteed.
 
-Passage references must be changed from the following style: "Gen 1, Matt 1-2"  
-To: "Gen.1,Matt.1-Matt.2"  
+Passage references must be changed from the following style: "Gen 1, Matt 1-2, Psalm 119:1-10"  
+To: "Gen.1,Matt.1-Matt.2,Ps.119.1-Ps.119.10"  
 
 Example reading plans can be found [https://github.com/mjdenham/and-bible/tree/master/AndBible/assets/readingplan here].
 
