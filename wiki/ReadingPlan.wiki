@@ -9,6 +9,8 @@ Non-OSIS references will be deprecated.  I have made some attempt to ensure old 
 Passages references must be changed from the following style: "Gen 1, Matt 1-2"  
 To: "Gen.1,Matt.1-Matt.2"  
 
+Example reading plans can be found [https://github.com/mjdenham/and-bible/tree/master/AndBible/assets/readingplan here].
+
 A full list of OSIS book names can be found [http://www.crosswire.org/wiki/OSIS_Book_Abbreviations here]
 
 
