@@ -26,6 +26,12 @@ This is done by backing up on one phone and restoring on the other.
 
 If one device has an internal and external SD card the location of the backup folder may not be on the removable SD card but can still be copied via USB cable.
 
+The backup created by And Bible is a SqLite database file named andBibleDatabase.db stored in a folder named andbible_backup on your SD card or, with some devices, main internal storage.
+
+You may wish to copy this file to your pc via usb after backup to ensure you do not lose any data.
+
+If you are having difficulty restoring i) ensure you have a copy of your backup file ii) do a backup and observe the location of the new andBibleDatabase.db iii) overwrite the new file with the old backup file iv) do a restore.
+
 == Can you add an Exit button? ==
 
 Pressing the Home button takes you to the main Android screen from which you can see all your other applications.  Long-pressing the Home button allows you to jump straight to any recent application.  This is the standard way Android applications work.
