@@ -26,7 +26,7 @@ This is done by backing up on one phone and restoring on the other.
 
 If one device has an internal and external SD card the location of the backup folder may not be on the removable SD card but can still be copied via USB cable.
 
-The backup created by And Bible is a SqLite database file named andBibleDatabase.db stored in a folder named andbible_backup on your SD card or, with some devices, main internal storage.
+The backup created by And Bible is a SqLite database file named andBibleDatabase.db stored in a folder named andbible_backup on your SD card or, with some devices, the primary internal storage.
 
 You may wish to copy this file to your pc via usb after backup to ensure you do not lose any data.
 
