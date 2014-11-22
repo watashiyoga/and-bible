@@ -1,6 +1,12 @@
 #labels release,notes
 = Release Notes =
 
+== Release 2.1.6 (22 Nov 2014) ==
+  * Fix SynodalProt versification error affecting mudules like Russian CARS
+  * Work around for offline X repository
+  * Some localisation updates
+  * Brighter red letter in Night mode
+
 == Release 2.1.5 (11 Oct 2014) ==
   * Fix minor JSword bug preventing index of Gill
   * Azerbaijani localisation
