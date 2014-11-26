@@ -2,6 +2,6 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
-== 2014-11-10 ==
-  * Fix SynodalProt versification problem
-  * Brighten red letter, night time colour.
+== Next build ==
+  * Add 2 year reading plan
+  * Fix annoying scroll on double-tap/maximise
