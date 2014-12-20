@@ -3,6 +3,4 @@
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
 == Next build ==
-  * Add 2 year reading plan
-  * Fix unrequested scroll on double-tap/maximise
-  * Fix rare error going Back to book chapter when book has multiple sections.
+  * Layout improvements and fixes
