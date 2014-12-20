@@ -1,6 +1,11 @@
 #labels release,notes
 = Release Notes =
 
+== Release 2.1.7 (20 Dec 2014) ==
+  * New 2 year reading plan
+  * Fix inadvertent scroll on double-tap(maximise)
+  * Fix rare error going Back to book chapter when book has multiple sections.
+
 == Release 2.1.6 (22 Nov 2014) ==
   * Fix SynodalProt versification error affecting mudules like Russian CARS
   * Work around for offline X repository
