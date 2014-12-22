@@ -79,6 +79,11 @@ The [https://groups.google.com/group/and-bible And Bible Discussion Group] allow
 
 Alternatively e-mail help.andbible@gmail.com
 
+== Psalms in French Bibles are Offset by One ==
+This is due to the unusual versification used by the Sword modules containing French Bibles like FreSegond and FreCrampon.
+
+Please see [http://www.crosswire.org/pipermail/sword-devel/2014-March/041180.html this discussion] on the sword-devel mailing list.
+
 == I just see squares instead of the Hebrew bible ==
 
 Hebrew font support was added in Android 2.2.  Although some people have found out how to add Hebrew fonts to older versions of Android that is not supported although it may work for you.
