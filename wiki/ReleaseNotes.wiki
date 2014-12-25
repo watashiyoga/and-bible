@@ -1,6 +1,10 @@
 #labels release,notes
 = Release Notes =
 
+== Release 2.1.8 (26 Dec 2014) ==
+  * Fix prev/next chapter swipe on old devices
+  * Updated cs, hu localisations
+
 == Release 2.1.7 (20 Dec 2014) ==
   * New 2 year reading plan
   * Fix inadvertent scroll on double-tap(maximise)
