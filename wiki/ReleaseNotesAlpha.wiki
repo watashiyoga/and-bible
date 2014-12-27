@@ -4,7 +4,7 @@ Below are release notes for recent alpha builds.  See [AlphaBetaTesting this pag
 
 == Next build ==
   * Layout improvements and fixes
-  ** Refactored code
-  ** More unit tests
-  ** Improved <l> handling especially for rusCars poetry
-  ** Milestone quote e.g. ESV start of Jn 3:16
+    * Refactored code
+    * More unit tests
+    * Improved `<l>` handling especially for rusCars poetry
+    * Milestone quote e.g. ESV start of Jn 3:16
