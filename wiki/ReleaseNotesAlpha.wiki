@@ -11,3 +11,4 @@ Below are release notes for recent alpha builds.  See [AlphaBetaTesting this pag
     * Avoid extra redundant note in HunUj due to trailing space after references
     * Allow red letter in non-Bible modules
     * Correct name of hi super css class
+    * Derive x-reference verse from osisRef not reference text because some modules like UZIBT do not have a valid text in x-references.
