@@ -27,7 +27,7 @@ cd andbible
 git init
 git pull git://github.com/mjdenham/and-bible.git
 
-= App Bar Compat =
+= App Bar Compat (4.4.2 19) =
 The App Bar Compat library is now required.  If using Eclipse this must be configured as a Library Project.
 
 Follow [http://developer.android.com/tools/support-library/setup.html#libs-with-res Adding libraries with resources] on the Android [http://developer.android.com/tools/support-library Support Library] page.
@@ -39,8 +39,8 @@ After installation you should see a project named android-support-v7-appcompat i
 
 Some IDEs like IDEA already have custom embedded Android Tools which can be used.  See this [http://developer.android.com/guide/developing/other-ide.html Google Help Page] for more information.
 
-= Future Gradle =
-In the future gradle will be used for builds but eclipse builds (as now) will be supported in parallel.  However, libraries will no longer be pre-installed in the libs folder but using gradle will automatically download and copy the required libraries to the libs folder for use in eclipse builds.  To force population of the libs folder run:  
+= Gradle =
+Building with gradle is supported but eclipse is my main development environment so integration with IDEA is up to the user.  Most libraries are no longer pre-installed in the libs folder but using gradle will automatically download and copy the required libraries to the libs folder for use in eclipse builds.  To force population of the libs folder run:  
 gradle copyJarDependencies
 
 Gradle 1.12 should be installed as described at:
@@ -65,3 +65,18 @@ Or
 = Problems =
 == ActionBar cannot be resolved to a type == 
 You need to install the App Bar Compat library as described in the links above.
+
+== Android 5 SDK ==
+The Android 5 SDK is not currently supported although if you are on this version you should be able to get And Bible working but the ActionBar will look a little different.
+
+I did briefly upgrade to Android 5 but various things broke (I don't plan to look at the Android 5 SDK again for a while).  It was just before a minor release so I downgraded again, but the downgrade was not easy.  If you have installed the Android 5 SDK you should be able to get it working reasonably well but not perfectly.  If you need to downgrade from 5 to 4.4.2 I have pasted in some downgrade notes I made below.  The hardest thing was finding the older versions of the appcompat library
+
+I don't recall if I really needed to downgrade the tools but if you need to you may follow these instructions:
+http://stackoverflow.com/questions/9555337/how-to-downgrade-my-sdk-version
+http://dl-ssl.google.com/android/repository/tools_r22-linux.zip
+from July 2014
+
+I definitely needed to downgrade the appcompat library.  On my pc it is in /opt/android-sdk-linux/extras/android/support.
+Older versions of the appcompat library can be accessed as follows:
+https://dl-ssl.google.com/android/repository/support_r19.zip
+https://dl-ssl.google.com/android/repository/support_r19.1.zip
