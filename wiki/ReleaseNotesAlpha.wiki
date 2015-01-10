@@ -4,7 +4,7 @@ Below are release notes for recent alpha builds.  See [AlphaBetaTesting this pag
 
 == Next build ==
   * Layout improvements and fixes
-    * Refactored code
+    * Refactored OSIS to html parser
     * More unit tests
     * Improved `<l>` handling especially for rusCars poetry
     * Add milestone quote handler e.g. ESV start of Jn 3:16 had a missing quote
@@ -12,6 +12,6 @@ Below are release notes for recent alpha builds.  See [AlphaBetaTesting this pag
     * Allow red letter in non-Bible modules
     * Correct name of hi super css class
     * Derive x-reference verse from osisRef not reference text because some modules like UZIBT do not have a valid text in x-references.
-    * Handle OSIS table, row, and cell tags.
-    * Handle OSIS list and item tags.
-    * Divine name displayed in lower caps.
+    * Add support for OSIS table, row, and cell
+    * Add support for OSIS list and item
+    * Display divine name in lower caps
