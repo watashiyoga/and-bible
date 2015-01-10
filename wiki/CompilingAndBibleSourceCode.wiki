@@ -13,7 +13,7 @@ Eclipse is the IDE used for development of And Bible.
  # Install the [http://developer.android.com/sdk/eclipse-adt.html Eclipse ADT plugin].
  # Ensure Eclipse has a Git plugin e.g. eGit or install Git for use from the command line (see below for more details).
  # Clone the [https://github.com/mjdenham/and-bible And Bible source]
- # Install Gradle, Enide, and download jars as described in Gradle below.
+ # Install Gradle, Enide, and download required jars as described in Gradle below.
  # In eclipse right-click the And Bible project and select Run As/Android Application
 
 = Git =
