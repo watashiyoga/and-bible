@@ -6,7 +6,7 @@ When compiling you will notice warnings regarding anonymous inner classes.  Thes
 
 Eclipse is the IDE used for development of And Bible.
 
- # Download and install jdk 1.6.
+ # Download and install jdk 1.7.
  # Install the [http://developer.android.com/sdk/index.html Android SDK].
  # Install [http://www.eclipse.org/downloads/ Eclipse] for Java EE developers or for Java Developers
  # Select Java 6 as the installed jre and compliance level in Window/Preferences.
