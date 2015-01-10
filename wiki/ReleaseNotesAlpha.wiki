@@ -14,3 +14,4 @@ Below are release notes for recent alpha builds.  See [AlphaBetaTesting this pag
     * Derive x-reference verse from osisRef not reference text because some modules like UZIBT do not have a valid text in x-references.
     * Handle OSIS table, row, and cell tags.
     * Handle OSIS list and item tags.
+    * Divine name displayed in lower caps.
