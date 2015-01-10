@@ -14,6 +14,7 @@ Eclipse is the IDE used for development of And Bible.
  # Ensure Eclipse has a Git plugin e.g. eGit or install Git for use from the command line (see below for more details).
  # Clone the [https://github.com/mjdenham/and-bible And Bible source]
  # Install Gradle, Enide, and download required jars as described in Gradle below.
+ # Install Android Support v7 App Compat library as described below.
  # In eclipse right-click the And Bible project and select Run As/Android Application
 
 = Git =
@@ -28,7 +29,7 @@ cd andbible
 git init
 git pull git://github.com/mjdenham/and-bible.git
 
-= App Bar Compat (4.4.2 19) =
+= Android Support Library App Bar Compat v7 (4.4.2 19) =
 The App Bar Compat library is now required.  If using Eclipse this must be configured as a Library Project.
 
 Follow [http://developer.android.com/tools/support-library/setup.html#libs-with-res Adding libraries with resources] on the Android [http://developer.android.com/tools/support-library Support Library] page.
