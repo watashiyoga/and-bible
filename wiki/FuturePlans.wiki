@@ -14,6 +14,7 @@ Remove the current split screen setting and add a sub-menu containing:
   * Unlink
 
 ==Standard Swipe==
+With positive feedback during swipe (ViewPager).
 
 ==Reorganise and simplify the Menus==
 I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
