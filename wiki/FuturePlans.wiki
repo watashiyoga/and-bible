@@ -16,6 +16,9 @@ Remove the current split screen setting and add a sub-menu containing:
 ==Standard Swipe==
 With positive feedback during swipe (ViewPager).
 
+==SD Card selection==
+And Bible often uses the default internal SD card even though a larger external SD card is available.
+
 ==Reorganise and simplify the Menus==
 I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
 
