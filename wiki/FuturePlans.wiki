@@ -2,26 +2,18 @@
 
 Here are enhancements I hope to include in the upcoming releases.  Also see the [https://andbible.uservoice.com UserVoice page] which influences the below list.
 
-==Technical Changes==
-Integrate EventBus to simplify component interactions.
-Separate out the XML->HTML code as a separate module and add specific unit tests.
-Build with Gradle.  This is Google's future planned build mechanism.
-Add Guice to facilitate unit testing and dependencies between different sections of code.
-More unit tests, starting with the XML->HTML conversion.
+==Interlinear Greek/Hebrew==
+Multiple documents displayed vertically word-by-word matched on Strongs numbers.
 
 ==More Split Screen Functions==
-Remove teh current split screen setting and add a sub-menu containing:
+Remove the current split screen setting and add a sub-menu containing:
   * New split screen
   * Close split screen
   * Swap split screens
   * Link
   * Unlink
 
-==Abbreviate Book Names==
-Eg StrongsRealGreek -> 'StReG' instead of 'Stron' which could match several books.
-
-==Fix Daily Readings==
-Convert to uses of OSIS references and SimpleOSISParser which will avoid problems with simple books and book name translations.
+==Standard Swipe==
 
 ==Reorganise and simplify the Menus==
 I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
