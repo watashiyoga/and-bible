@@ -2,7 +2,7 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
-== Next build ==
+== Jan 10th 2015 ==
   * Layout improvements and fixes
     * Refactored OSIS to html parser
     * More unit tests
