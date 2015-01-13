@@ -2,11 +2,13 @@
 
 = Recent Changes =
 
-==Nicer Toolbar==
-Implement a standard, prettier and more powerful toolbar while retaining the current shortcut buttons. As the standard Android toolbar proliferates many phones hide the Menu button and users do not know how to access anything in the menus.
+==Technical Changes==
+Refactor the XML->HTML conversion code and add specific unit tests.
+Integrate EventBus to simplify component interactions.
+Build with Gradle.  This is Google's future planned build mechanism.
 
-==Persecuted Users==
-Use less obviously Christian icon to reduce probability of causing persecution for users.
+==Fix Daily Readings==
+Convert to uses of OSIS references and SimpleOSISParser which will avoid problems with simple books and book name translations.
 
-==Alternate Versifications==
-Support users with different order of Bible books and different chapter divisions.
+==Abbreviate Book Names==
+Eg StrongsRealGreek -> 'StReG' instead of 'Stron' which could match several books.
