@@ -1,17 +1,3 @@
 = Alpha Build Release Notes =
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
-
-== Jan 10th 2015 ==
-  * Layout improvements and fixes
-    * Refactored OSIS to html parser
-    * More unit tests
-    * Improved `<l>` handling especially for rusCars poetry
-    * Add milestone quote handler e.g. ESV start of Jn 3:16 had a missing quote
-    * Avoid extra redundant note in HunUj due to trailing space after references
-    * Allow red letter in non-Bible modules
-    * Correct name of hi super css class
-    * Derive x-reference verse from osisRef not reference text because some modules like UZIBT do not have a valid text in x-references.
-    * Add support for OSIS table, row, and cell
-    * Add support for OSIS list and item
-    * Display divine name in lower caps
