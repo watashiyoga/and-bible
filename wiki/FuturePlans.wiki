@@ -9,15 +9,19 @@ Multiple documents displayed vertically word-by-word matched on Strongs numbers.
 Remove the current split screen setting and add a sub-menu containing:
   * New split screen
   * Close split screen
-  * Swap split screens
+  * Swap split screens OR ability to maximise lower screen
   * Link
   * Unlink
+  * Open Strongs in lower window
 
 ==Standard Swipe==
 With positive feedback during swipe (ViewPager).
 
 ==SD Card selection==
 And Bible often uses the default internal SD card even though a larger external SD card is available.
+
+==TSK View==
+The TSK shows a list of verses.  It is tedious to click, back, click, back, etc.  It would be nice to show all the verse automatically a bit like the Bookmarks or Compare translations views.
 
 ==Reorganise and simplify the Menus==
 I am struggling to come up with a great idea that does not involve more clicks, but see the wiki page on this subject.
