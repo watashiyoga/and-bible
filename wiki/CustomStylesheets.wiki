@@ -1,0 +1,36 @@
+#summary Custom CSS Stylesheet for Document Text
+
+This feature is part of version 2.1.10 and is not yet released (Jan 2015).
+
+= Introduction =
+
+It is possible to change the colour, layout, or style of document text by creating a custom stylesheet.
+
+= Details =
+
+Create a css stylesheet using classes and attributes as found in these standard stylesheets: [https://github.com/mjdenham/and-bible/blob/master/AndBible/assets/web/style.css style.css] [https://github.com/mjdenham/and-bible/blob/master/AndBible/assets/web/night_mode.css night_mode.css].
+
+Name the files style.css or night_mode.css and place them in a folder named 'jsword/css' on your sdcard.
+
+The style.css file will always be loaded but the night_mode.css will only be loaded when Night mode is selected.
+
+After changing either css file And Bible will need to be restarted to show the changes.
+
+== Example ==
+An example custom css file to use green text for night mode is attached.
+It sets the text and heading to green as follows:
+{{{
+body {
+	color: #007000;
+}
+
+.heading1 {
+	color: #007000;
+}
+}}}
+== Hi tag ==
+In addition to the standard style classes used by And Bible module developers requiring a custom span tag may use the type 'x-*'.
+E.g. <hi type='x-anything'>module text</hi> 
+will result in:
+<span class='hi hi_x-anything'>text</span>
+So you may add the class 'hi_x-anything' to your stylesheet.
