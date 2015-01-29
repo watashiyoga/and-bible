@@ -31,7 +31,7 @@ body {
 }
 }}}
 == Hi tag ==
-In addition to the standard style classes used by And Bible module developers requiring a custom span tag may use the type 'x-\*'.
+In addition to the standard style classes used by And Bible module developers requiring a custom span tag may use the type `'x-\*'`.  
 E.g. 
 {{{
 <hi type='x-anything'>module text</hi> 
