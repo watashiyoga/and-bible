@@ -48,7 +48,8 @@ a {
 /* change Strongs to blue so as not to clash */
 .strongs {
 	color: #210C7D;
-}}}}
+}
+}}}
 
 == Hi tag ==
 In addition to the standard style classes used by And Bible module developers requiring a custom span tag may use the type `'x-*'`.  
