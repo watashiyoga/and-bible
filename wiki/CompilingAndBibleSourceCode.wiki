@@ -43,7 +43,8 @@ Some IDEs like IDEA already have custom embedded Android Tools which can be used
 
 = Gradle =
 Building with gradle is supported but eclipse is my main development environment so integration with IDEA is up to the user.  Most libraries are no longer pre-installed in the libs folder but using gradle will automatically download and copy the required libraries to the libs folder for use in eclipse builds.  To force population of the libs folder run:  
-gradle copyJarDependencies
+    gradle copyJarDependencies
+from the AndBible folder.
 
 Gradle 1.12 should be installed as described at:
 http://www.gradle.org/installation
