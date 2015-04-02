@@ -42,7 +42,7 @@ a {
 	color: #3D1E06;
 }
 /* make the verse numbers green too */
-.verse {
+.verseNo {
 	color: #007000;
 }
 /* change Strongs to blue so as not to clash */
