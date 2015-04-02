@@ -2,7 +2,7 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
-== 2.4.15 ==
+== 2/4/15 ==
   * Custom user stylesheet support (see wiki)
   * Map zoom control fix
   * Support new paragraph type
