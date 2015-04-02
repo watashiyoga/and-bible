@@ -3,7 +3,7 @@
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
 == 2/4/15 ==
-  * Custom user stylesheet support (see wiki)
+  * Custom css stylesheet support (see wiki page for more details)
   * Map zoom control fix
   * Support new paragraph type
   * Fewer Xiphos repo checks
