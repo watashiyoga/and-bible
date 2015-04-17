@@ -2,8 +2,5 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
-== 2/4/15 ==
-  * Custom css stylesheet support (see wiki page for more details)
-  * Map zoom control fix
-  * Support new paragraph type
-  * Fewer Xiphos repo checks
+== Next ==
+  * Handle title in div marked as pre-verse e.g. ESVS & OEB Psalm 25 etc.
