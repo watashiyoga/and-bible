@@ -1,6 +1,15 @@
 #labels release,notes
 = Release Notes =
 
+== Release 2.1.11 (11 April 2015) ==
+  * Custom css stylesheet support (see And Bible wiki for details)
+  * Updated Dutch localisation
+  * Updated JSword library with many fixes
+  * Synodal Prot versification mapping
+  * Map zoom control fix
+  * Support new paragraph type
+  * Fewer Xiphos repo checks
+
 == Release 2.1.9 (10 Jan 2015) ==
 Layout improvements and fixes
   * Refactored OSIS to html parser
