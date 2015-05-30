@@ -2,9 +2,9 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
-== Next ==
+== 30 May ==
   * Fix links to named Bible versions
-  * Maximise window
+  * Add maximise window functionality
   * Ability to disable use of dedicated links window in Settings
   * Add 2 missing Synodal and SynodalProt versification mappings
 
