@@ -5,6 +5,7 @@ Below are release notes for recent alpha builds.  See [AlphaBetaTesting this pag
 == Next ==
   * Fix links to named Bible versions
   * Maximise window
+  * Add 2 missing Synodal and SynodalProt versification mappings
 
 == 23 May ==
   * Unlimited windows (split screens)
