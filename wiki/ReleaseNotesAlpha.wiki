@@ -2,6 +2,10 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
+== 1 June ==
+  * Fix Maximise sync
+  * Fix opening links in same window
+
 == 30 May ==
   * Fix links to specific Bible versions
   * Add maximise window functionality
