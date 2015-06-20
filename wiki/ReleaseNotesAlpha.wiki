@@ -2,6 +2,12 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
+== 20 June ==
+  * Fix incorrect display after delete then new
+  * Change persistence structure
+  * New Windows take initial document state from active window
+  * Closed Links window will take initial document state from active window
+
 == 1 June ==
   * Fix Maximise sync
   * Fix opening links in same window
