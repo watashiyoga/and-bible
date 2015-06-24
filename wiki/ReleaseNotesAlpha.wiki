@@ -2,6 +2,10 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
+== 24 June ==
+  * Fix links window state initialisation
+  * Enhance Maximised state to allow switching of windows in and out
+
 == 20 June ==
   * Fix incorrect display after delete then new
   * Change persistence structure
