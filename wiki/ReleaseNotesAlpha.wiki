@@ -2,6 +2,10 @@
 
 Below are release notes for recent alpha builds.  See [AlphaBetaTesting this page] for access to alpha releases.
 
+== 25 June ==
+  * Backward compatibility fixes to make menus update < Android 4
+  * Simplify Maximised window
+
 == 24 June ==
   * Fix links window state initialisation
   * Enhance Maximised state to allow switching of windows in and out
