@@ -1,6 +1,12 @@
 #labels release,notes
 = Release Notes =
 
+== Release 2.2.0 (26 June 2015) ==
+  * Windows replace split-screen (see Menu/Window or demo)
+  * Links open in dedicated window.
+  * Unlimited windows synchronized or independent
+  * Row of minimised windows at bottom
+
 == Release 2.1.11 (11 April 2015) ==
   * Custom css stylesheet support (see And Bible wiki for details)
   * Updated Dutch localisation
