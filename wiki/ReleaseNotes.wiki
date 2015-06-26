@@ -2,7 +2,7 @@
 = Release Notes =
 
 == Release 2.2.0 (26 June 2015) ==
-  * Windows replace split-screen (see Menu/Window or demo)
+  * Windows replace split-screen (see Menu/Window or [http://tiny.cc/abdemo see demo])
   * Links open in dedicated window.
   * Unlimited windows synchronized or independent
   * Row of minimised windows at bottom
