@@ -1,6 +1,14 @@
 #labels release,notes
 = Release Notes =
 
+== Next ==
+  * Attempt to fix occasional 'The specified child already has a parent.'
+  * Try to avoid rare NPE in ControlFactory
+
+== Release 2.2.1 ==
+  * Prevent race condition when initialising windows
+  * Fix logic error switching between My Note view and Bible view - caused window flashes following links
+  * Consequent Android 2.3 issues affecting swipe, bookmarks, ...
 == Release 2.2.0 (26 June 2015) ==
   * Windows replace split-screen (see Menu/Window or [http://tiny.cc/abdemo see demo])
   * Links open in dedicated window.
