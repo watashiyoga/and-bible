@@ -4,6 +4,7 @@
 == Next ==
   * Attempt to fix occasional 'The specified child already has a parent.'
   * Try to avoid rare NPE in ControlFactory
+  * Fix unsynchronised window initialisation
 
 == Release 2.2.1 ==
   * Prevent race condition when initialising windows
