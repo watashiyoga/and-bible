@@ -2,10 +2,11 @@
 = Release Notes =
 
 == Next ==
-  * Attempt to fix occasional 'The specified child already has a parent.'
-  * Try to avoid rare NPE in ControlFactory
   * Fix unsynchronised window initialisation
+  * New window is unsynchronised if unsynchronised window is active
   * Update Korean and Latvian localisations
+  * Attempt to fix occasional 'The specified child already has a parent.' building windows
+  * Try to avoid rare NPE in ControlFactory
 
 == Release 2.2.1 ==
   * Prevent race condition when initialising windows
